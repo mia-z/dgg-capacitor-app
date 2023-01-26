@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Lato&family=Lobster&family=Lora:wght@400;500;600&family=Mulish:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;600;700&family=Nunito:wght@200;300;400;500;600;700&family=Open+Sans&family=Roboto+Slab:wght@200;300;400;500;600;700&family=Work+Sans:wght@200;300;400;500;600&display=swap');
+
+html, body, #app {
+    background-color: whitesmoke;
+}
+
+$lato: 'Lato', sans-serif;
+$lobster: 'Lobster', cursive;
+$lora: 'Lora', serif;
+$mulish: 'Mulish', sans-serif;
+$nunito: 'Nunito', sans-serif;
+$nunito-sans: 'Nunito Sans', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$roboto: 'Roboto Slab', serif;
+$work-sans: 'Work Sans', sans-serif;
+$abyssinica: 'Abyssinica SIL', serif;
+
+.lato {
+    font-family: $lato;
+}
+
+.lobster {
+    font-family: $lobster;
+}
+
+.lora {
+    font-family: $lora;
+}
+
+.mulish {
+    font-family: $mulish;
+}
+
+.nunito {
+    font-family: $nunito;
+}
+
+.nunito-sans {
+    font-family: $nunito-sans;
+}
+
+.open-sans {
+    font-family: $open-sans;
+}
+
+.roboto {
+    font-family: $roboto;
+}
+
+.work-sans {
+    font-family: $work-sans;
+}
+
+.abyssinica {
+    font-family: $abyssinica;
+}
+
+.curvy-bg {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300' preserveAspectRatio='xMinYMin meet'><path d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z'></path></svg>")
+}
+
+
+//REMOVE UGLY ARROWS FROM input[type=number]
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.styled-scrollbars {
+    --scrollbar-foreground: rgb(239, 68, 68);
+    --scrollbar-background: whitesmoke;
+    /* Foreground, Background */
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+}
+.styled-scrollbars::-webkit-scrollbar {
+    width: 7px; /* Mostly for vertical scrollbars */
+    height: 10px; /* Mostly for horizontal scrollbars */
+}
+.styled-scrollbars::-webkit-scrollbar-thumb { /* Foreground */
+    background: var(--scrollbar-foreground);
+}
+.styled-scrollbars::-webkit-scrollbar-track { /* Background */
+    background: var(--scrollbar-background);
+}
+
+@import "./tw-extensions.scss";
+
+/* Core CSS required for Ionic components to work properly */
+@import '@ionic/react/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
+
+/* Optional CSS utils that can be commented out */
+@import '@ionic/react/css/padding.css';
+@import '@ionic/react/css/float-elements.css';
+@import '@ionic/react/css/text-alignment.css';
+@import '@ionic/react/css/text-transformation.css';
+@import '@ionic/react/css/flex-utils.css';
+@import '@ionic/react/css/display.css';
+
+@import "./ionic-overrides.scss";
+
+@import "./dgg-overrides.scss";
+
+#user-card {
+	overflow: hidden;
+	z-index: 0;
+
+	&.pepe {
+		&:after {
+			background: url("https://cdn.destiny.gg/2.60.0/emotes/6157386b7d2fc.png") 0 0 repeat;
+		}
+	}
+
+	&.yee {
+		&:after {
+			background: url("https://cdn.destiny.gg/2.60.0/emotes/5c2bbe330b357.png") 0 0 repeat;
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		opacity: 0.15;
+		width: 250%;
+		height: 250%;
+		top: -110%;
+		left: -40%;
+		z-index: -1;
+		background: url("https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png") 0 0 repeat;
+		animation: bg-tile-animation 1s linear 0s infinite;
+	}
+}
+
+@keyframes bg-tile-animation {
+	from {
+		transform: rotate(-30deg) translateX(0);
+	}
+
+	to {
+		transform: rotate(-30deg) translateX(30px);
+	}
+}
+
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 0.5px solid #fff;
+	margin: 0 0.25em;
+}
+
+.separator:not(:empty)::before {
+	margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+	margin-left: .25em;
+}

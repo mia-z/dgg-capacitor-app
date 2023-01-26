@@ -1,0 +1,13 @@
+{
+  "name": "dgg-cap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom",
+  "proxies": [
+	  {
+		  "path": "/chat",
+		  "proxyUrl": "wss://chat.destiny.gg/ws"
+	  }
+  ]
+}

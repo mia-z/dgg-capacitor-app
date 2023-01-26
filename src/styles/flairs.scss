@@ -1,0 +1,310 @@
+:root {
+    --rainbow-saturation: 100%;
+    --rainbow-lightness: 65%;
+    --rainbow-gradient: repeating-linear-gradient(
+            90deg,
+    hsl(0, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(45, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(90, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(135, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(180, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(225, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(270, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(315, var(--rainbow-saturation), var(--rainbow-lightness)),
+    hsl(360, var(--rainbow-saturation), var(--rainbow-lightness))
+    50%
+  );
+}
+@keyframes move {
+    to {
+        background-position-x: -100%;
+    }
+}
+
+.flair.protected {
+    display: none !important;
+}
+
+.flair.moderator {
+    display: none !important;
+}
+
+.flair.flair2 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair4 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair5 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair6 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair10 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair14 {
+    display: none !important;
+}
+
+.flair.flair15 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair19 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair16 {
+
+    height: 16px;
+    width: 16px;
+    order: 127;
+}
+
+.flair.flair18 {
+
+    height: 16px;
+    width: 16px;
+    order: 50;
+}
+
+.flair.flair21 {
+
+    height: 16px;
+    width: 16px;
+    order: 50;
+}
+
+.flair.flair22 {
+
+    height: 18px;
+    width: 18px;
+    order: 50;
+}
+
+.flair.flair24 {
+
+    height: 18px;
+    width: 18px;
+    order: 50;
+}
+
+.flair.flair26 {
+
+    height: 18px;
+    width: 18px;
+    order: 50;
+}
+
+.flair.flair25 {
+
+    height: 16px;
+    width: 16px;
+    order: 50;
+}
+
+.flair.flair27 {
+
+    height: 18px;
+    width: 18px;
+    order: 50;
+}
+
+.flair.flair28 {
+
+    height: 16px;
+    width: 16px;
+    order: 50;
+}
+
+.flair.flair29 {
+
+    height: 15px;
+    width: 17px;
+    order: 50;
+}
+
+.flair.flair30 {
+
+    height: 16px;
+    width: 16px;
+    order: 50;
+}
+
+.flair.flair11 {
+
+    height: 16px;
+    width: 16px;
+    order: 11;
+}
+.user.flair11 {
+    color: #929292;
+}
+
+.flair.bot {
+
+    height: 16px;
+    width: 16px;
+    order: 10;
+}
+.user.bot {
+    color: #0088CC;
+}
+
+.flair.subscriber {
+    display: none !important;
+}
+.user.subscriber {
+    color: #59AEEA;
+}
+
+.flair.flair9 {
+
+    height: 16px;
+    width: 16px;
+    order: 8;
+}
+.user.flair9 {
+    color: #59AEEA;
+}
+
+.flair.flair13 {
+
+    height: 18px;
+    width: 18px;
+    order: 7;
+}
+.user.flair13 {
+    color: #59AEEA;
+}
+
+.flair.flair1 {
+
+    height: 18px;
+    width: 18px;
+    order: 6;
+}
+.user.flair1 {
+    color: #2ADDC8;
+}
+
+.flair.flair3 {
+
+    height: 18px;
+    width: 18px;
+    order: 5;
+}
+.user.flair3 {
+    color: #4DB524;
+}
+
+.flair.flair8 {
+
+    height: 18px;
+    width: 18px;
+    order: 4;
+}
+.user.flair8 {
+    color: #DD29D2;
+}
+
+.flair.flair12 {
+
+    height: 16px;
+    width: 16px;
+    order: 3;
+}
+.user.flair12 {
+    color: #E79015;
+}
+
+.flair.flair20 {
+
+    height: 16px;
+    width: 16px;
+    order: 3;
+}
+
+.flair.flair7 {
+
+    height: 18px;
+    width: 13px;
+    order: 3;
+}
+.user.flair7 {
+    color: #FC4C02;
+}
+
+.flair.flair42 {
+    
+    height: 18px;
+    width: 18px;
+    order: 3;
+}
+.user.flair42 {
+    color: transparent;
+    background: var(--rainbow-gradient);
+    background-clip: text;
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    animation: move 3s linear infinite;
+    position: relative;
+}
+.msg-chat:not(.msg-whisper) .user.flair42:hover::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 2px);
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background: var(--rainbow-gradient);
+}
+
+.flair.vip {
+    display: none !important;
+}
+.user.vip {
+    color: #DB4C1C;
+}
+
+.flair.admin {
+    display: none !important;
+}
+.user.admin {
+    color: #EE1F1F;
+}
+
+.flair.flair17 {
+    display: none !important;
+}
+.user.flair17 {
+    color: #FCE205;
+}

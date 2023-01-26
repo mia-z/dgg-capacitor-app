@@ -1,0 +1,11 @@
+{
+  "appId": "com.miaz.dgg",
+  "appName": "dgg-cap",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
