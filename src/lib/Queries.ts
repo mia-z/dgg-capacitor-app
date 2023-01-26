@@ -50,9 +50,9 @@ export const RecentEmbeds = async (): Promise<Vyneer.Embed[]> => {
 	return parsedEmbedInfo.data;
 }
 
-export const RecentChatQuery = async (): Promise<DggPayloadItem[]> => {
+export const RecentChatQuery = async (): Promise<string[]> => {
 	const res = await HTTP.sendRequest("https://destiny.gg/api/chat/history", {
 		method: "get",
 	});
-	return res.data;
+	return JSON.parse(res.data);
 }

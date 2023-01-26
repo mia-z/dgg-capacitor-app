@@ -3,6 +3,10 @@ import ChatLine from "./ChatLine"
 import { Keyboard } from "@capacitor/keyboard";
 import {BroadcastLine} from "./BroadcastLine";
 import {useBoundStore} from "../hooks/useBoundStore";
+import { useQuery } from "react-query";
+import { RecentChatQuery } from "../lib/Queries";
+import { parseChatMessage } from "../lib/Helpers";
+import { UtilityLine } from "./UtilityLine";
 
 type ChatContainerProps = {
 	height: number,
@@ -10,10 +14,10 @@ type ChatContainerProps = {
 }
 
 export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
-	const { chatMessages, playerIsHidden } = useBoundStore();
+	const { chatMessages, setMessages, playerIsHidden } = useBoundStore();
 
-	const chatContainer = useRef<HTMLDivElement>(null);
-	const chatBottomRef = useRef<HTMLDivElement>(null);
+	const chatContainer = useRef<HTMLDivElement | null>(null);
+	const chatBottomRef = useRef<HTMLDivElement | null>(null);
 
     const [bottomIsVisible, setBottomIsVisible] = useState<boolean>(true);
 
@@ -21,7 +25,26 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 
     const [chatHeight] = useState<number>(playerIsHidden ? height - (((9/16) * width)) : height);
 
-	
+	const recentChatQuery = useQuery({
+		queryKey: ["chatHistory"],
+		queryFn: async () => await RecentChatQuery(),
+		refetchInterval: false,
+		onSuccess: (data) => {
+			console.log(data);
+			const messages = data
+				.map((payload) => parseChatMessage(payload))
+				.filter((payload) => payload.command === "MSG" || payload.command === "BROADCAST") as MessageCollection; //Typescript couldnt grasp this inference hmm.
+			const spacerMessage: UtilityMessage = {
+				command: "UTILITY", 
+				utilityType: "HORIZONTAL_SPACER", 
+				data: "", 
+				isHidden: false, 
+				timestamp: Date.now().toString()
+			};
+			const messagesWithSeparator = [ ...messages, spacerMessage ]	
+			setMessages(messagesWithSeparator);
+		}
+	});
 
     useEffect(() => {
         if (isInteracting || !bottomIsVisible) {
@@ -70,6 +93,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 	                    switch(message.command) {
 	                        case "MSG": return <ChatLine key={`${message.timestamp}-${message.nick}`} {...message} />;
 	                        case "BROADCAST": return <BroadcastLine key={`${message.timestamp}-broadcast`} data={message.data} />;
+							case "UTILITY": return <UtilityLine key={`${message.timestamp}-utility`} {...message} />
 	                    }})
 				}
 				<div ref={chatBottomRef} className={"h-[4px]"}>{/*hidden reference for chat scrolling*/}</div>

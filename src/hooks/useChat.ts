@@ -44,7 +44,7 @@ export const useChat = (auth: string) => {
         }
 	}, [wsClient]);
 
-    const handleMessage = useCallback((message: MessageEvent<string>) => {
+    const handleMessage = useCallback((message: MessageEvent) => {
         const parsedMessage = parseChatMessage(message.data);
         switch (parsedMessage.command) {
             case "MSG": {
@@ -87,7 +87,7 @@ export const useChat = (auth: string) => {
 
     const handleClose = useCallback((event: Event) => {
         console.log("Chat socket closed!");
-		addMessage({ data: "Disconnected - will try to reconnect..", command: "SYS", isHidden: false, type: "warning" });
+		addMessage({ data: "Disconnected - will try to reconnect..", command: "SYS", isHidden: false, type: "warning", timestamp: Date.now().toString() });
         setReady(false);
 	}, [wsClient]);
 

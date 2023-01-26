@@ -110,6 +110,8 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 	);
 }
 
-export default ChatLine;
+
+//export default ChatLine;
+export default memo(ChatLine);
 
 

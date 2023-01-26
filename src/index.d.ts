@@ -122,17 +122,21 @@ type Tier3Sub = "flair3";
 type Tier4Sub = "flair8";
 type Tier5Sub = "flair42";
 
-type ChatMessageCommand = "MSG" | "QUIT" | "JOIN" | "NAMES" | "BROADCAST" | "ERR"| "MUTE" | "BAN";
+type DggPayloadCommand = "MSG" | "QUIT" | "JOIN" | "NAMES" | "BROADCAST" | "ERR"| "MUTE" | "BAN";
+
+type UtilityCommand = "UTILITY";
+
+type ChatMessageCommand = DggPayloadCommand & UtilityCommand;
 
 type ChatUser = Pick<DggUser, "features" | "nick">;
 
 type MessageBase = {
     data: string,
-	isHidden: boolean
+	isHidden: boolean,
+	timestamp: string,
 }
 
 type ChatUserAndTimestampMessage = MessageBase & ChatUser & {
-    timestamp: string,
 	isSameNickAsPrevious: boolean,
 	isEmoteComboMessage: boolean,
 	isEmoteComboFinished: boolean,
@@ -183,9 +187,14 @@ type BanMessage =  ChatUserAndTimestampMessage & {
 	duration: string
 }
 
+type UtilityMessage = MessageBase & {
+	command: "UTILITY",
+	utilityType: "HORIZONTAL_SPACER"
+}
+
 type MessageCollection = Array<MessageCollectionItem>;
 
-type MessageCollectionItem = ChatMessage | BroadcastMessage | ErrorMessage | SystemMessage;
+type MessageCollectionItem = ChatMessage | BroadcastMessage | ErrorMessage | SystemMessage | UtilityMessage;
 
 type DggPayloadItem = ChatMessage | QuitMessage | JoinMessage | BroadcastMessage | NamesMessage | ErrorMessage | MuteMessage | BanMessage;
 
