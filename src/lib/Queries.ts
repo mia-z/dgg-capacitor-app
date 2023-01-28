@@ -22,6 +22,28 @@ export const StreamInfoQuery = async (): Promise<LiveResponseData<"dggApi:stream
 	return parsedStreamInfo.data;
 }
 
+export const LatestVideosQuery = async (): Promise<LiveResponseData<"dggApi:videos">> => {
+	const res = await HTTP.sendRequest("https://linode.miaz.xyz/data/videos", {
+		method: "get",
+		headers: {
+			"Authorization": `Basic ${btoa("admin:sohcahtoa")}`
+		}
+	});
+	const parsedVideosInfo = JSON.parse(res.data);
+	return parsedVideosInfo.data;
+}
+
+export const LatestVodsQuery = async (): Promise<LiveResponseData<"dggApi:youtubeVods">> => {
+	const res = await HTTP.sendRequest("https://linode.miaz.xyz/data/youtubevods", {
+		method: "get",
+		headers: {
+			"Authorization": `Basic ${btoa("admin:sohcahtoa")}`
+		}
+	});
+	const parsedVodsInfo = JSON.parse(res.data);
+	return parsedVodsInfo.data;
+}
+
 export const HostInfoQuery = async (): Promise<LiveResponseData<"dggApi:hosting">> => {
 	const res = await HTTP.sendRequest("https://linode.miaz.xyz/data/hosting", {
 		method: "get",
@@ -33,21 +55,21 @@ export const HostInfoQuery = async (): Promise<LiveResponseData<"dggApi:hosting"
 	return parsedhostInfo.data;
 }
 
-export const Last5Embeds = async (): Promise<Vyneer.Embed[]> => {
+export const Last5EmbedsQuery = async (): Promise<Vyneer.Embed[]> => {
 	const res = await HTTP.sendRequest("https://vyneer.me/tools/embeds/last", {
 		method: "get",
 
 	});
 	const parsedEmbedInfo = JSON.parse(res.data);
-	return parsedEmbedInfo.data;
+	return parsedEmbedInfo;
 }
 
-export const RecentEmbeds = async (): Promise<Vyneer.Embed[]> => {
+export const RecentEmbedsQuery = async (): Promise<Vyneer.Embed[]> => {
 	const res = await HTTP.sendRequest("https://vyneer.me/tools/embeds?t=60", {
 		method: "get",
 	});
 	const parsedEmbedInfo = JSON.parse(res.data);
-	return parsedEmbedInfo.data;
+	return parsedEmbedInfo;
 }
 
 export const RecentChatQuery = async (): Promise<string[]> => {

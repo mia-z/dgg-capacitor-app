@@ -9,8 +9,11 @@ import { DateTime } from "luxon";
 import React from "react";
 import HumanizeDuration from "humanize-duration";
 import {ClearUserData} from "../lib/PreferencesHelper";
+import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
+import { VodsModal } from "./modals/VodsModal";
+import { VideosModal } from "./modals/VideosModal";
 
-const meemePhrases = [
+const memePhrases = [
 	"YEE wins",
 	"PEPE wins",
 	"For me, personally..",
@@ -48,6 +51,9 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 
     const [usersModalOpen, setUsersModalOpen] = useState<boolean>(false);
 	const [emotesModalOpen, setEmotesModalOpen] = useState<boolean>(false);
+    const [embedsModalOpen, setEmbedsModalOpen] = useState<boolean>(false);
+    const [vodsModalOpen, setVodsModalOpen] = useState<boolean>(false);
+	const [videosModalOpen, setVideosModalOpen] = useState<boolean>(false);
 
 	const onUsersButtonPress = () => {
 		setUsersModalOpen(true);
@@ -175,22 +181,17 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 							}
 						</div>
 						<div className={"flex flex-col mt-auto"}>
-							<IonButton onTouchEnd={() => notImplementedAlert(notImplementedAlertProps)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setVodsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
 								<div className={"text-xs"}>
 									Show latest VODs
 								</div>
 							</IonButton>
-							<IonButton onTouchEnd={() => notImplementedAlert(notImplementedAlertProps)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setVideosModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
 								<div className={"text-xs"}>
 									Show latest videos
 								</div>
 							</IonButton>
-							<IonButton onTouchEnd={() => notImplementedAlert(notImplementedAlertProps)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
-								<div className={"text-xs"}>
-									Show stream schedule
-								</div>
-							</IonButton>
-							<IonButton onTouchEnd={() => notImplementedAlert(notImplementedAlertProps)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setEmbedsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
 								<div className={"text-xs"}>
 									Show recent chat embeds
 								</div>
@@ -227,8 +228,11 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 				</IonContent>
 			</IonMenu>
 
-			<UsersModal usersModalOpen={usersModalOpen} setUsersModalOpen={setUsersModalOpen} />
-			<EmotesModal emotesModalOpen={emotesModalOpen} setEmotesModalOpen={setEmotesModalOpen} />
+			<UsersModal isOpen={usersModalOpen} setOpen={setUsersModalOpen} />
+			<EmotesModal isOpen={emotesModalOpen} setOpen={setEmotesModalOpen} />
+			<ChatEmbedsModal isOpen={embedsModalOpen} setOpen={setEmbedsModalOpen} />
+			<VodsModal isOpen={vodsModalOpen} setOpen={setVodsModalOpen} />
+			<VideosModal isOpen={videosModalOpen} setOpen={setVideosModalOpen} />
 
 			<IonAlert
 				isOpen={logoutAlertOpen}
