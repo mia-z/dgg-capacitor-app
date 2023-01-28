@@ -215,6 +215,8 @@ type LiveResponseType = "dggApi:streamInfo" | "dggApi:youtubeVods" | "dggApi:vid
 type LiveResponseData<T> =
 	T extends "dggApi:streamInfo" ? StreamInfo :
 	T extends "dggApi:hosting" ? HostInfo :
+	T extends "dggApi:videos" ? VideosInfo :
+	T extends "dggApi:youtubeVods" ? VodsInfo :
 	any;
 
 type DggLiveResponse<T> = {
@@ -262,6 +264,27 @@ type HostInfo = {
 	displayName: string,
 	url: string
 }
+
+type VideosInfo = {
+	videos: {
+		id: string,
+		title: string,
+		mediumThumbnailUrl: string,
+		highThumbnailUrl: string,
+		url: string,
+		thumbnailHref: string
+	}[]
+}
+
+type VodsInfo = {
+	id: string,
+	title: string,
+	mediumThumbnailUrl: string,
+	highThumbnailUrl: string,
+	url: string,
+	streamStartTime: string,
+	streamEndTime: string
+}[];
 
 type SupportedPlatforms = "youtube" | "twitch";
 
