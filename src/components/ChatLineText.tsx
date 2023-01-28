@@ -1,6 +1,6 @@
 import React, { FC, TouchEvent, useState } from "react"
 import { useBoundStore } from "../hooks/useBoundStore";
-import {ChatLinkModal} from "./modals/ChatLinkModal";
+import {ChatLinkModal} from "./modals/VodsModal";
 
 type ChatLineTextProps = {
     text: string,
