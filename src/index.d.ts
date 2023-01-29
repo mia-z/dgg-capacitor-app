@@ -286,7 +286,9 @@ type VodsInfo = {
 	streamEndTime: string
 }[];
 
-type SupportedPlatforms = "youtube" | "twitch";
+declare const Platforms = ["youtube", "twitch", "rumble"] as const;
+
+type SupportedPlatforms = typeof Platforms[number];
 
 type EmbedInfo = {
 	platform: SupportedPlatforms,
