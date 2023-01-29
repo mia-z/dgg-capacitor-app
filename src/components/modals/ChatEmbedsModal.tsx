@@ -1,14 +1,35 @@
 import React, { FC, useEffect, useRef, Dispatch, SetStateAction } from "react";
 import { useBoundStore } from "../../hooks/useBoundStore";
+import { parseEmbedLink } from "../../lib/Helpers";
 import { ChatMenuModal } from "../common/ChatMenuModal";
+import { useIonAlert } from "@ionic/react";
 
 type ChatEmbedsModalProps = {
 	isOpen: boolean,
 	setOpen: Dispatch<SetStateAction<boolean>>,
 }
 
+const couldntParseAlertProps = {
+	header: "Error",
+	message: "Couldnt parse that embed link!",
+	buttons: ["Ok"]
+}
+
 export const ChatEmbedsModal: FC<ChatEmbedsModalProps> = ({ isOpen, setOpen }) => {
-	const { last5Embeds, recentEmbeds } = useBoundStore();
+	const { last5Embeds, recentEmbeds, setCurrentEmbed, setUsingCustomEmbed } = useBoundStore();
+
+	const [presentAlert] = useIonAlert();
+
+	const updateEmbed = (link: string) => {
+		const embed = parseEmbedLink(link);
+		if (!embed) {
+			presentAlert(couldntParseAlertProps);
+			return;
+		}
+		setCurrentEmbed(embed);
+		setUsingCustomEmbed(true);
+		setOpen(false);
+	}
 
 	return (
 		<ChatMenuModal isOpen={isOpen} setOpen={setOpen}>
@@ -23,7 +44,7 @@ export const ChatEmbedsModal: FC<ChatEmbedsModalProps> = ({ isOpen, setOpen }) =
 					last5Embeds.map((embed, index) => (
 						<div key={`${embed.timestamp}-${embed.channel}`} className={"flex flex-col px-2"}>
 							<div className={"truncate text-center text-[whitesmoke] roboto"}>
-								<span className={"underline text-blue-600"}>{embed.link}</span>&nbsp;-&nbsp;{embed.title}
+								<span onTouchEnd={() => updateEmbed(embed.link)} className={"underline text-blue-600"}>{embed.link}</span>&nbsp;-&nbsp;{embed.title}
 							</div>
 						</div>
 					))
@@ -37,7 +58,7 @@ export const ChatEmbedsModal: FC<ChatEmbedsModalProps> = ({ isOpen, setOpen }) =
 					recentEmbeds.map((embed, index) => (
 						<div key={`${embed.timestamp}-${embed.channel}`} className={"flex flex-col px-2"}>
 							<div className={"truncate text-center text-[whitesmoke] roboto"}>
-								<span className={"underline text-blue-600"}>{embed.link}</span>&nbsp;-&nbsp;{embed.title}
+								<span onTouchEnd={() => updateEmbed(embed.link)} className={"underline text-blue-600"}>{embed.link}</span>&nbsp;-&nbsp;{embed.title}
 							</div>
 						</div>
 					))

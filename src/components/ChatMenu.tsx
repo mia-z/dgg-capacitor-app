@@ -1,4 +1,4 @@
-import { FC, useContext, useRef, useState } from "react";
+import { FC, useCallback, useContext, useRef, useState } from "react";
 import {IonAlert, IonButton, IonContent, IonIcon, IonMenu, useIonAlert, useIonRouter} from "@ionic/react";
 import { peopleOutline, desktopOutline, happyOutline, closeOutline, settingsSharp, logOutOutline } from "ionicons/icons";
 import { UsersModal } from "./modals/UsersModal";
@@ -12,6 +12,7 @@ import {ClearUserData} from "../lib/PreferencesHelper";
 import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
 import { VodsModal } from "./modals/VodsModal";
 import { VideosModal } from "./modals/VideosModal";
+import { parseEmbedLink } from "../lib/Helpers";
 
 const memePhrases = [
 	"YEE wins",
@@ -31,14 +32,20 @@ const notImplementedAlertProps = {
 	buttons: ["Ok"]
 }
 
+const noVodsAlertProps = {
+	header: "No vods",
+	subHeader: "Couldnt find any vods, try again in a few minutes",
+	buttons: ["Ok"]
+}
+
 export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 	const sideMenuRef = useRef<HTMLIonMenuElement>(null);
 
 	const router = useIonRouter();
 
-	const [notImplementedAlert] = useIonAlert();
+	const [presentAlert] = useIonAlert();
 
-	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken } = useBoundStore();
+	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken, setCurrentEmbed, setUsingCustomEmbed, vodsInfo } = useBoundStore();
 
 	const { emotes, flairs } = useContext(DggAssets);
 
@@ -71,12 +78,28 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		setLogoutLoadingAlertOpen(false);
 	}
 
+	const onPlayLatestVod = useCallback(() => {
+		if (!vodsInfo || (vodsInfo && vodsInfo?.length < 1 && !vodsInfo[0])) {
+			presentAlert(noVodsAlertProps);
+			return;
+		}
+
+		const embed = parseEmbedLink(vodsInfo[0].url);
+		if (embed) {
+			setCurrentEmbed(embed);
+			sideMenuRef.current!.close();
+		} else {
+			console.log("couldnt parse latest embed url!");
+		}
+
+	}, [vodsInfo, sideMenuRef]);
+
 	return (
 		<>
 			<IonMenu ref={sideMenuRef} id={"side-menu"} menuId={"side-menu"} contentId={"bigscreen-content"}>
 				<IonContent>
 					<div className={"bg-light-black h-full w-full flex flex-col relative"}>
-						<IonIcon onTouchEnd={() => notImplementedAlert(notImplementedAlertProps)} className={"absolute left-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
+						<IonIcon onTouchEnd={() => presentAlert(notImplementedAlertProps)} className={"absolute left-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
 						<IonIcon onTouchEnd={() => setLogoutAlertOpen(true)} className={"absolute right-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={logOutOutline} />
 						<div className={"lobster text-3xl text-white my-2 text-center"}>
 							Appstiny
@@ -170,13 +193,24 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 										and lasted&nbsp;
 										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
 									</div>
-									<div className={"flex flex-col mt-2"}>
-										<IonButton className={"w-3/5 h-6 text-sm mx-auto roboto"}>
-											<div className={"text-xs"}>
-												Play latest VOD
-											</div>
-										</IonButton>
-									</div>
+									{
+										currentEmbed.videoId === (vodsInfo && vodsInfo?.at(0)?.id) ?
+										<div className={"flex flex-col mt-2"}>
+											<IonButton disabled onTouchEnd={onPlayLatestVod} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
+												<div className={"text-xs"}>
+													Playing latest vod..
+												</div>
+											</IonButton>
+										</div>	:
+										<div className={"flex flex-col mt-2"}>
+											<IonButton onTouchEnd={onPlayLatestVod} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
+												<div className={"text-xs"}>
+													Play latest VOD
+												</div>
+											</IonButton>
+										</div>
+									}
+
 								</>
 							}
 						</div>
