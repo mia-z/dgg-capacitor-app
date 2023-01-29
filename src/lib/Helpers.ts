@@ -18,7 +18,13 @@ export const randomRange = (min: number, max: number) => Math.floor(Math.random(
 const youtubeRegex: RegExp = new RegExp(/^(https:\/\/(www.)?|#)?(youtu(\.)?be)(\.com\/watch\?v=|\/)(.*)/mg);
 const twitchRegex: RegExp = new RegExp(/^(https:\/\/(www.)?|#)?(twitch)(\.tv|\/)(.*)/mg);
 
-export const parseEmbedLink = (embedLink: string): EmbedInfo | null => {
+export const parseEmbedLink = (input: string): EmbedInfo | null => {
+	let embedLink = input;
+	if (embedLink.startsWith("/bigscreen#")) {
+		console.log("slicing");
+		embedLink = embedLink.slice(10);
+		console.log(embedLink);
+	}
 	if (embedLink.charAt(0) === "#") {
 		const parts = embedLink.slice(1).split("/");
 		if (parts.length !== 2) {
