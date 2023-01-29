@@ -4,9 +4,11 @@ import { ChatLineText } from "./ChatLineText";
 import { useBoundStore } from "../hooks/useBoundStore";
 import { ChatEmoteCombo } from "./ChatEmoteCombo";
 import { DggAssets } from "../hooks/DggAssetContext";
+import { parseEmbedLink } from "../lib/Helpers";
+import { Platforms } from "../contants";
 
 const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, isSameNickAsPrevious, comboCount, isEmoteComboFinished, isEmoteComboMessage }) => {
-    const { showUserMessages, user, watchingNicks, addNickToWatch, removeNickToWatch, chatUsers, setWatchingNicks } = useBoundStore();
+    const { showUserMessages, user, watchingNicks, addNickToWatch, removeNickToWatch, chatUsers, setWatchingNicks,setCurrentEmbed, setUsingCustomEmbed } = useBoundStore();
     const { emotes, flairs, emoteRegex } = useContext(DggAssets);
     const flairsToUse = flairs?.filter((flair, index) => {
         return features.includes(flair.name)
@@ -36,7 +38,22 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 		}
 	}, [watchingNicks]);
 
-	const onMessageTextPress = useCallback((text: string) => {
+	const onMessageTextPress = useCallback((text: string, isEmbed: boolean = false) => {
+		if (isEmbed) {
+			const embed = parseEmbedLink(text);
+			if (!embed) {
+				console.log("couldnt parse embed!");
+				return;
+			}
+			if (!Platforms.some(x => x === embed.platform)) {
+				console.log(`${embed.platform} is not a supported embed, yet!`);
+				return;
+			}
+			setCurrentEmbed(embed);
+			setUsingCustomEmbed(true);
+			return;
+		}
+
 		if (chatUsers.some(x => text.toLowerCase().includes(x.nick.toLowerCase()))) {
 			const textAsNick = chatUsers.find(x => text.toLowerCase().includes(x.nick.toLowerCase()));
 
