@@ -1521,6 +1521,15 @@
     ionicons "^6.0.4"
     tslib "^2.1.0"
 
+"@ionic/core@^7.0.0-beta.0":
+  version "7.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.0.0-beta.0.tgz#8f659b767c73eac9ed4b13f16ecfb643da7ac35a"
+  integrity sha512-pIbuyVtvs5UscAqUNKgevttZknMbBPo8JaDzSME/O++a0tvra5TCQY5hwnlyNbkFpvEjOuyJqcHZeuinStRGqA==
+  dependencies:
+    "@stencil/core" "^2.18.0"
+    ionicons "^6.1.1"
+    tslib "^2.1.0"
+
 "@ionic/react-router@^6.4.1":
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/@ionic/react-router/-/react-router-6.4.1.tgz#7238037335dca1cc553ac0254403a9f62fd422d2"
@@ -5649,6 +5658,13 @@ ionicons@^6.0.2, ionicons@^6.0.4:
   dependencies:
     "@stencil/core" "^2.18.0"
 
+ionicons@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-6.1.1.tgz#4c24c29aaf9ec235d741e7fe692e47ea814b1a7d"
+  integrity sha512-Qe6mx25DFNwA9UL1rhewI5StI3uD4+BqB2KdvLjyWhtvoUXwyAsmfHLZuDANAHQowIKtTt6BZCt5/g5NIQ635Q==
+  dependencies:
+    "@stencil/core" "^2.18.0"
+
 ip@^1.1.5:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.8.tgz#ae05948f6b075435ed3307acce04629da8cdbf48"
@@ -8399,6 +8415,11 @@ react-scripts@^5.0.1:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-twitch-embed@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-twitch-embed/-/react-twitch-embed-3.0.1.tgz#59701297144ccede4e3fabe42c4789d66399d242"
+  integrity sha512-ZjsLB3AVDQiGpL30u5TNq0CrBSuZXMvhbTgNSeQwoT9ehGud3R4LHxA5PZlt/TEquRVEsNNryLtQbXekk/kyUQ==
 
 react-window@^1.8.8:
   version "1.8.8"

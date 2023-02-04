@@ -7,9 +7,6 @@ const config: CapacitorConfig = {
 	webDir: "dist",
 	plugins: {
         
-    },
-	server: {
-        hostname: "localhost"
     }
 };
 
