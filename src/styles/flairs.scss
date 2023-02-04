@@ -13,7 +13,7 @@
     hsl(315, var(--rainbow-saturation), var(--rainbow-lightness)),
     hsl(360, var(--rainbow-saturation), var(--rainbow-lightness))
     50%
-  );
+    );
 }
 @keyframes move {
     to {
