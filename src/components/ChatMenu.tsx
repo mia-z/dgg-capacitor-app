@@ -38,6 +38,12 @@ const noVodsAlertProps = {
 	buttons: ["Ok"]
 }
 
+const noDestinyStreamError = {
+	header: "Couldnt play Destiny stream",
+	subHeader: "Couldnt play Destiny's youtube stream - tell miaz in DGG if you see this error (you shouldnt ever see it!)",
+	buttons: ["Ok"]
+}
+
 export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 	const sideMenuRef = useRef<HTMLIonMenuElement>(null);
 
@@ -78,6 +84,16 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		setLogoutLoadingAlertOpen(false);
 	}
 
+	const onPlayDestinyStream = useCallback(() => {
+		if (streamInfo?.streams.youtube.id) {
+			setCurrentEmbed({ platform: "youtube", videoId: streamInfo?.streams.youtube.id });
+			setUsingCustomEmbed(false);
+			sideMenuRef.current!.close();
+		} else {
+			presentAlert(noDestinyStreamError);
+		}
+	}, [streamInfo, sideMenuRef]);
+
 	const onPlayLatestVod = useCallback(() => {
 		if (!vodsInfo || (vodsInfo && vodsInfo?.length < 1 && !vodsInfo[0])) {
 			presentAlert(noVodsAlertProps);
@@ -87,6 +103,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		const embed = parseEmbedLink(vodsInfo[0].url);
 		if (embed) {
 			setCurrentEmbed(embed);
+			setUsingCustomEmbed(true);
 			sideMenuRef.current!.close();
 		} else {
 			console.log("couldnt parse latest embed url!");
@@ -171,7 +188,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 												Stream is playing
 											</div>
 										</IonButton> :
-										<IonButton disabled className={"w-3/5 h-6 text-sm mx-auto roboto"}>
+										<IonButton onTouchEnd={() => onPlayDestinyStream()} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
 											<div className={"text-xs"}>
 												View Destiny's Stream
 											</div>

@@ -2,6 +2,7 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import YouTube, { YouTubeProps} from "react-youtube";
 import {useBoundStore} from "../hooks/useBoundStore";
 import { useInfoQueries } from "../hooks/useInfoQueries";
+import { TwitchPlayer } from "react-twitch-embed";
 
 type StreamContainerProps = {
     height: number,
@@ -35,10 +36,7 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 		case "twitch": {
 			return (
 				<div className={"transition-all flex flex-col"} style={{ width: "100%", height: playerIsHidden ? 0 : (9/16) * width }}>
-					{/* <iframe src={`https://player.twitch.tv/?channel=${currentEmbed.videoId}&parent=localhost`} height={playerDimensions.height} width={playerDimensions.width} /> */}
-					<div className={"text-white text-center roboto m-auto"}>
-						Twitch embeds do not work with Ionic, <span className={"italic"}>for now.</span><br />This is Twitch's fault.
-					</div>
+					<TwitchPlayer channel={currentEmbed.videoId} height={playerDimensions.height} width={playerDimensions.width} />
 				</div>
 			)
 		}
@@ -51,6 +49,4 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 		}
 		default: return <div></div> //TODO: Improve this somewhat
 	}
-
-
 }
