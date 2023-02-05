@@ -57,7 +57,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 		setShouldFetchChatAfterResume(true);
 	});
 
-	useMemo(() => {
+	useEffect(() => {
 		if (chatBottomRef.current) {
 			const bottomObserver = new IntersectionObserver((entries) => {
 				if (entries[0].isIntersecting) {
