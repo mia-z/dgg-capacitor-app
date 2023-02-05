@@ -59,7 +59,11 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 	const [logoutLoadingAlertOpen, setLogoutLoadingAlertOpen] = useState<boolean>(false);
 
 	const flairsToUse = flairs?.filter((flair, index) => {
-		return user?.features.includes(flair.name)
+		if (!user?.features || user.features.length > 0) {
+			return [];
+		} else {
+			return user?.features.includes(flair.name);
+		}
 	});
 
     const [usersModalOpen, setUsersModalOpen] = useState<boolean>(false);
