@@ -48,9 +48,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 				timestamp: Date.now().toString()
 			};
 			
-			const messageIndicies = new Set(messages.map(x => x.timestamp));
-			const uniqueMerged = [ ...chatMessages, ...messages.filter(m => !messageIndicies.has(m.timestamp)) ]
-			const messagesWithSeparator = [ ...uniqueMerged, spacerMessage ];
+			const messagesWithSeparator = [ ...messages, spacerMessage ];
 			setMessages(messagesWithSeparator);
 			setShouldFetchChatAfterResume(false);
 			App.removeAllListeners();
