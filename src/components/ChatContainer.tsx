@@ -7,6 +7,8 @@ import { useQuery } from "react-query";
 import { RecentChatQuery } from "../lib/Queries";
 import { parseChatMessage } from "../lib/Helpers";
 import { UtilityLine } from "./UtilityLine";
+import { arrowDownOutline } from "ionicons/icons";
+import { IonIcon } from "@ionic/react";
 
 type ChatContainerProps = {
 	height: number,
@@ -96,15 +98,11 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 							case "UTILITY": return <UtilityLine key={`${message.timestamp}-utility`} {...message} />
 	                    }})
 				}
-				<div ref={chatBottomRef} className={"h-[4px]"}>{/*hidden reference for chat scrolling*/}</div>
+				<div ref={chatBottomRef} className={"h-[8px]"}>{/*hidden reference for chat scrolling*/}</div>
 	        </div>
-			<div className={"relative"}>
-				<div onClick={() => restoreScroll()} className={`${!bottomIsVisible ? "h-10 opacity-100" : "h-0 opacity-0 pointer-events-none"} absolute bottom-0 left-0 -right-2 transition-all flex z-[99999] w-[calc(100%-2px)] bg-black rounded-t-xl border-t border-x border-t-blue-400 border-x-blue-400`}>
-					<div className={"text-white roboto text-xl my-auto w-full text-center"}>
-						Click to return to latest messages
-                    </div>
-	            </div>
-	        </div>
+			<div onClick={() => restoreScroll()} className={`transition-all absolute bottom-16 h-12 w-12 bg-blue-400 rounded-full flex ${!bottomIsVisible ? "right-8" : "-right-12"}`}>
+				<IonIcon className={"text-white m-auto text-3xl"} icon={arrowDownOutline} />
+			</div>
 		</>
     );
 }
