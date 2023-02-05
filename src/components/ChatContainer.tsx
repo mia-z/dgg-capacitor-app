@@ -48,29 +48,22 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 		}
 	});
 
-    useEffect(() => {
-        if (isInteracting || !bottomIsVisible) {
-            const bottomObserver = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    setBottomIsVisible(true);
-                } else {
-                    setBottomIsVisible(false);
-                }
-            })
-			bottomObserver.observe(chatBottomRef.current!);
-            return () => {
-                bottomObserver.disconnect();
-            }
-        }
-	}, [chatBottomRef, isInteracting, bottomIsVisible]);
+	const bottomObserver = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			setBottomIsVisible(true);
+		} else {
+			setBottomIsVisible(false);
+		}
+	})
+	bottomObserver.observe(chatBottomRef.current!);
 
     useEffect(() => {
-        if (!isInteracting && bottomIsVisible) {
+        if (bottomIsVisible) {
             chatContainer.current!.scroll({
 				top: chatContainer.current!.scrollHeight,
 			});
         }
-	}, [chatMessages, height, isInteracting, bottomIsVisible]);
+	}, [chatMessages, height, bottomIsVisible]);
 
     const onChatContainerStartTouch = () => {
         setIsInteracting(true);
