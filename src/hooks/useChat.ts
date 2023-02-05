@@ -12,9 +12,9 @@ export const useChat = (auth: string) => {
     const [ready, setReady] = useState<boolean>(false);
 
     useEffect(() => {
-		wsClient.current = new WebSocket("wss://linode.miaz.xyz/ws?authkey=" + authKey);
+//		wsClient.current = new WebSocket("wss://linode.miaz.xyz/ws?authkey=" + authKey);
 //		wsClient.current = new WebSocket("wss://linode.miaz.xyz/wslocal");
-//		wsClient.current = new WebSocket("ws://192.168.7.101:5125/wslocal");
+		wsClient.current = new WebSocket("ws://192.168.7.101:5125/wslocal");
 
         applyListeners();
 

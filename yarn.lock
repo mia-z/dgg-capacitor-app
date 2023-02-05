@@ -1521,10 +1521,10 @@
     ionicons "^6.0.4"
     tslib "^2.1.0"
 
-"@ionic/core@^7.0.0-beta.0":
-  version "7.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.0.0-beta.0.tgz#8f659b767c73eac9ed4b13f16ecfb643da7ac35a"
-  integrity sha512-pIbuyVtvs5UscAqUNKgevttZknMbBPo8JaDzSME/O++a0tvra5TCQY5hwnlyNbkFpvEjOuyJqcHZeuinStRGqA==
+"@ionic/core@^6.5.2":
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-6.5.2.tgz#92544e01d04dd5189006db59ba9d064c9e40a869"
+  integrity sha512-9SQedXM0Hohy6ydgJVA22Ls6DeDgVJdlUHgaxQUNhtqIZuCqbaYZMEoanflMc852qkIyQtF25Zh7Q2wIVZveWw==
   dependencies:
     "@stencil/core" "^2.18.0"
     ionicons "^6.1.1"
