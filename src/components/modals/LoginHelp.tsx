@@ -1,11 +1,21 @@
-import {Dispatch, FC, SetStateAction, useRef} from "react";
-import {IonButton, IonContent, IonModal, IonSlide, IonSlides} from "@ionic/react";
+import {Dispatch, FC, SetStateAction, useRef, useState} from "react";
+import {IonButton, IonContent, IonicSlides, IonModal} from "@ionic/react";
 import Step1Image from "../../styles/img/Step1.png";
 import Step2Image from "../../styles/img/Step2.png";
 import Step3Image from "../../styles/img/Step3.png";
 import Step4Image from "../../styles/img/Step4.png";
 import { arrowForward }  from "ionicons/icons";
 import {SetHasSeenLoginInfo} from "../../lib/PreferencesHelper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperRef, Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
+
+import 'swiper/scss';
+import 'swiper/scss/autoplay';
+import 'swiper/scss/keyboard';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
+import 'swiper/scss/zoom';
+import '@ionic/react/css/ionic-swiper.css';
 
 type LoginHelpProps = {
 	loginHelpOpen: boolean,
@@ -13,7 +23,7 @@ type LoginHelpProps = {
 }
 
 export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen }) => {
-	const slidesRef = useRef<HTMLIonSlidesElement>(null);
+	const [swiperRef, setSwiperRef] = useState<SwiperRef>();
 
 	const loginHelpDismiss = async () => {
 		await SetHasSeenLoginInfo();
@@ -24,8 +34,17 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 		<IonModal keepContentsMounted={true} isOpen={loginHelpOpen} onWillDismiss={loginHelpDismiss}>
 			<IonContent>
 				<div className={"bg-light-black h-full"}>
-					<IonSlides ref={slidesRef} className={"h-full"}>
-						<IonSlide>
+					<Swiper onSwiper={(instance) => setSwiperRef(instance)}
+						className={"h-full"}
+						initialSlide={0}
+						slidesPerView={1}
+						modules={[Autoplay, Keyboard, Pagination, Scrollbar, Zoom, IonicSlides]}
+						autoplay={false}
+						keyboard={false}
+						pagination={false}
+						scrollbar={false}
+						zoom={true}>
+						<SwiperSlide>
 							<div className={"relative h-full w-full flex flex-col"}>
 								<div className={"relative text-light-black rounded p-3 text-center w-4/5 mt-3 work-sans mx-auto shadow-lg text-xs bg-[whitesmoke]"}>
 									Third-party logins to Destiny.gg chat are not fully supported - this short guide will help you get started so you can join your fellow chatters!
@@ -39,7 +58,7 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 									Log in to one of these like normal and you will be sent to your DGG website profile.
 								</div>
 								<div className={"mt-auto mb-2 flex-col"}>
-									<IonButton onTouchEnd={() => slidesRef.current?.slideNext()} className={""}>
+									<IonButton onTouchEnd={() => swiperRef?.slideNext()} className={""}>
 										Continue
 									</IonButton>
 								</div>
@@ -49,8 +68,8 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 									</div>
 								</div>
 							</div>
-						</IonSlide>
-						<IonSlide>
+						</SwiperSlide>
+						<SwiperSlide>
 							<div className={"relative h-full w-full flex flex-col"}>
 								<div className={"mx-auto mt-7 w-4/5 rounded-[25px] border-2 border-blue-400 shadow-lg"}>
 									<img className={""} src={Step2Image} />
@@ -59,13 +78,13 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 									Once logged in, head over to the "Developers" tab using the right-most button on the navigation bar.
 								</div>
 								<div className={"mt-auto mb-2 flex-col"}>
-									<IonButton onTouchEnd={() => slidesRef.current?.slideNext()} className={""}>
+									<IonButton onTouchEnd={() => swiperRef?.slideNext()} className={""}>
 										Continue
 									</IonButton>
 								</div>
 							</div>
-						</IonSlide>
-						<IonSlide>
+						</SwiperSlide>
+						<SwiperSlide>
 							<div className={"relative h-full w-full flex flex-col"}>
 								<div className={"mx-auto mt-7 w-4/5 rounded-[25px] border-2 border-blue-400 shadow-lg"}>
 									<img className={""} src={Step3Image} />
@@ -79,13 +98,13 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 									<img className={"absolute -bottom-4 -right-2"} src={"https://cdn.destiny.gg/2.60.0/emotes/6296cf7e8ccd0.png"} />
 								</div>
 								<div className={"mt-auto mb-2 flex-col"}>
-									<IonButton onTouchEnd={() => slidesRef.current?.slideNext()} className={""}>
+									<IonButton onTouchEnd={() => swiperRef?.slideNext()} className={""}>
 										Continue
 									</IonButton>
 								</div>
 							</div>
-						</IonSlide>
-						<IonSlide>
+						</SwiperSlide>
+						<SwiperSlide>
 							<div className={"relative h-full w-full flex flex-col"}>
 								<div className={"mx-auto mt-7 w-4/5 rounded-[25px] border-2 border-blue-400 shadow-lg"}>
 									<img className={""} src={Step4Image} />
@@ -100,13 +119,13 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 									<img className={"absolute -bottom-4 -right-2"} src={"https://cdn.destiny.gg/2.60.0/emotes/6296cf7e8ccd0.png"} />
 								</div>
 								<div className={"mt-auto mb-2 flex-col"}>
-									<IonButton onTouchEnd={() => setLoginHelpOpen(false)} className={""}>
+									<IonButton onTouchEnd={() => { setLoginHelpOpen(false); swiperRef?.slideTo(0) }} className={""}>
 										Done!
 									</IonButton>
 								</div>
 							</div>
-						</IonSlide>
-					</IonSlides>
+						</SwiperSlide>
+					</Swiper>
 				</div>
 			</IonContent>
 		</IonModal>

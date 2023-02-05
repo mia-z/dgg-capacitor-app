@@ -1521,12 +1521,12 @@
     ionicons "^6.0.4"
     tslib "^2.1.0"
 
-"@ionic/core@^6.5.2":
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-6.5.2.tgz#92544e01d04dd5189006db59ba9d064c9e40a869"
-  integrity sha512-9SQedXM0Hohy6ydgJVA22Ls6DeDgVJdlUHgaxQUNhtqIZuCqbaYZMEoanflMc852qkIyQtF25Zh7Q2wIVZveWw==
+"@ionic/core@^7.0.0-beta.1":
+  version "7.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.0.0-beta.1.tgz#7c9186f889a8a8ba75aca0a2f9a2f54b86cb871b"
+  integrity sha512-83L5BlrEL1QWSAWtpNHKnH1dWa8RLfcc20kC7/okA918XPYXeg4NGrfPVgygytePjrr1fhMnAOgKGK1hjesTRA==
   dependencies:
-    "@stencil/core" "^2.18.0"
+    "@stencil/core" "^3.0.0"
     ionicons "^6.1.1"
     tslib "^2.1.0"
 
@@ -2017,6 +2017,11 @@
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.20.0.tgz#0e68b5b42e727233803291eb0367ab2b53f7f1f3"
   integrity sha512-ka+eOW+dNteXIfLCRipNbbAlBEQjqJ2fkx3fxzlKgnNHEQMdZiuIjlWt63KzvOJStNeuADdQXo89BB1dC2VRUw==
+
+"@stencil/core@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-3.0.0.tgz#2fba3143c77d2e0d619dbffb1a5c938f7a4b7615"
+  integrity sha512-MYhrOlnzAtBUJH0FEggaP2pwm5GUvkB4wYRpZZFtUzGXAPamvrsreUf8QsGe0C4NdFdk8NlUauFxEEGE3z1+Sw==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
@@ -9112,6 +9117,11 @@ ssh-config@^1.1.1:
   resolved "https://registry.yarnpkg.com/ssh-config/-/ssh-config-1.1.6.tgz#c6ce2d7f85f395178c9e47c448d62b8adf9b2523"
   integrity sha512-ZPO9rECxzs5JIQ6G/2EfL1I9ho/BVZkx9HRKn8+0af7QgwAmumQ7XBFP1ggMyPMo+/tUbmv0HFdv4qifdO/9JA==
 
+ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
@@ -9384,6 +9394,13 @@ svgo@^2.7.0:
     csso "^4.2.0"
     picocolors "^1.0.0"
     stable "^0.1.8"
+
+swiper@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-9.0.2.tgz#7acad3a875e415f2265aa8bb5786455917472bb1"
+  integrity sha512-6iGqr9OeEMU7KVfGxXNW+xhVWmqvVhtt+1nnqbZ0a0i1p/S1rXgr9cPD55k7DFxeOojVHkiEqmsubaP3NgWwUQ==
+  dependencies:
+    ssr-window "^4.0.2"
 
 symbol-tree@^3.2.4:
   version "3.2.4"
