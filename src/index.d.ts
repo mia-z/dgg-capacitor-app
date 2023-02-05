@@ -162,7 +162,8 @@ type JoinMessage = ChatUserAndTimestampMessage & {
 
 type ErrorMessage = {
     command: "ERR",
-    description: string
+    description: string,
+	timestamp: string,
 }
 
 type BroadcastMessage = {
