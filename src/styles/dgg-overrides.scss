@@ -177,4 +177,15 @@
 	}
 }
 
+.nsfw-link {
+    // border-style: dashed;
+    // border-color: transparent transparent $color-underline-nsfw transparent;
+    // border-width: 1px 0 1px 0;
+	text-decoration: underline dashed red;
+}
+
+.nsfl-link {
+	text-decoration: underline dashed yellow;
+}
+
 @import "./flairs.scss";
