@@ -1,4 +1,4 @@
-import React, {FC, useCallback, useContext, useEffect, useRef, useState} from "react"
+import React, {FC, useCallback, useContext, useEffect, useMemo, useRef, useState} from "react"
 import ChatLine from "./ChatLine"
 import { Keyboard } from "@capacitor/keyboard";
 import {BroadcastLine} from "./BroadcastLine";
@@ -9,6 +9,7 @@ import { parseChatMessage } from "../lib/Helpers";
 import { UtilityLine } from "./UtilityLine";
 import { arrowDownOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
+import { App } from "@capacitor/app";
 
 type ChatContainerProps = {
 	height: number,
@@ -21,6 +22,8 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 	const chatContainer = useRef<HTMLDivElement | null>(null);
 	const chatBottomRef = useRef<HTMLDivElement | null>(null);
 
+	const [shouldFetchChatAfterResume, setShouldFetchChatAfterResume] = useState<boolean>(true);
+
     const [bottomIsVisible, setBottomIsVisible] = useState<boolean>(true);
 
     const [isInteracting, setIsInteracting] = useState<boolean>(false);
@@ -31,6 +34,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 		queryKey: ["chatHistory"],
 		queryFn: async () => await RecentChatQuery(),
 		refetchInterval: false,
+		enabled: shouldFetchChatAfterResume,
 		onSuccess: (data) => {
 			// console.log(data);
 			const messages = data
@@ -45,17 +49,30 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			};
 			const messagesWithSeparator = [ ...messages, spacerMessage ]	
 			setMessages(messagesWithSeparator);
+			setShouldFetchChatAfterResume(false);
 		}
 	});
 
-	const bottomObserver = new IntersectionObserver((entries) => {
-		if (entries[0].isIntersecting) {
-			setBottomIsVisible(true);
-		} else {
-			setBottomIsVisible(false);
+	App.addListener("resume", () => {
+		setShouldFetchChatAfterResume(true);
+	});
+
+	useMemo(() => {
+		if (chatBottomRef.current) {
+			const bottomObserver = new IntersectionObserver((entries) => {
+				if (entries[0].isIntersecting) {
+					setBottomIsVisible(true);
+				} else {
+					setBottomIsVisible(false);
+				}
+			})
+			bottomObserver.observe(chatBottomRef.current!);
+	
+			return () => {
+				bottomObserver.disconnect();
+			}
 		}
-	})
-	bottomObserver.observe(chatBottomRef.current!);
+	}, [chatBottomRef])
 
     useEffect(() => {
         if (bottomIsVisible) {
