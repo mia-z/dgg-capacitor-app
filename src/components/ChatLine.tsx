@@ -1,4 +1,4 @@
-import React, { FC, memo, TouchEvent, useCallback, useContext } from "react";
+import React, { FC, memo, TouchEvent, useCallback, useContext, useState } from "react";
 import { ChatLineEmote } from "./ChatLineEmote";
 import { ChatLineText } from "./ChatLineText";
 import { useBoundStore } from "../hooks/useBoundStore";
@@ -10,6 +10,10 @@ import { Platforms } from "../contants";
 const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, isSameNickAsPrevious, comboCount, isEmoteComboFinished, isEmoteComboMessage }) => {
     const { showUserMessages, user, watchingNicks, addNickToWatch, removeNickToWatch, chatUsers, setWatchingNicks,setCurrentEmbed, setUsingCustomEmbed } = useBoundStore();
     const { emotes, flairs, emoteRegex } = useContext(DggAssets);
+
+	const [hasNsfwLink, setHasNsfwLink] = useState<boolean>(false);
+	const [hasNsflLink, setHasNsflLink] = useState<boolean>(false);
+
     const flairsToUse = flairs?.filter((flair, index) => {
         return features.includes(flair.name)
     });
@@ -28,6 +32,10 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 	const isWatchingNicks = watchingNicks.length > 0;
 
 	const isWatchingThisNick = isWatchingNicks && watchingNicks.some(x => x.toLowerCase() === nick.toLowerCase());
+
+	const hasNsfwLabel = data.match(/(nsfw)+/i)?.[0];
+
+	const hasNsflLabel = data.match(/(nsfl)+/i)?.[0];
 
 	const onNickPress = useCallback((event: TouchEvent<HTMLSpanElement>) => {
 		event.stopPropagation();
@@ -119,7 +127,17 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
                         const emote = emotes!.find(x => x.prefix === string);
                         return <ChatLineEmote key={`${string}${timestamp}${index}`} emote={emote!} />;
                     } else {
-						return <ChatLineText key={`${string}${timestamp}${index}`} onMessageTextPress={onMessageTextPress} isGreenText={isGreenText} isCurrentUserMessage={isCurrentUser} isSlashMeMessage={isSlashMeMessage} text={string} />;
+						return <ChatLineText 
+							key={`${string}${timestamp}${index}`}
+							setHasNsflLink={setHasNsflLink} 
+							setHasNsfwLink={setHasNsfwLink} 
+							hasNsflLabel={hasNsflLabel} 
+							hasNsfwLabel={hasNsfwLabel} 
+							onMessageTextPress={onMessageTextPress} 
+							isGreenText={isGreenText} 
+							isCurrentUserMessage={isCurrentUser} 
+							isSlashMeMessage={isSlashMeMessage} 
+							text={string} />;
                     }
                 })
 			}

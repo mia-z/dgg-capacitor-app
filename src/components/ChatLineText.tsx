@@ -1,4 +1,4 @@
-import React, { FC, TouchEvent, useState } from "react"
+import React, { Dispatch, FC, SetStateAction, TouchEvent, useState } from "react"
 import { useBoundStore } from "../hooks/useBoundStore";
 
 type ChatLineTextProps = {
@@ -7,13 +7,24 @@ type ChatLineTextProps = {
 	isSlashMeMessage: boolean,
 	isCurrentUserMessage: boolean,
 	onMessageTextPress: (text: string, isEmbed?: boolean) => void,
+	hasNsflLabel: string | undefined,
+	hasNsfwLabel: string | undefined,
+	setHasNsfwLink: Dispatch<SetStateAction<boolean>>,
+	setHasNsflLink: Dispatch<SetStateAction<boolean>>
 }
 
 const urlRegex = new RegExp(/(http|https):\/\/(\S*)/);
 const embedRegex = new RegExp(/^([#]{1}(twitch|youtube)\/(.+))$/);
 
-export const ChatLineText: FC<ChatLineTextProps> = ({ isGreenText, text, isSlashMeMessage, isCurrentUserMessage, onMessageTextPress }) => {
+export const ChatLineText: FC<ChatLineTextProps> = ({ isGreenText, text, isSlashMeMessage, isCurrentUserMessage, onMessageTextPress, hasNsflLabel, hasNsfwLabel, setHasNsflLink, setHasNsfwLink }) => {
 	const isUrl = text.match(urlRegex);
+	if (isUrl && hasNsfwLabel) {
+		setHasNsfwLink(true);
+	}
+	if (isUrl && hasNsflLabel) {
+		setHasNsflLink(true);
+	}
+
 	const isEmbed = text.match(embedRegex);
 
 	const onTextPress = (event: TouchEvent<HTMLDivElement>) => {
@@ -29,7 +40,7 @@ export const ChatLineText: FC<ChatLineTextProps> = ({ isGreenText, text, isSlash
 	if (isUrl) {
 		return (
 			<>
-				<a href={text} className={`break-all text-[#02c2ff]`}>&nbsp;{text}</a>
+				<a href={text} className={`break-all text-[#02c2ff] ${hasNsfwLabel ? " nsfw-link" : ""} ${hasNsflLabel ? "nsfl-link" : ""}`}>&nbsp;{text}</a>
 			</>
 		)
     } 
