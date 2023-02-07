@@ -1,0 +1,3 @@
+[submodule "plugins/dgg-kotlin-websocket"]
+	path = plugins/dgg-kotlin-websocket
+	url = git@github.com:mia-z/dgg-kotlin-websocket.git
