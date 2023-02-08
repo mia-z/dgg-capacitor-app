@@ -1,3 +1,3 @@
-[submodule "plugins/dgg-kotlin-websocket"]
-	path = plugins/dgg-kotlin-websocket
-	url = git@github.com:mia-z/dgg-kotlin-websocket.git
+[submodule "plugins/capacitor-websocket"]
+	path = plugins/capacitor-websocket
+	url = git@github.com:mia-z/capacitor-websocket.git
