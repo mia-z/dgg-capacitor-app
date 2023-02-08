@@ -17,8 +17,6 @@
     "ionic:save": "ionic cap copy android"
   },
   "dependencies": {
-    "@awesome-cordova-plugins/core": "^6.3.0",
-    "@awesome-cordova-plugins/http": "^6.3.0",
     "@capacitor/android": "^4.6.1",
     "@capacitor/app": "^4.1.1",
     "@capacitor/browser": "^4.1.0",
@@ -33,12 +31,9 @@
     "@ionic/core": "^7.0.0-beta.1",
     "@ionic/react": "^6.4.1",
     "@ionic/react-router": "^6.4.1",
-    "@miaz/dgg-chat": "^0.0.1",
+    "@miaz/capacitor-websocket": "file:./plugins/capacitor-websocket",
     "@ungap/global-this": "^0.4.4",
     "@vitejs/plugin-react": "^3.0.0",
-    "axios": "^1.2.2",
-    "cordova-plugin-advanced-http": "^3.3.1",
-    "cordova-plugin-file": "^7.0.0",
     "core-js": "^3.27.1",
     "humanize-duration": "^3.28.0",
     "ionicons": "^6.0.4",

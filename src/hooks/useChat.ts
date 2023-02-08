@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useCallback, useLayoutEffect } from "react";
 import { parseChatMessage } from "../lib/Helpers";
 import {useBoundStore} from "./useBoundStore";
-import { DggChatSocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/dgg-chat";
+import { CapacitorWebsocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/capacitor-websocket";
 
 export const useChat = (auth: string) => {
     const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers } = useBoundStore();
@@ -12,27 +12,33 @@ export const useChat = (auth: string) => {
 
     useEffect(() => {
         applyListeners();
-        DggChatSocket.build({ authToken: auth });
-        DggChatSocket.applyListeners();
-        DggChatSocket.connect();
+        CapacitorWebsocket.build({ 
+            url: "wss://chat.destiny.gg/ws", 
+            headers: { 
+                "User-Agent": "Appstiny-ChatConnector",
+                "Origin": "https://www.destiny.gg",
+                "Cookie": "authtoken=" + auth,
+            } 
+        });
+        CapacitorWebsocket.applyListeners();
+        CapacitorWebsocket.connect();
 
         return () => {
             cleanupListeners();
-            DggChatSocket.disconnect();
+            CapacitorWebsocket.disconnect();
         }
 	}, [authKey]);
 
     const applyListeners = useCallback(() => {
-        DggChatSocket.addListener("message", handleMessage);
-        DggChatSocket.addListener("disconnected", handleDisconnect);
-        DggChatSocket.addListener("error", handleError);
-        DggChatSocket.addListener("connected", handleConnect);
+        CapacitorWebsocket.addListener("message", handleMessage);
+        CapacitorWebsocket.addListener("disconnected", handleDisconnect);
+        CapacitorWebsocket.addListener("error", handleError);
+        CapacitorWebsocket.addListener("connected", handleConnect);
 	}, []);
 
     const cleanupListeners = useCallback(() => {
         console.log("cleaning listeners");
-        //@ts-ignore
-        DggChatSocket.removeAllListeners();
+        CapacitorWebsocket.removeAllListeners();
 	}, []);
 
     const handleMessage = useCallback((message: MessageEvent) => {
@@ -86,7 +92,7 @@ export const useChat = (auth: string) => {
 	}, []);
 
     const sendMessage = (chatMessage: string) => {
-        DggChatSocket.send({ data: `MSG { "data": "${chatMessage}" } ` });
+        CapacitorWebsocket.send({ data: `MSG { "data": "${chatMessage}" } ` });
     };
 
     return { sendMessage };

@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { GetLoginToken, GetUserData } from "../lib/PreferencesHelper";
-import { Last5EmbedsQuery, LatestVideosQuery, LatestVodsQuery, RecentEmbedsQuery, StreamInfoQuery } from "../lib/Queries";
+import { Last5EmbedsQuery, RecentEmbedsQuery, StreamInfoQuery } from "../lib/Queries";
 import { useBoundStore } from "./useBoundStore";
 
 export const useInfoQueries = () => {
@@ -18,28 +18,6 @@ export const useInfoQueries = () => {
 		onSuccess: (result) => {
 			if (result) {
 				setStreamInfo(result);
-			}
-		},
-		refetchInterval: 1000 * 60
-	});
-
-    const vodsInfoQuery = useQuery({
-		queryKey: ["vodsInfo", vodsInfo],
-		queryFn: async () => await LatestVodsQuery(),
-		onSuccess: (result) => {
-			if (result) {
-				setVodsInfo(result);
-			}
-		},
-		refetchInterval: 1000 * 60
-	});
-
-    const videosInfoQuery = useQuery({
-		queryKey: ["videosInfo", videosInfo],
-		queryFn: async () => await LatestVideosQuery(),
-		onSuccess: (result) => {
-			if (result) {
-				setVideosInfo(result);
 			}
 		},
 		refetchInterval: 1000 * 60
@@ -72,10 +50,10 @@ export const useInfoQueries = () => {
 			...streamInfoQuery
 		},
 		videosInfo: {
-			...videosInfoQuery
+			
 		},
         vodsInfo: {
-			...vodsInfoQuery
+			
 		},
 		recentEmbedsInfo: {
 			...recentEmbedsQuery
