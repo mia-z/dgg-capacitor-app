@@ -13,10 +13,11 @@ export const useChat = (auth: string) => {
     useEffect(() => {
         applyListeners();
         CapacitorWebsocket.build({ 
-            url: "wss://chat.destiny.gg/ws", 
+            // url: "wss://chat.destiny.gg/ws", 
+            url: "wss://chat.omniliberal.dev/ws", 
             headers: { 
                 "User-Agent": "Appstiny-ChatConnector",
-                "Origin": "https://www.destiny.gg",
+                "Origin": "https://www.omniliberal.dev",
                 "Cookie": "authtoken=" + auth,
             } 
         });
@@ -42,6 +43,7 @@ export const useChat = (auth: string) => {
 	}, []);
 
     const handleMessage = useCallback((message: MessageEvent) => {
+        console.log(message);
         const parsedMessage = parseChatMessage(message.data);
         switch (parsedMessage.command) {
             case "MSG": {

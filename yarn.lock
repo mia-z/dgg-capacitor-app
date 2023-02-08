@@ -1918,8 +1918,10 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@miaz/capacitor-websocket@file:./plugins/capacitor-websocket":
+"@miaz/capacitor-websocket@^0.1.1":
   version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@miaz/capacitor-websocket/-/capacitor-websocket-0.1.1.tgz#c3217b5f03f960253ac2c2c9bdf950bcfead52e6"
+  integrity sha512-/I7gnaxc268lsKZGlI2FHdKgErVAXt6106N6I54BIXcbNlvU/Fj+RUNhedp1N2DB0CtmD98EzoJg9dN1YkP37g==
   dependencies:
     "@capacitor/cli" "^4.6.3"
 
