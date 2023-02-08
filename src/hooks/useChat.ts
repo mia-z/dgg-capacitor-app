@@ -1,10 +1,9 @@
 import { useRef, useState, useEffect, useCallback, useLayoutEffect } from "react";
 import { parseChatMessage } from "../lib/Helpers";
 import {useBoundStore} from "./useBoundStore";
+import { DggChatSocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/dgg-chat";
 
 export const useChat = (auth: string) => {
-    const wsClient = useRef<WebSocket | null>(null);
-
     const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers } = useBoundStore();
 
     const [authKey, setAuthKey] = useState<string>(auth);
@@ -12,37 +11,29 @@ export const useChat = (auth: string) => {
     const [ready, setReady] = useState<boolean>(false);
 
     useEffect(() => {
-		wsClient.current = new WebSocket("wss://linode.miaz.xyz/ws?authkey=" + authKey);
-//		wsClient.current = new WebSocket("wss://linode.miaz.xyz/wslocal");
-//		wsClient.current = new WebSocket("ws://192.168.7.101:5125/wslocal");
-
         applyListeners();
+        DggChatSocket.build({ authToken: auth });
+        DggChatSocket.applyListeners();
+        DggChatSocket.connect();
 
         return () => {
             cleanupListeners();
-            wsClient.current!.close();
+            DggChatSocket.disconnect();
         }
-	}, [wsClient, authKey]);
+	}, [authKey]);
 
     const applyListeners = useCallback(() => {
-        if (wsClient.current !== null) {
-            console.log("applying listeners");
-            wsClient.current.addEventListener("message", handleMessage);
-            wsClient.current.addEventListener("close", handleClose);
-            wsClient.current.addEventListener("error", handleError);
-            wsClient.current.addEventListener("open", handleOpen);
-        }
-	}, [wsClient]);
+        DggChatSocket.addListener("message", handleMessage);
+        DggChatSocket.addListener("disconnected", handleDisconnect);
+        DggChatSocket.addListener("error", handleError);
+        DggChatSocket.addListener("connected", handleConnect);
+	}, []);
 
     const cleanupListeners = useCallback(() => {
-        if (wsClient.current !== null) {
-            console.log("cleaning listeners");
-            wsClient.current.removeEventListener("message", handleMessage);
-            wsClient.current.removeEventListener("close", handleClose);
-            wsClient.current.removeEventListener("error", handleError);
-            wsClient.current.removeEventListener("open", handleOpen);
-        }
-	}, [wsClient]);
+        console.log("cleaning listeners");
+        //@ts-ignore
+        DggChatSocket.removeAllListeners();
+	}, []);
 
     const handleMessage = useCallback((message: MessageEvent) => {
         const parsedMessage = parseChatMessage(message.data);
@@ -75,29 +66,28 @@ export const useChat = (auth: string) => {
             }
 			case "ERR": {
 				console.log("Got an error message from the stream: " + parsedMessage.description);
-            	break;
-        	}
+                break;
+            }
         }
-	}, [wsClient]);
+	}, []);
 
-    const handleOpen = useCallback((event: Event) => {
+    const handleConnect = useCallback((event: ConnectedEvent) => {
         console.log("Connected to chat!");
         setReady(true);
-	}, [wsClient]);
+	}, []);
 
-    const handleClose = useCallback((event: Event) => {
-        console.log("Chat socket closed!");
+    const handleDisconnect = useCallback((event: DisconnectedEvent) => {
+        console.log("Disconnected from chat!");
 		addMessage({ data: "Disconnected - will try to reconnect..", command: "SYS", isHidden: false, type: "warning", timestamp: Date.now().toString() });
-        setReady(false);
-	}, [wsClient]);
+	}, []);
 
-    const handleError = useCallback((error: Event) => {
-        console.log("Chat socket error! " + error.type);
-	}, [wsClient]);
+    const handleError = useCallback((error: ErrorEvent) => {
+        console.log("Chat socket error! " + error.cause);
+	}, []);
 
-    const sendMessage = useCallback((chatMessage: string) => {
-		wsClient.current?.send(chatMessage);
-    }, [wsClient]);
+    const sendMessage = (chatMessage: string) => {
+        DggChatSocket.send({ data: `MSG { "data": "${chatMessage}" } ` });
+    };
 
     return { sendMessage };
 }
