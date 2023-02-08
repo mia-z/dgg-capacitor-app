@@ -38,7 +38,7 @@ export const BigScreen: FC = () => {
 						<ChatContainer height={height} width={width} />
 						<ChatInputContainer height={height} width={width} sendMessage={sendMessage} />
 					</div>
-            	</IonContent>
+				</IonContent>
 			</DggAssetsContext>
         </IonPage>
 	);

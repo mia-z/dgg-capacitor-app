@@ -104,14 +104,14 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			<div onTouchMove={onChatContainerStartTouch} onTouchEnd={() => onChatContainerEndTouch()} ref={chatContainer} className={"relative bg-black overflow-scroll transition-all leading-6"} style={{ height: chatHeight }}>
 				{
 					chatMessages.map((message, index) => {
-	                    switch(message.command) {
-	                        case "MSG": return <ChatLine key={`${message.timestamp}-${message.nick}`} {...message} />;
-	                        case "BROADCAST": return <BroadcastLine key={`${message.timestamp}-broadcast`} data={message.data} />;
+						switch(message.command) {
+							case "MSG": return <ChatLine key={`${message.timestamp}-${message.nick}`} {...message} />;
+							case "BROADCAST": return <BroadcastLine key={`${message.timestamp}-broadcast`} data={message.data} />;
 							case "UTILITY": return <UtilityLine key={`${message.timestamp}-utility`} {...message} />
-	                    }})
+					}})
 				}
 				<div ref={chatBottomRef} className={"h-[8px]"}>{/*hidden reference for chat scrolling*/}</div>
-	        </div>
+			</div>
 			<div onClick={() => restoreScroll()} className={`transition-all z-50 absolute bottom-16 h-12 w-12 bg-blue-400 rounded-full flex ${!bottomIsVisible ? "right-8" : "-right-12"}`}>
 				<IonIcon className={"text-white m-auto text-3xl"} icon={arrowDownOutline} />
 			</div>

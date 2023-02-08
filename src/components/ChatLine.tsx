@@ -111,7 +111,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 					}
 					<span onTouchEnd={onNickPress} className={"text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
 						{nick}
-	                </span>
+					</span>
 					{	!isSlashMeMessage &&
 						<span className={"text-white"}>
 							:&nbsp;
