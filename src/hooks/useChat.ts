@@ -13,6 +13,7 @@ export const useChat = (auth: string) => {
     useEffect(() => {
         applyListeners();
         CapacitorWebsocket.build({ 
+            name: "chat",
             url: "wss://chat.destiny.gg/ws", 
             //url: "wss://chat.omniliberal.dev/ws", 
             headers: { 
@@ -22,12 +23,12 @@ export const useChat = (auth: string) => {
                 "Cookie": "authtoken=" + auth,
             } 
         });
-        CapacitorWebsocket.applyListeners();
-        CapacitorWebsocket.connect();
+        CapacitorWebsocket.applyListeners({ name: "chat" });
+        CapacitorWebsocket.connect({ name: "chat" });
 
         return () => {
             cleanupListeners();
-            CapacitorWebsocket.disconnect();
+            CapacitorWebsocket.disconnect({ name: "chat" });
         }
 	}, [authKey]);
 
@@ -108,7 +109,7 @@ export const useChat = (auth: string) => {
 	}, []);
 
     const sendMessage = (chatMessage: string) => {
-        CapacitorWebsocket.send({ data: `MSG { "data": "${chatMessage}" } ` });
+        CapacitorWebsocket.send({ name: "chat", data: `MSG { "data": "${chatMessage}" } ` });
     };
 
     return { sendMessage };
