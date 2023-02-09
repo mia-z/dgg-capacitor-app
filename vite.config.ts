@@ -3,10 +3,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
 	plugins: [react()],
-  	root: "./src",
-  	build: {
-	    outDir: "../dist",
-	    minify: false,
-	    emptyOutDir: true,
-  	}
+	root: "./src",
+	build: {
+		target: "ES6",
+		outDir: "../dist",
+		minify: false,
+		emptyOutDir: true,
+	}
 });
