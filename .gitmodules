@@ -1,3 +1,0 @@
-[submodule "plugins/capacitor-websocket"]
-	path = plugins/capacitor-websocket
-	url = git@github.com:mia-z/capacitor-websocket.git
