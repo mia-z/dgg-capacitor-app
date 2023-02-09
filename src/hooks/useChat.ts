@@ -4,7 +4,7 @@ import {useBoundStore} from "./useBoundStore";
 import { CapacitorWebsocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/capacitor-websocket";
 
 export const useChat = (auth: string) => {
-    const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers } = useBoundStore();
+    const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers, setPollIsActive, setNewPoll, endPoll, updatePoll } = useBoundStore();
 
     const [authKey, setAuthKey] = useState<string>(auth);
 
@@ -13,11 +13,12 @@ export const useChat = (auth: string) => {
     useEffect(() => {
         applyListeners();
         CapacitorWebsocket.build({ 
-            // url: "wss://chat.destiny.gg/ws", 
-            url: "wss://chat.omniliberal.dev/ws", 
+            url: "wss://chat.destiny.gg/ws", 
+            //url: "wss://chat.omniliberal.dev/ws", 
             headers: { 
                 "User-Agent": "Appstiny-ChatConnector",
-                "Origin": "https://www.omniliberal.dev",
+                //"Origin": "https://www.omniliberal.dev",
+                "Origin": "https://www.destiny.gg",
                 "Cookie": "authtoken=" + auth,
             } 
         });
@@ -74,6 +75,19 @@ export const useChat = (auth: string) => {
             }
 			case "ERR": {
 				console.log("Got an error message from the stream: " + parsedMessage.description);
+                break;
+            }
+            case "POLLSTART": {
+                setPollIsActive(true);
+                setNewPoll(parsedMessage);
+                break;
+            }
+            case "POLLSTOP": {
+                endPoll(parsedMessage);
+                break;
+            }
+            case "VOTECAST": {
+                updatePoll(parsedMessage.vote);
                 break;
             }
         }

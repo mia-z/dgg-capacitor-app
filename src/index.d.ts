@@ -188,6 +188,49 @@ type BanMessage =  ChatUserAndTimestampMessage & {
 	duration: string
 }
 
+type PollMessage = {
+	canvote: boolean,
+    myvote: number,
+    nick: string,
+    weighted: boolean,
+    start: string,
+    now: string,
+    time: number,
+    question: string,
+    options: string[],
+	totals: number[],
+    totalvotes: number
+}
+
+type PollStartMessage = PollMessage & {
+	command: "POLLSTART",
+}
+
+type PollStopMessage = PollMessage & {
+	command: "POLLSTOP",
+}
+
+type PollState = {
+	position: "START" | "END",
+	canVote: boolean,
+	myVote: number,
+	weighted: boolean,
+	start: string,
+	duration: number,
+	remaining: number,
+	question: string,
+	options: string[],
+	totals: number[],
+	totalVotes: number,
+	author: string
+}
+
+type VoteCastMessage = {
+	command: "VOTECAST",
+	nick: string,
+	vote: number
+}
+
 type UtilityMessage = MessageBase & {
 	command: "UTILITY",
 	utilityType: "HORIZONTAL_SPACER"
@@ -197,7 +240,7 @@ type MessageCollection = Array<MessageCollectionItem>;
 
 type MessageCollectionItem = ChatMessage | BroadcastMessage | ErrorMessage | SystemMessage | UtilityMessage;
 
-type DggPayloadItem = ChatMessage | QuitMessage | JoinMessage | BroadcastMessage | NamesMessage | ErrorMessage | MuteMessage | BanMessage;
+type DggPayloadItem = ChatMessage | QuitMessage | JoinMessage | BroadcastMessage | NamesMessage | ErrorMessage | MuteMessage | BanMessage | PollStartMessage | PollStopMessage | VoteCastMessage;
 
 declare class MessageParseError extends Error {
     constructor(message: string);
