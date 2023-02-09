@@ -13,6 +13,7 @@ import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
 import { VodsModal } from "./modals/VodsModal";
 import { VideosModal } from "./modals/VideosModal";
 import { parseEmbedLink } from "../lib/Helpers";
+import { useStreamUpdates } from "../hooks/useStreamUpdates";
 
 const memePhrases = [
 	"YEE wins",
@@ -71,6 +72,8 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
     const [embedsModalOpen, setEmbedsModalOpen] = useState<boolean>(false);
     const [vodsModalOpen, setVodsModalOpen] = useState<boolean>(false);
 	const [videosModalOpen, setVideosModalOpen] = useState<boolean>(false);
+
+	const updates = useStreamUpdates();
 
 	const onUsersButtonPress = () => {
 		setUsersModalOpen(true);
