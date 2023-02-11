@@ -1,4 +1,4 @@
-import { FC, useCallback, useContext, useRef, useState } from "react";
+import React, { FC, useCallback, useContext, useRef, useState } from "react";
 import {IonAlert, IonButton, IonContent, IonIcon, IonMenu, useIonAlert, useIonRouter} from "@ionic/react";
 import { peopleOutline, desktopOutline, happyOutline, closeOutline, settingsSharp, logOutOutline } from "ionicons/icons";
 import { UsersModal } from "./modals/UsersModal";
@@ -6,7 +6,6 @@ import { EmotesModal } from "./modals/EmotesModal";
 import { useBoundStore } from "../hooks/useBoundStore";
 import { DggAssets } from "../hooks/DggAssetContext";
 import { DateTime } from "luxon";
-import React from "react";
 import HumanizeDuration from "humanize-duration";
 import {ClearUserData} from "../lib/PreferencesHelper";
 import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
