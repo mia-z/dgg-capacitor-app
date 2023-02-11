@@ -254,19 +254,32 @@ type MessageError = MessageParseError | MessageMatchError;
 
 type UnimplementedMessage = any;
 
-type LiveResponseType = "dggApi:streamInfo" | "dggApi:youtubeVods" | "dggApi:videos" | "dggApi:youtubeVideos" | "dggApi:hosting";
+type LiveResponseType = "dggApi:streamInfo" | "dggApi:youtubeVods" | "dggApi:videos" | "dggApi:hosting";
 
 type LiveResponseData<T> =
 	T extends "dggApi:streamInfo" ? StreamInfo :
 	T extends "dggApi:hosting" ? HostInfo :
 	T extends "dggApi:videos" ? VideosInfo :
-	T extends "dggApi:youtubeVods" ? VodsInfo :
-	any;
+	T extends "dggApi:youtubeVods" ? VodsInfo : 
+	never;
 
-type DggLiveResponse<T> = {
-    type: LiveResponseType,
-	data: LiveResponseData<T>
-}
+type DggLiveResponse<T> = 
+	T extends `dggApi:streamInfo` ? {
+		type: `dggApi:streamInfo`,
+		data: StreamInfo
+	} : 
+	T extends `dggApi:hosting` ? {
+		type: `dggApi:hosting`,
+		data: HostInfo
+	} : 
+	T extends `dggApi:videos` ? {
+		type: `dggApi:videos`,
+		data: VideosInfo
+	} : 
+	T extends `dggApi:youtubeVods` ? {
+		type: `dggApi:youtubeVods`,
+		data: VodsInfo
+	} : never;
 
 type StreamInfo = {
     hostedChannel: string | undefined,
@@ -338,6 +351,8 @@ type EmbedInfo = {
 	platform: SupportedPlatforms,
 	videoId: string
 }
+
+type EventNames = "chat" | "live";
 
 declare namespace Vyneer {
 	type Embed = {
