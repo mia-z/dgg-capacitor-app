@@ -33,10 +33,10 @@ export const useChat = (auth: string) => {
 	}, [authKey]);
 
     const applyListeners = useCallback(() => {
-        CapacitorWebsocket.addListener("message", handleMessage);
-        CapacitorWebsocket.addListener("disconnected", handleDisconnect);
-        CapacitorWebsocket.addListener("error", handleError);
-        CapacitorWebsocket.addListener("connected", handleConnect);
+        CapacitorWebsocket.addListener<EventNames>("chat:message", handleMessage);
+        CapacitorWebsocket.addListener<EventNames>("chat:disconnected", handleDisconnect);
+        CapacitorWebsocket.addListener<EventNames>("chat:error", handleError);
+        CapacitorWebsocket.addListener<EventNames>("chat:connected", handleConnect);
 	}, []);
 
     const cleanupListeners = useCallback(() => {
@@ -45,7 +45,7 @@ export const useChat = (auth: string) => {
 	}, []);
 
     const handleMessage = useCallback((message: MessageEvent) => {
-        console.log(message);
+        //console.log(message);
         const parsedMessage = parseChatMessage(message.data);
         switch (parsedMessage.command) {
             case "MSG": {

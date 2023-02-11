@@ -11,12 +11,14 @@ import { DggAssetsContext } from "../hooks/DggAssetContext";
 import {usePreferenceQueries} from "../hooks/usePreferenceQueries";
 import {ChatMenu} from "../components/ChatMenu";
 import { PollContainer } from "../components/PollContainer";
+import { useStreamUpdates } from "../hooks/useStreamUpdates";
 
 //Stub method used for testing the chat - is essentially a noop
 const sendMessage = (message: string) => console.log("message sent " + message);
 
 export const BigScreen: FC = () => {
 	usePreferenceQueries();
+	useStreamUpdates();
 
 	const { authToken, user, setPollIsActive, endPoll, setNewPoll, updatePoll } = useBoundStore();
 

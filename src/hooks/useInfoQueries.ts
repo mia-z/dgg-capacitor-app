@@ -5,24 +5,10 @@ import { useBoundStore } from "./useBoundStore";
 
 export const useInfoQueries = () => {
     const { 
-		streamInfo, setStreamInfo, 
-		videosInfo, setVideosInfo, 
-		vodsInfo, setVodsInfo,
 		last5Embeds, setLast5Embeds,
 		recentEmbeds, setRecentEmbeds
 	} = useBoundStore();
     
-	const streamInfoQuery = useQuery({
-		queryKey: ["streamInfo", streamInfo],
-		queryFn: async () => await StreamInfoQuery(),
-		onSuccess: (result) => {
-			if (result) {
-				setStreamInfo(result);
-			}
-		},
-		refetchInterval: 1000 * 60
-	});
-
 	const last5EmbedsQuery = useQuery({
 		queryKey: ["last5Embeds", last5Embeds],
 		queryFn: async () => await Last5EmbedsQuery(),
@@ -46,15 +32,6 @@ export const useInfoQueries = () => {
 	});
 
 	return {
-		streamInfo: {
-			...streamInfoQuery
-		},
-		videosInfo: {
-			
-		},
-        vodsInfo: {
-			
-		},
 		recentEmbedsInfo: {
 			...recentEmbedsQuery
 		},

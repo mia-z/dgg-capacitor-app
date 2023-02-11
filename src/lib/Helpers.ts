@@ -47,3 +47,12 @@ export const parseEmbedLink = (input: string): EmbedInfo | null => {
 		return null;
 	}
 }
+
+export const parseLiveUpdateMessage = (message: string) => {
+	const match = message.match(/dggApi:(youtubeVods|videos|hosting|streamInfo)/);
+	if (!match) 
+		return null;
+	
+	const responseType = match[0] as LiveResponseType;
+	return (JSON.parse(message) as DggLiveResponse<typeof responseType>);
+}
