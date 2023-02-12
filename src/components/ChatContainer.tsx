@@ -112,7 +112,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 				}
 				<div ref={chatBottomRef} className={"h-[8px]"}>{/*hidden reference for chat scrolling*/}</div>
 			</div>
-			<div onClick={() => restoreScroll()} className={`transition-all z-50 absolute bottom-16 h-12 w-12 bg-blue-400 rounded-full flex ${!bottomIsVisible ? "right-8" : "-right-12"}`}>
+			<div onClick={() => restoreScroll()} className={`transition-all z-50 absolute bottom-16 right-8 h-12 w-12 bg-blue-400 rounded-full flex ${!bottomIsVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
 				<IonIcon className={"text-white m-auto text-3xl"} icon={arrowDownOutline} />
 			</div>
 		</>
