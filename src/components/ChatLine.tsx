@@ -1,4 +1,4 @@
-import React, { FC, memo, TouchEvent, useCallback, useContext, useState } from "react";
+import React, { FC, memo, MouseEvent, TouchEvent, useCallback, useContext, useState } from "react";
 import { ChatLineEmote } from "./ChatLineEmote";
 import { ChatLineText } from "./ChatLineText";
 import { useBoundStore } from "../hooks/useBoundStore";
@@ -37,7 +37,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 
 	const hasNsflLabel = data.match(/(nsfl)+/i)?.[0];
 
-	const onNickPress = useCallback((event: TouchEvent<HTMLSpanElement>) => {
+	const onNickPress = useCallback((event: MouseEvent<HTMLSpanElement>) => {
 		event.stopPropagation();
 		if (watchingNicks.some(x => x.toLowerCase() === nick.toLowerCase())) {
 			removeNickToWatch(nick);
@@ -78,7 +78,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 		}
 	}, [watchingNicks, chatUsers]);
 
-	const onChatLinePress = (event: TouchEvent<HTMLDivElement>) => {
+	const onChatLinePress = (event: MouseEvent<HTMLDivElement>) => {
 		setWatchingNicks([]);
 	}
 
@@ -90,7 +90,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
     }
 
 	return (
-		<div key={`${nick}${timestamp}`} onTouchEnd={onChatLinePress} className={`flex flex-row flex-wrap msg-chat ${isCurrentUser ? "bg-[#212121]" : ""} ${isTaggingCurrentUser ? "bg-[#06263e]" : ""} ${(isWatchingNicks && isWatchingThisNick) ? "opacity-100" : isWatchingNicks ? "opacity-50" : ""}`}>
+		<div key={`${nick}${timestamp}`} onClick={onChatLinePress} className={`flex flex-row flex-wrap msg-chat ${isCurrentUser ? "bg-[#212121]" : ""} ${isTaggingCurrentUser ? "bg-[#06263e]" : ""} ${(isWatchingNicks && isWatchingThisNick) ? "opacity-100" : isWatchingNicks ? "opacity-50" : ""}`}>
 			{
 				isSameNickAsPrevious ?
 				<>
@@ -109,7 +109,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
                             </React.Fragment>
 						))
 					}
-					<span onTouchEnd={onNickPress} className={"text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+					<span onClick={onNickPress} className={"text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
 						{nick}
 					</span>
 					{	!isSlashMeMessage &&
