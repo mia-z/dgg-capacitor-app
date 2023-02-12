@@ -1,5 +1,5 @@
-import {StateCreator} from "zustand";
-import {CombinedSlices} from "../hooks/useBoundStore";
+import { StateCreator } from "zustand";
+import { CombinedSlices } from "../hooks/useBoundStore";
 
 export type ChatUsersSlice = {
     chatUsers: ChatUser[],
