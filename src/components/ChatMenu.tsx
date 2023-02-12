@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useContext, useRef, useState } from "react";
+import React, { FC, useCallback, useContext, useEffect, useRef, useState } from "react";
 import {IonAlert, IonButton, IonContent, IonIcon, IonMenu, useIonAlert, useIonRouter} from "@ionic/react";
 import { peopleOutline, desktopOutline, happyOutline, closeOutline, settingsSharp, logOutOutline } from "ionicons/icons";
 import { UsersModal } from "./modals/UsersModal";
@@ -12,6 +12,7 @@ import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
 import { VodsModal } from "./modals/VodsModal";
 import { VideosModal } from "./modals/VideosModal";
 import { parseEmbedLink } from "../lib/Helpers";
+import { App } from "@capacitor/app";
 
 const memePhrases = [
 	"YEE wins",
@@ -47,6 +48,8 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 	const sideMenuRef = useRef<HTMLIonMenuElement>(null);
 
 	const router = useIonRouter();
+
+	const [ver, setVer] = useState<string>("");
 
 	const [presentAlert] = useIonAlert();
 
@@ -114,6 +117,13 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 
 	}, [vodsInfo, sideMenuRef]);
 
+	useEffect(() => {
+		(async () => {
+			const v = await App.getInfo();
+			setVer(v.version);
+		})();
+	}, []);
+
 	return (
 		<>
 			<IonMenu ref={sideMenuRef} id={"side-menu"} menuId={"side-menu"} contentId={"bigscreen-content"}>
@@ -124,7 +134,10 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 						<div className={"lobster text-3xl text-white my-2 text-center"}>
 							Appstiny
 						</div>
-						<div id={"user-card"} className={`flex flex-col bg-slate-600 h-24 p-2 m-3 rounded relative ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
+						<div id={"user-card"} className={`flex flex-col bg-slate-600 text-sm h-24 p-2 m-3 rounded relative ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
+							<div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+								{user?.nick}
+							</div>
 							<div className={"grid grid-cols-3 h-full"}>
 								<div className={"col-start-1 flex flex-col my-auto h-full"}>
 									<div className={"text-center roboto text-white mb-2"}>
@@ -139,8 +152,11 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 									}
 								</div>
 								<div className={"col-start-2 flex flex-col my-auto h-full"}>
-									<div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
-										{user?.nick}
+									{/* <div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+								
+									</div> */}
+									<div className={"text-center roboto text-white mb-2"}>
+										Flairs
 									</div>
 									<div className={"flex flex-row flex-wrap justify-center"}>
 										{
@@ -270,13 +286,20 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 									<IonIcon className={""} slot={"icon-only"} icon={desktopOutline} />
 								</IonButton>
 							</div>
-							{
-								user?.team === "YEE" ?
-									<div className={"text-center my-1 text-xs text-[#b9b9b9]"}>YEE wins</div> :
-								user?.team === "PEPE" ?
-									<div className={"text-center my-1 text-xs text-[#b9b9b9]"}>PEPE wins</div> :
-								null
-							}
+							<div className={"grid grid-cols-3"}>
+								<div className={"col-start-2"}>
+									{
+										user?.team === "YEE" ?
+											<div className={"text-center my-1 text-xs text-[#b9b9b9]"}>YEE wins</div> :
+										user?.team === "PEPE" ?
+											<div className={"text-center my-1 text-xs text-[#b9b9b9]"}>PEPE wins</div> :
+										null
+									}
+								</div>
+								<div className={"col-start-3 text-right mr-1 text-xs my-auto text-[#b9b9b9]"}>
+									v{ver}
+								</div>
+							</div>
 						</div>
 					</div>
 				</IonContent>
