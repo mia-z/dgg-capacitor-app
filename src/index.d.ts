@@ -122,7 +122,7 @@ type Tier3Sub = "flair3";
 type Tier4Sub = "flair8";
 type Tier5Sub = "flair42";
 
-type DggPayloadCommand = "MSG" | "QUIT" | "JOIN" | "NAMES" | "BROADCAST" | "ERR"| "MUTE" | "BAN";
+type DggPayloadCommand = "MSG" | "QUIT" | "JOIN" | "NAMES" | "BROADCAST" | "ERR"| "MUTE" | "BAN" | "PIN";
 
 type UtilityCommand = "UTILITY";
 
@@ -202,6 +202,12 @@ type PollMessage = {
     totalvotes: number
 }
 
+type PinMessage = MessageBase & ChatUser & {
+	command: "PIN",
+	createdDate: string,
+	uuid: string
+}
+
 type PollStartMessage = PollMessage & {
 	command: "POLLSTART",
 }
@@ -225,6 +231,14 @@ type PollState = {
 	author: string
 }
 
+type PinnedMessage = {
+	user: ChatUser,
+	createdDate: string,
+	uuid: string,
+	data: string,
+	timestamp: string
+}
+
 type VoteCastMessage = {
 	command: "VOTECAST",
 	nick: string,
@@ -240,7 +254,7 @@ type MessageCollection = Array<MessageCollectionItem>;
 
 type MessageCollectionItem = ChatMessage | BroadcastMessage | ErrorMessage | SystemMessage | UtilityMessage;
 
-type DggPayloadItem = ChatMessage | QuitMessage | JoinMessage | BroadcastMessage | NamesMessage | ErrorMessage | MuteMessage | BanMessage | PollStartMessage | PollStopMessage | VoteCastMessage;
+type DggPayloadItem = ChatMessage | QuitMessage | JoinMessage | BroadcastMessage | NamesMessage | ErrorMessage | MuteMessage | BanMessage | PollStartMessage | PollStopMessage | VoteCastMessage | PinMessage;
 
 declare class MessageParseError extends Error {
     constructor(message: string);
@@ -353,6 +367,8 @@ type EmbedInfo = {
 }
 
 type EventNames = "chat" | "live";
+
+
 
 declare namespace Vyneer {
 	type Embed = {
