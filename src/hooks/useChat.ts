@@ -4,7 +4,7 @@ import {useBoundStore} from "./useBoundStore";
 import { CapacitorWebsocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/capacitor-websocket";
 
 export const useChat = (auth: string) => {
-    const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers, setPollIsActive, setNewPoll, endPoll, updatePoll } = useBoundStore();
+    const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers, setPollIsActive, setNewPoll, endPoll, updatePoll, setPinnedMessage } = useBoundStore();
 
     const [authKey, setAuthKey] = useState<string>(auth);
 
@@ -90,6 +90,9 @@ export const useChat = (auth: string) => {
             case "VOTECAST": {
                 updatePoll(parsedMessage.vote);
                 break;
+            }
+            case "PIN": {
+                setPinnedMessage(parsedMessage);
             }
         }
 	}, []);
