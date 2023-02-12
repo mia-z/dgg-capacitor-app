@@ -83,15 +83,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			});
         }
 	}, [chatMessages, height, bottomIsVisible]);
-
-    const onChatContainerStartTouch = () => {
-        setIsInteracting(true);
-    }
-
-	const onChatContainerEndTouch = useCallback(() => {
-        setIsInteracting(false);
-	}, [chatContainer]);
-
+	
     const restoreScroll = () => {
         chatContainer.current!.scroll({
 			top: chatContainer.current!.scrollHeight,
@@ -101,7 +93,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 
 	return (
 		<>
-			<div onTouchMove={onChatContainerStartTouch} onTouchEnd={() => onChatContainerEndTouch()} ref={chatContainer} className={"relative bg-black overflow-scroll transition-all leading-6"} style={{ height: chatHeight }}>
+			<div ref={chatContainer} className={"relative bg-black overflow-scroll transition-all leading-6"} style={{ height: chatHeight }}>
 				{
 					chatMessages.map((message, index) => {
 						switch(message.command) {
