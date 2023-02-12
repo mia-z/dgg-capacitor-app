@@ -1,4 +1,4 @@
-import React, { FC, FormEvent, useCallback, useContext, useEffect, TouchEvent, useState, KeyboardEvent, ChangeEvent, useMemo} from "react"
+import React, { FC, FormEvent, useCallback, useContext, useEffect, TouchEvent, useState, KeyboardEvent, ChangeEvent, useMemo, MouseEvent} from "react"
 import { IonFab, IonFabButton, IonFabList, IonMenuButton, IonInput, IonIcon, IonMenuToggle, IonButton } from "@ionic/react";
 import { menu } from "ionicons/icons";
 import { ChatMenu } from "./ChatMenu";
@@ -56,7 +56,7 @@ export const ChatInputContainer: FC<ChatInputContainerProps> = ({ height, width,
 		event.preventDefault();
 		const splitInput = chatInput.split(" ");
 		splitInput[splitInput.length - 1] = replacement;
-		setChatInput(splitInput.join(" "));
+		setChatInput(splitInput.join(" ") + " ");
 	}, [chatInput]);
 
 	return (
