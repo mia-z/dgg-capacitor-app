@@ -53,7 +53,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 
 	const [presentAlert] = useIonAlert();
 
-	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken, setCurrentEmbed, setUsingCustomEmbed, vodsInfo } = useBoundStore();
+	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken, setCurrentEmbed, setUsingCustomEmbed, vodsInfo, pinnedMessage } = useBoundStore();
 
 	const { emotes, flairs } = useContext(DggAssets);
 
@@ -67,6 +67,14 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 			return user?.features.includes(flair.name);
 		}
 	});
+
+	const pinnedUserFlairsToUse = flairs?.filter((flair, index) => {
+		if (!pinnedMessage || !pinnedMessage.user.features || pinnedMessage.user.features.length < 1) {
+			return [];
+		} else {
+			return pinnedMessage.user.features.includes(flair.name);
+		}
+	})
 
     const [usersModalOpen, setUsersModalOpen] = useState<boolean>(false);
 	const [emotesModalOpen, setEmotesModalOpen] = useState<boolean>(false);
@@ -138,7 +146,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 							<div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
 								{user?.nick}
 							</div>
-							<div className={"grid grid-cols-3 h-full"}>
+							<div className={"grid grid-cols-3 text-xs h-full"}>
 								<div className={"col-start-1 flex flex-col my-auto h-full"}>
 									<div className={"text-center roboto text-white mb-2"}>
 										Team
@@ -152,9 +160,6 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 									}
 								</div>
 								<div className={"col-start-2 flex flex-col my-auto h-full"}>
-									{/* <div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
-								
-									</div> */}
 									<div className={"text-center roboto text-white mb-2"}>
 										Flairs
 									</div>
@@ -268,6 +273,16 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 							</IonButton>
 						</div>
 						<div className={"mt-auto"}>
+							{
+								pinnedMessage &&
+								<div className={"flex flex-col relative p-1 bg-slate-800 shadow-md mx-2 rounded-lg"}>
+									<div className={"lobster text-white text-center"}>Pinned Message</div>
+									<div className={"text-[#dedede] text-xs mb-2 text-center"}>
+										<span className={"text-white user " + pinnedUserFlairsToUse?.map(x => x.name).reverse().join(" ")}>{pinnedMessage.user.nick}</span>:&nbsp;{pinnedMessage.data}
+									</div>
+									<img className={"absolute -top-4 right-1"} src={"https://cdn.destiny.gg/2.60.0/emotes/6296cf7e8ccd0.png"} />
+								</div>
+							}
 							<div className={"lobster text-lg text-white my-2 text-center separator"}>
 								Chat Tools
 							</div>
