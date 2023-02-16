@@ -148,7 +148,7 @@ type ChatMessage = ChatUserAndTimestampMessage & {
 }
 
 type SystemMessage = MessageBase & {
-	type: "warning" | "error",
+	type: "info" | "warning" | "error",
 	command: "SYS"
 }
 
