@@ -10,6 +10,7 @@ import { UtilityLine } from "./UtilityLine";
 import { arrowDownOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 import { App } from "@capacitor/app";
+import { SystemLine } from "./SystemLine";
 
 type ChatContainerProps = {
 	height: number,
@@ -17,7 +18,7 @@ type ChatContainerProps = {
 }
 
 export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
-	const { chatMessages, setMessages, playerIsHidden } = useBoundStore();
+	const { chatMessages, setMessages, playerIsHidden, setChatReady } = useBoundStore();
 
 	const chatContainer = useRef<HTMLDivElement | null>(null);
 	const chatBottomRef = useRef<HTMLDivElement | null>(null);
@@ -25,8 +26,6 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 	const [shouldFetchChatAfterResume, setShouldFetchChatAfterResume] = useState<boolean>(true);
 
     const [bottomIsVisible, setBottomIsVisible] = useState<boolean>(true);
-
-    const [isInteracting, setIsInteracting] = useState<boolean>(false);
 
     const [chatHeight] = useState<number>(playerIsHidden ? height - (((9/16) * width)) : height);
 
@@ -52,6 +51,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			setMessages(messagesWithSeparator);
 			setShouldFetchChatAfterResume(false);
 			App.removeAllListeners();
+			setChatReady(true);
 		}
 	});
 
@@ -100,6 +100,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 							case "MSG": return <ChatLine key={`${message.timestamp}-${message.nick}`} {...message} />;
 							case "BROADCAST": return <BroadcastLine key={`${message.timestamp}-broadcast`} data={message.data} />;
 							case "UTILITY": return <UtilityLine key={`${message.timestamp}-utility`} {...message} />
+							case "SYS": return <SystemLine key={`${message.timestamp}-system`} {...message} />
 					}})
 				}
 				<div ref={chatBottomRef} className={"h-[8px]"}>{/*hidden reference for chat scrolling*/}</div>
