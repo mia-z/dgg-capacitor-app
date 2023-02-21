@@ -67,7 +67,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
 
 			if (!textAsNick) return; //In some high traffic conditions, the nick-text matching could end up being null. VERY rare, but probably best to put this here
 
-			if (watchingNicks.some(x => textAsNick.nick.toLowerCase().includes(x.toLocaleLowerCase()))) {
+			if (watchingNicks.some(x => textAsNick.nick.toLowerCase().includes(x.toLowerCase()))) {
 				removeNickToWatch(textAsNick.nick);
 			} else {
 				if (!watchingNicks.some(x => x.toLowerCase() === nick.toLowerCase())) {
