@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, SetStateAction, TouchEvent, useState } from "react"
+import React, { Dispatch, FC, MouseEvent, SetStateAction, TouchEvent, useState } from "react"
 import { useBoundStore } from "../hooks/useBoundStore";
 
 type ChatLineTextProps = {
@@ -27,12 +27,12 @@ export const ChatLineText: FC<ChatLineTextProps> = ({ isGreenText, text, isSlash
 
 	const isEmbed = text.match(embedRegex);
 
-	const onTextPress = (event: TouchEvent<HTMLDivElement>) => {
+	const onTextPress = (event: MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation();
 		onMessageTextPress(text);
 	}
 
-	const onEmbedPress = (event: TouchEvent<HTMLDivElement>) => {
+	const onEmbedPress = (event: MouseEvent<HTMLDivElement>) => {
 		event.stopPropagation();
 		onMessageTextPress(text, true);
 	}
@@ -48,12 +48,12 @@ export const ChatLineText: FC<ChatLineTextProps> = ({ isGreenText, text, isSlash
 	if (isEmbed) {
 		return (
 			<>
-				<span onTouchEnd={onEmbedPress} className={`break-all text-[#02c2ff]`}>&nbsp;{text}</span>
+				<span onClick={onEmbedPress} className={`break-all text-[#02c2ff]`}>&nbsp;{text}</span>
 			</>
 		)
     } 
 
 	return (
-		<span onTouchEnd={onTextPress} className={`${isGreenText ? "text-[#6ca528]" : isCurrentUserMessage ? "text-[#dedede]" : "text-[#b9b9b9]"} ${isSlashMeMessage ? "italic" : ""} break-all`}>&nbsp;{text}</span>
+		<span onClick={onTextPress} className={`${isGreenText ? "text-[#6ca528]" : isCurrentUserMessage ? "text-[#dedede]" : "text-[#b9b9b9]"} ${isSlashMeMessage ? "italic" : ""} break-all`}>&nbsp;{text}</span>
 	)
 }
