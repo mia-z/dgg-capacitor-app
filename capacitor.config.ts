@@ -1,8 +1,12 @@
 import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-	appId: "com.miaz.dgg",
-	appName: "dgg-cap",
+	appId: "com.miaz.appstiny",
+	android: {
+	
+	},
+	
+	appName: "Appstiny",
 	bundledWebRuntime: false,
 	webDir: "dist",
 	plugins: {
