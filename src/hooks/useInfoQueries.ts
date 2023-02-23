@@ -1,12 +1,13 @@
 import { useQuery } from "react-query";
 import { GetLoginToken, GetUserData } from "../lib/PreferencesHelper";
-import { Last5EmbedsQuery, RecentEmbedsQuery, StreamInfoQuery } from "../lib/Queries";
+import { Last5EmbedsQuery, RecentEmbedsQuery, StreamInfoQuery, VyneerYoutubeVodsQuery } from "../lib/Queries";
 import { useBoundStore } from "./useBoundStore";
 
 export const useInfoQueries = () => {
     const { 
 		last5Embeds, setLast5Embeds,
-		recentEmbeds, setRecentEmbeds
+		recentEmbeds, setRecentEmbeds,
+		vodsInfo, setVodsInfo
 	} = useBoundStore();
     
 	const last5EmbedsQuery = useQuery({
@@ -26,6 +27,17 @@ export const useInfoQueries = () => {
 		onSuccess: (result) => {
 			if (result) {
 				setRecentEmbeds(result);
+			}
+		},
+		refetchInterval: 1000 * 60
+	});
+
+	const vyneerVodsQuery = useQuery({
+		queryKey: ["vyneerVods", vodsInfo],
+		queryFn: async () => await VyneerYoutubeVodsQuery(),
+		onSuccess: (result) => {
+			if (result) {
+				setVodsInfo(result);
 			}
 		},
 		refetchInterval: 1000 * 60

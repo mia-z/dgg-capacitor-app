@@ -44,9 +44,9 @@ export const useStreamUpdates = () => {
             case "dggApi:videos":{
                 setVideosInfo(parsedMessage.data);
             } break;
-            case "dggApi:youtubeVods":{
-                setVodsInfo(parsedMessage.data);
-            } break;
+            // case "dggApi:youtubeVods":{
+            //     setVodsInfo(parsedMessage.data);
+            // } break;
             default: return null; //Shouldnt ever hit this !
         }
 	}, []);
