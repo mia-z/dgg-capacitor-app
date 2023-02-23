@@ -368,8 +368,6 @@ type EmbedInfo = {
 
 type EventNames = "chat" | "live";
 
-
-
 declare namespace Vyneer {
 	type Embed = {
 		link: string,
@@ -377,5 +375,13 @@ declare namespace Vyneer {
 		channel: string,
 		title: string,
 		timestamp: string
+	}
+
+	type Vod = {
+		endtime: string,
+		id: string,
+		starttime: string,
+		thumbnail: string,
+		title: string
 	}
 }
