@@ -34,3 +34,10 @@ export const RecentChatQuery = async (): Promise<string[]> => {
 	});
 	return res.data;
 }
+
+export const VyneerYoutubeVodsQuery = async (): Promise<Vyneer.Vod[]> => {
+	const res = await CapacitorHttp.get({
+		url: "https://vyneer.me/tools/ytvods",
+	});
+	return res.data;
+}
