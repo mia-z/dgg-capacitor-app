@@ -173,3 +173,11 @@ input[type=number] {
 .separator:not(:empty)::after {
 	margin-left: .25em;
 }
+
+.action-sheet {
+	z-index: 999999;
+
+	.pane {
+		@apply bg-light-black;
+	}
+}
