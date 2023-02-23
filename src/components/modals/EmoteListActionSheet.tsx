@@ -1,26 +1,22 @@
 import React, { FC, useContext, useEffect, useRef, Dispatch, SetStateAction } from "react";
 import {DggAssets} from "../../hooks/DggAssetContext";
-import { ChatMenuModal } from "../common/ChatMenuModal";
+import { CustomActionSheet } from "../common/CustomActionSheet";
 
-type EmotesModalProps = {
+type EmoteListActionSheetProps = {
     isOpen: boolean,
 	setOpen: Dispatch<SetStateAction<boolean>>
 }
 
-export const EmotesModal: FC<EmotesModalProps> = ({ isOpen, setOpen }) => {
+export const EmoteListActionSheet: FC<EmoteListActionSheetProps> = ({ isOpen, setOpen }) => {
 	const { emotes } = useContext(DggAssets);
 
 	return (
-		<ChatMenuModal isOpen={isOpen} setOpen={setOpen}>
-			<div className={"grid grid-cols-3 grid-rows-1 grid-flow-row h-10 mt-2"}>
-				<div className={"col-start-2 my-auto"}>
-					<div className={"text-white roboto text-3xl text-center"}>
-						Emotes
-					</div>
+		<CustomActionSheet isOpen={isOpen} setOpen={setOpen} name={"emotes"} extraConfig={{ handleKeyboard: true, cssClass: "action-sheet" }}>
+			<div className={"h-full flex flex-col"}>
+				<div className={"lobster text-3xl text-white text-center h-10"}>
+					Emotes
 				</div>
-			</div>
-			<div className={"flex flex-row flex-wrap h-[calc(100%-40px)] overflow-y-scroll"} onTouchMove={(e) => e.stopPropagation()}>
-				<div className={"flex flex-row flex-wrap text-center justify-center"}>
+				<div className={"flex flex-row flex-wrap justify-center text-center h-[calc(100%-40px)] p-2 overflow-y-scroll"}>
 					{
 						emotes.map(({ prefix, image }, index) => {
 							return (
@@ -37,6 +33,6 @@ export const EmotesModal: FC<EmotesModalProps> = ({ isOpen, setOpen }) => {
 					}
 				</div>
 			</div>
-		</ChatMenuModal>
+		</CustomActionSheet>
     );
 }

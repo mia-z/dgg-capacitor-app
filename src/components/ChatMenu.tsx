@@ -1,16 +1,16 @@
 import React, { FC, useCallback, useContext, useEffect, useRef, useState } from "react";
-import {IonAlert, IonButton, IonContent, IonIcon, IonMenu, useIonAlert, useIonRouter} from "@ionic/react";
+import { IonAlert, IonButton, IonContent, IonIcon, IonMenu, useIonAlert, useIonRouter } from "@ionic/react";
 import { peopleOutline, desktopOutline, happyOutline, closeOutline, settingsSharp, logOutOutline } from "ionicons/icons";
-import { UsersModal } from "./modals/UsersModal";
-import { EmotesModal } from "./modals/EmotesModal";
+import { UserListActionSheet } from "./modals/UserListActionSheet";
+import { EmoteListActionSheet } from "./modals/EmoteListActionSheet";
 import { useBoundStore } from "../hooks/useBoundStore";
 import { DggAssets } from "../hooks/DggAssetContext";
 import { DateTime } from "luxon";
 import HumanizeDuration from "humanize-duration";
-import {ClearUserData} from "../lib/PreferencesHelper";
-import { ChatEmbedsModal } from "./modals/ChatEmbedsModal";
-import { VodsModal } from "./modals/VodsModal";
-import { VideosModal } from "./modals/VideosModal";
+import { ClearUserData } from "../lib/PreferencesHelper";
+import { ChatEmbedsActionSheet } from "./modals/ChatEmbedsActionSheet";
+import { VodsActionSheet } from "./modals/VodsActionSheet";
+import { VideosActionSheet } from "./modals/VideosActionSheet";
 import { parseEmbedLink } from "../lib/Helpers";
 import { App } from "@capacitor/app";
 
@@ -114,13 +114,12 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 			return;
 		}
 
-		const embed = parseEmbedLink(vodsInfo[0].url);
-		if (embed) {
-			setCurrentEmbed(embed);
+		try {
+			setCurrentEmbed({ platform: "youtube", videoId: vodsInfo[0].id });
 			setUsingCustomEmbed(true);
 			sideMenuRef.current!.close();
-		} else {
-			console.log("couldnt parse latest embed url!");
+		} catch (e) {
+			console.log(e + " couldnt parse latest embed url!");
 		}
 
 	}, [vodsInfo, sideMenuRef]);
@@ -320,11 +319,11 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 				</IonContent>
 			</IonMenu>
 
-			<UsersModal isOpen={usersModalOpen} setOpen={setUsersModalOpen} />
-			<EmotesModal isOpen={emotesModalOpen} setOpen={setEmotesModalOpen} />
-			<ChatEmbedsModal isOpen={embedsModalOpen} setOpen={setEmbedsModalOpen} />
-			<VodsModal isOpen={vodsModalOpen} setOpen={setVodsModalOpen} />
-			<VideosModal isOpen={videosModalOpen} setOpen={setVideosModalOpen} />
+			<UserListActionSheet isOpen={usersModalOpen} setOpen={setUsersModalOpen} />
+			<EmoteListActionSheet isOpen={emotesModalOpen} setOpen={setEmotesModalOpen} />
+			<ChatEmbedsActionSheet isOpen={embedsModalOpen} setOpen={setEmbedsModalOpen} />
+			<VodsActionSheet isOpen={vodsModalOpen} setOpen={setVodsModalOpen} />
+			<VideosActionSheet isOpen={videosModalOpen} setOpen={setVideosModalOpen} />
 
 			<IonAlert
 				isOpen={logoutAlertOpen}
