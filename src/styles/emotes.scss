@@ -72,12 +72,12 @@
 }
 .emote.Aware {
 
-  height: 32px;
-  width: 2135px;
+  height: 30px;
+  width: 1920px;
 }
 .msg-chat .emote.Aware {
-  margin-top: -32px;
-  top: 8px;
+  margin-top: -30px;
+  top: 7.5px;
 }
 .emote.AYAYA {
   
@@ -2086,19 +2086,19 @@
 }
 @keyframes Aware {
   0% { background-position: 0px; }
-  100% { background-position: -2135px; }
+  100% { background-position: -1920px; }
 }
 @keyframes Aware-hover {
   0% { background-position: 0px; }
-  100% { background-position: -2135px; }
+  100% { background-position: -1920px; }
 }
 .emote.Aware {
-  width: 35px;
-  background-position: 35px;
-  animation: Aware steps(61) 3s 4;
+  width: 32px;
+  background-position: 32px; 
+  animation: Aware steps(60) 3s 4;
 }
 .emote.Aware:hover {
-  animation: Aware-hover steps(61) 3s infinite;
+  animation: Aware-hover steps(60) 3s infinite;
 }
 @keyframes AYAYA-anim {
     0% { transform: translate(0px, 0px); }
