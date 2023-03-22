@@ -93,7 +93,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 
 	return (
 		<>
-			<div ref={chatContainer} className={"relative bg-black overflow-scroll transition-all leading-6"} style={{ height: chatHeight }}>
+			<div ref={chatContainer} className={"absolute h-full w-full bottom-10 left-0 bg-black overflow-scroll transition-all leading-6"} style={{ height: chatHeight }}>
 				{
 					chatMessages.map((message, index) => {
 						switch(message.command) {
