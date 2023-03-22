@@ -13,7 +13,10 @@ const config: CapacitorConfig = {
         CapacitorHttp: {
 			enabled: true
 		}
-    }
+    },
+	ios: {
+		contentInset: "always"
+	}
 };
 
 export default config;
