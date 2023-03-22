@@ -90,7 +90,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
     }
 
 	return (
-		<div key={`${nick}${timestamp}`} onClick={onChatLinePress} className={`flex flex-row flex-wrap msg-chat ${isCurrentUser ? "bg-[#212121]" : ""} ${isTaggingCurrentUser ? "bg-[#06263e]" : ""} ${(isWatchingNicks && isWatchingThisNick) ? "opacity-100" : isWatchingNicks ? "opacity-50" : ""}`}>
+		<div key={`${timestamp}`} onClick={onChatLinePress} className={`flex flex-row flex-wrap msg-chat ${isCurrentUser ? "bg-[#212121]" : ""} ${isTaggingCurrentUser ? "bg-[#06263e]" : ""} ${(isWatchingNicks && isWatchingThisNick) ? "opacity-100" : isWatchingNicks ? "opacity-50" : ""}`}>
 			{
 				isSameNickAsPrevious ?
 				<>
@@ -109,7 +109,7 @@ const ChatLine: FC<ChatMessage> = ({ nick, data, features, timestamp, isHidden, 
                             </React.Fragment>
 						))
 					}
-					<span onClick={onNickPress} className={"text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+					<span onClick={onNickPress} className={"text-white user font-bold " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
 						{nick}
 					</span>
 					{	!isSlashMeMessage &&
