@@ -60,7 +60,7 @@ export const ChatInputContainer: FC<ChatInputContainerProps> = ({ height, width,
 	}, [chatInput]);
 
 	return (
-		<div className={`h-10 bg-black flex flex-row p-1 relative`}>
+		<div className={`absolute bottom-0 left-0 w-full h-10 bg-black flex flex-row p-1`}>
 			<div className={`absolute ${(suggestionsShowing) ? "h-10 -top-10" : "h-0 -top-0"} -right-2 left-0 z-50 transition-all flex flex-row overflow-x-scroll w-[calc(100%-2px)] bg-black rounded-t-xl border-t border-x border-t-blue-400 border-x-blue-400`}>
 				{
 					emoteSuggestions.concat(chatterSuggestions).map((suggestion, index) => (
