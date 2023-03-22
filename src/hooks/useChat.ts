@@ -3,6 +3,7 @@ import { parseChatMessage } from "../lib/Helpers";
 import {useBoundStore} from "./useBoundStore";
 import { CapacitorWebsocket, ConnectedEvent, DisconnectedEvent, ErrorEvent, MessageEvent } from "@miaz/capacitor-websocket";
 import { PluginListenerHandle } from "@capacitor/core";
+import { v4 as uuid } from "uuid";
 
 export const useChat = (auth: string) => {
     const { addChatUser, addMessage, hideUserMessages, removeChatUser, setChatUsers, setPollIsActive, setNewPoll, endPoll, updatePoll, setPinnedMessage, chatReady, setChatReady } = useBoundStore();
@@ -35,10 +36,11 @@ export const useChat = (auth: string) => {
     }, []);
 
     const handleMessage = useCallback((message: MessageEvent) => {
-        console.log(message);
+        //console.log(message);
         const parsedMessage = parseChatMessage(message.data);
         switch (parsedMessage.command) {
             case "MSG": {
+                parsedMessage.timestamp = `${parsedMessage.timestamp}#${uuid().toString()}`;
                 addMessage(parsedMessage);
                 break;
             }
@@ -55,8 +57,8 @@ export const useChat = (auth: string) => {
                 break;
             }
 			case "BROADCAST": {
-				const unique = { ...parsedMessage, timestamp: `${parsedMessage.timestamp}${Date.now().toString()}` };
-				addMessage(unique);
+                parsedMessage.timestamp = `${parsedMessage.timestamp}#${uuid().toString()}`;
+				addMessage(parsedMessage);
 				break;
             }
 			case "MUTE":

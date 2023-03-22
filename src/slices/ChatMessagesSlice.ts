@@ -1,6 +1,7 @@
 import {StateCreator} from "zustand";
 import {CombinedSlices} from "../hooks/useBoundStore";
 import emotes from "../styles/assets/emotes.json";
+import { v4 as uuid } from "uuid";
 
 const emoteNames = emotes.map(x => x.prefix);
 
