@@ -28,21 +28,21 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 	switch (currentEmbed.platform) {
 		case "youtube": {		
 			return (
-				<div className={"transition-all"} style={{ width: "100%", height: playerIsHidden ? 0 : (9/16) * width }}>
+				<div className={`transition-all absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
 					<YouTube videoId={currentEmbed.videoId} opts={playerDimensions} />
 				</div>
 			);
 		}
 		case "twitch": {
 			return (
-				<div className={"transition-all flex flex-col"} style={{ width: "100%", height: playerIsHidden ? 0 : (9/16) * width }}>
+				<div className={`transition-all flex flex-col absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
 					<TwitchPlayer channel={currentEmbed.videoId} height={playerDimensions.height} width={playerDimensions.width} />
 				</div>
 			)
 		}
 		case "rumble": {
 			return (
-				<div className={"transition-all"} style={{ width: "100%", height: playerIsHidden ? 0 : (9/16) * width }}>
+				<div className={`transition-all absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
 					<iframe src={`https://rumble.com/embed/${currentEmbed.videoId}`} {...playerDimensions} />
 				</div>
 			)
