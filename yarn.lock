@@ -1955,8 +1955,10 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
-"@miaz/capacitor-websocket@file:../capacitor-websocket":
-  version "0.3.0"
+"@miaz/capacitor-websocket@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@miaz/capacitor-websocket/-/capacitor-websocket-0.4.0.tgz#8a9a4db135d2107b1ec6b0fa2ee763aaeb9b09de"
+  integrity sha512-PwhuOsbEjLTta4b5BL461Eu63QrUiftv1MHxg2LZyZ24F/PRVOkpnU4yAN0GK5PhIvo72lk4dgxpVrEoXRogDQ==
   dependencies:
     "@capacitor/cli" "^4.6.3"
 

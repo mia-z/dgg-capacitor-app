@@ -52,6 +52,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			setShouldFetchChatAfterResume(false);
 			App.removeAllListeners();
 			setChatReady(true);
+			restoreScroll();
 		}
 	});
 

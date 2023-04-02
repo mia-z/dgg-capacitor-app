@@ -13,7 +13,8 @@ import "core-js/features/array/at";
 const queryClient = new QueryClient();
 
 setupIonicReact({
-	mode: "md"
+	mode: "md",
+	
 });
 
 //await ResetSeenLoginInfo();

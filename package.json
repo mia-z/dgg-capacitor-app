@@ -15,8 +15,9 @@
     "preview": "vite preview",
     "ionic:serve": "vite",
     "ionic:build": "vite build",
-    "ionic:save": "yarn assets && ionic cap sync && ionic cap copy android",
-    "assets": "capacitor-assets generate --android"
+    "ionic:copy": "ionic cap update && ionic cap copy",
+    "assets:android": "capacitor-assets generate --android",
+    "assets:ios": "capacitor-assets generate --ios"
   },
   "dependencies": {
     "@capacitor/android": "^4.6.1",
@@ -33,7 +34,7 @@
     "@ionic/core": "^7.0.0-beta.1",
     "@ionic/react": "^6.4.1",
     "@ionic/react-router": "^6.4.1",
-    "@miaz/capacitor-websocket": "file:../capacitor-websocket",
+    "@miaz/capacitor-websocket": "^0.4.0",
     "@ungap/global-this": "^0.4.4",
     "@vitejs/plugin-react": "^3.0.0",
     "core-js": "^3.27.1",

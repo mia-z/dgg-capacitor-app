@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
 	android: {
 	
 	},
-	
+	backgroundColor: "#191414",
 	appName: "Appstiny",
 	bundledWebRuntime: false,
 	webDir: "dist",
