@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Appstiny</string>
     <string name="title_activity_main">Appstiny</string>
-    <string name="package_name">com.miaz.appstiny</string>
-    <string name="custom_url_scheme">com.miaz.appstiny</string>
+    <string name="package_name">com.miaz.dgg</string>
+    <string name="custom_url_scheme">com.miaz.dgg</string>
 </resources>

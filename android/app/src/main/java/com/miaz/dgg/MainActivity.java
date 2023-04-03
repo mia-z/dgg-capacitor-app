@@ -1,4 +1,4 @@
-package com.miaz.appstiny;
+package com.miaz.dgg;
 
 import com.getcapacitor.BridgeActivity;
 

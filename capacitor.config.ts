@@ -1,7 +1,7 @@
 import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-	appId: "com.miaz.appstiny",
+	appId: "com.miaz.dgg",
 	android: {
 	
 	},
