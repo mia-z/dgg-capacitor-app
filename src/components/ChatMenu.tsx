@@ -205,7 +205,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
 									</div>
 									{
-										currentEmbed.videoId === streamInfo?.streams.youtube.id ?
+										currentEmbed?.videoId === streamInfo?.streams.youtube.id ?
 										<IonButton disabled className={"w-3/5 h-6 text-sm mx-auto roboto"}>
 											<div className={"text-xs"}>
 												Stream is playing
@@ -234,7 +234,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
 									</div>
 									{
-										currentEmbed.videoId === (vodsInfo && vodsInfo?.at(0)?.id) ?
+										currentEmbed?.videoId === (vodsInfo && vodsInfo?.at(0)?.id) ?
 										<div className={"flex flex-col mt-2"}>
 											<IonButton disabled onTouchEnd={onPlayLatestVod} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
 												<div className={"text-xs"}>
