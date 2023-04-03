@@ -14,7 +14,7 @@ export type PlayerSlice = {
 }
 
 export const createPlayerSlice: StateCreator<CombinedSlices, [], [], PlayerSlice> = (set) => ({
-	currentEmbed: { platform: "youtube", videoId: "" },
+	currentEmbed: null,
 	playerIsHidden: false,
 	usingCustomEmbed: false,
 	setCurrentEmbed: (embedInfo: EmbedInfo) => set(() => ({ currentEmbed: embedInfo })),
