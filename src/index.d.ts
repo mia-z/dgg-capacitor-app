@@ -20,6 +20,8 @@ declare module "*.png" {
 	export = value;
 }
 
+declare const Platforms = ["youtube", "twitch", "rumble", "facebook", "kick"] as const;
+
 declare type DggUserFeature = "subscriber" | "flair1" | string;
 
 declare type DggUserRole = "USER" | "SUBSCRIBER" | string;
@@ -298,42 +300,30 @@ type DggLiveResponse<T> =
 type StreamInfo = {
     hostedChannel: string | undefined,
 	streams: {
-        twitch: any,
-		youtube: {
-            live: boolean,
-			game: string | undefined,
-			preview: string,
-			status_text: string,
-			started_at: string,
-			ended_at: string,
-			duration: number,
-			viewers: number,
-			id: string,
-			platform: "youtube",
-			type: "livestream" | string
-		},
-		facebook: any,
-		rumble: {
-            live: boolean,
-			game: string | undefined,
-			preview: string,
-			status_text: string,
-			started_at: string,
-			ended_at: string,
-			duration: number,
-			viewers: number,
-			id: string,
-			platform: "rumble",
-			type: "livestream" | string
-		},
+        [P in typeof Platforms[number]]: StreamInfoData<P>
     }
+}
+
+type StreamInfoData<T extends string> = {
+	live: boolean,
+	game: string | undefined,
+	preview: string,
+	status_text: string,
+	started_at: string,
+	ended_at: string,
+	duration: number,
+	viewers: number,
+	id: string,
+	platform: T,
+	type: "livestream" | string
 }
 
 type HostInfo = {
     id: string,
-	playform: "youtube",
+	platform: typeof Platforms[number],
 	displayName: string,
-	url: string
+	url: string,
+	preview: string,
 }
 
 type VideosInfo = {
@@ -357,14 +347,12 @@ type VodsInfo = {
 	streamEndTime: string
 }[];
 
-declare const Platforms = ["youtube", "twitch", "rumble"] as const;
-
 type SupportedPlatforms = typeof Platforms[number];
 
 type EmbedInfo = {
 	platform: SupportedPlatforms,
 	videoId: string
-}
+} | null;
 
 type EventNames = "chat" | "live";
 
