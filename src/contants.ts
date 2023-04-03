@@ -1,1 +1,1 @@
-export const Platforms = ["youtube", "twitch", "rumble"] as const;
+export const Platforms = ["youtube", "twitch", "rumble", "kick"] as const;
