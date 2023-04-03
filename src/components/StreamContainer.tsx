@@ -21,11 +21,22 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 
 	useEffect(() => {
 		if (!usingCustomEmbed) {
-			setCurrentEmbed({ platform: "youtube", videoId: streamInfo?.streams.youtube.id as string });
+			if (streamInfo?.streams.kick) {
+				setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id });
+			}
+			if (streamInfo?.streams.rumble) {
+				setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id });
+			}
+			if (streamInfo?.streams.twitch) {
+				setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id });
+			}
+			if (streamInfo?.streams.youtube) {
+				setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
+			}
 		}
 	}, [streamInfo, usingCustomEmbed]);
 
-	switch (currentEmbed.platform) {
+	switch (currentEmbed?.platform) {
 		case "youtube": {		
 			return (
 				<div className={`transition-all absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
@@ -36,7 +47,7 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 		case "twitch": {
 			return (
 				<div className={`transition-all flex flex-col absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
-					<TwitchPlayer channel={currentEmbed.videoId} height={playerDimensions.height} width={playerDimensions.width} />
+					<TwitchPlayer channel={currentEmbed.videoId} { ...playerDimensions }/>
 				</div>
 			)
 		}
@@ -47,6 +58,15 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 				</div>
 			)
 		}
-		default: return <div></div> //TODO: Improve this somewhat
+		case "kick": {
+			return (
+				<div className={`transition-all absolute w-full left-0 z-10 ${playerIsHidden ? "-top-[50%]" : "top-0"}`}>
+					<video { ...playerDimensions } controls autoPlay playsInline>
+						<source src={currentEmbed.videoId} type="application/x-mpegURL" />
+					</video>
+				</div>
+			)
+		}
+		default: return null; //TODO: Improve this somewhat
 	}
 }
