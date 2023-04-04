@@ -229,7 +229,10 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 						</div> */}
 						<div className={"flex flex-col"}>
 							{
-								streamInfo?.streams.youtube.live ?
+								(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live || 
+									streamInfo?.streams.kick && streamInfo?.streams.kick.live || 
+									streamInfo?.streams.rumble && streamInfo?.streams.rumble.live || 
+									streamInfo?.streams.twitch && streamInfo?.streams.twitch.live) ?
 								<>
 									<div className={"text-center roboto text-white"}>
 										Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
