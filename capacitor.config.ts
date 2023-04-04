@@ -16,6 +16,9 @@ const config: CapacitorConfig = {
     },
 	ios: {
 		contentInset: "always"
+	},
+	server: {
+		iosScheme: "http"
 	}
 };
 
