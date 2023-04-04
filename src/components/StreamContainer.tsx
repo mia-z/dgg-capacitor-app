@@ -20,7 +20,7 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 	const queries = useInfoQueries();
 
 	useEffect(() => {
-		if (!usingCustomEmbed) {
+		if (!usingCustomEmbed && !currentEmbed) {
 			if (streamInfo?.streams.kick) {
 				setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id });
 			}
@@ -34,7 +34,7 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 				setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
 			}
 		}
-	}, [streamInfo, usingCustomEmbed]);
+	}, [streamInfo, currentEmbed, usingCustomEmbed]);
 
 	switch (currentEmbed?.platform) {
 		case "youtube": {		
