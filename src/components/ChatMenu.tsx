@@ -13,6 +13,7 @@ import { VodsActionSheet } from "./modals/VodsActionSheet";
 import { VideosActionSheet } from "./modals/VideosActionSheet";
 import { parseEmbedLink } from "../lib/Helpers";
 import { App } from "@capacitor/app";
+import { KickLogoIcon, RumbleLogoIcon, TwitchLogoIcon, YoutubeLogoIcon } from "./../Images";
 
 const memePhrases = [
 	"YEE wins",
@@ -98,31 +99,34 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		setLogoutLoadingAlertOpen(false);
 	}
 
-	const onPlayDestinyStream = useCallback(() => {
-		if (streamInfo?.streams.youtube.id) {
-			setCurrentEmbed({ platform: "youtube", videoId: streamInfo?.streams.youtube.id });
-			setUsingCustomEmbed(false);
-			sideMenuRef.current!.close();
-		} else {
-			presentAlert(noDestinyStreamError);
+	const onStreamSourceClick = useCallback((platform: "youtube" | "kick" | "rumble" | "twitch") => {
+		switch (platform) {
+			case "youtube": {
+				if (streamInfo?.streams.youtube && streamInfo.streams.youtube.live) {
+					setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
+				}
+				break;
+			}
+			case "kick": {
+				if (streamInfo?.streams.kick && streamInfo.streams.kick.live) {
+					setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id });
+				}
+				break;
+			}
+			case "rumble": {
+				if (streamInfo?.streams.rumble && streamInfo.streams.rumble.live) {
+					setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id });
+				}
+				break;
+			}
+			case "twitch": {
+				if (streamInfo?.streams.twitch && streamInfo.streams.twitch.live) {
+					setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id });
+				}
+				break;
+			}
 		}
-	}, [streamInfo, sideMenuRef]);
-
-	const onPlayLatestVod = useCallback(() => {
-		if (!vodsInfo || (vodsInfo && vodsInfo?.length < 1 && !vodsInfo[0])) {
-			presentAlert(noVodsAlertProps);
-			return;
-		}
-
-		try {
-			setCurrentEmbed({ platform: "youtube", videoId: vodsInfo[0].id });
-			setUsingCustomEmbed(true);
-			sideMenuRef.current!.close();
-		} catch (e) {
-			console.log(e + " couldnt parse latest embed url!");
-		}
-
-	}, [vodsInfo, sideMenuRef]);
+	}, [streamInfo]);
 
 	useEffect(() => {
 		(async () => {
@@ -188,7 +192,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 							</div>
 						</div>
 						<hr className={"w-[85%] mx-auto my-2"} />
-						<div className={"flex flex-col"}>
+						{/* <div className={"flex flex-col"}>
 							{
 								streamInfo?.streams.youtube.live ?
 								<>
@@ -204,19 +208,6 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 										live for&nbsp;
 										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
 									</div>
-									{
-										currentEmbed?.videoId === streamInfo?.streams.youtube.id ?
-										<IonButton disabled className={"w-3/5 h-6 text-sm mx-auto roboto"}>
-											<div className={"text-xs"}>
-												Stream is playing
-											</div>
-										</IonButton> :
-										<IonButton onTouchEnd={() => onPlayDestinyStream()} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
-											<div className={"text-xs"}>
-												View Destiny's Stream
-											</div>
-										</IonButton>
-									}
 								</> :
 								<>
 									<div className={"text-center roboto text-white"}>
@@ -233,24 +224,54 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 										and lasted&nbsp;
 										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
 									</div>
-									{
-										currentEmbed?.videoId === (vodsInfo && vodsInfo?.at(0)?.id) ?
-										<div className={"flex flex-col mt-2"}>
-											<IonButton disabled onTouchEnd={onPlayLatestVod} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
-												<div className={"text-xs"}>
-													Playing latest vod..
-												</div>
-											</IonButton>
-										</div>	:
-										<div className={"flex flex-col mt-2"}>
-											<IonButton onTouchEnd={onPlayLatestVod} className={"w-3/5 h-6 text-sm mx-auto roboto"}>
-												<div className={"text-xs"}>
-													Play latest VOD
-												</div>
-											</IonButton>
-										</div>
-									}
 								</>
+							}
+						</div> */}
+						<div className={"flex flex-col"}>
+							{
+								streamInfo?.streams.youtube.live ?
+								<>
+									<div className={"text-center roboto text-white"}>
+										Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
+									</div>
+									<div className={"mx-auto mt-1"}>
+										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbb9fa8ab2.png"} />
+									</div>
+								</> :
+								<div className={"flex flex-row justify-center"}>
+									<div className={"text-center roboto my-auto text-white"}>
+										Destiny is <span className={"font-bold text-red-400"}>OFFLINE</span>
+									</div>
+									<div className={"ml-1"}>
+										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png"} />
+									</div>
+								</div>
+							}
+						</div>
+						<div className={"flex flex-row h-14 mt-5 justify-center space-x-2"}>
+							{
+								(streamInfo?.streams.twitch && streamInfo.streams.twitch.live) &&
+								<div onClick={() => onStreamSourceClick("twitch")} className={`twitch-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "twitch" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+									<img className={"h-full"} src={TwitchLogoIcon} />
+								</div>
+							}
+							{
+								(streamInfo?.streams.youtube && streamInfo.streams.youtube.live) &&
+								<div onClick={() => onStreamSourceClick("youtube")} className={`youtube-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "youtube" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+									<img className={"w-full my-auto"} src={YoutubeLogoIcon} />
+								</div>
+							}
+							{
+								(streamInfo?.streams.rumble && streamInfo.streams.rumble.live) &&
+								<div onClick={() => onStreamSourceClick("rumble")} className={`rumble-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "rumble" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+									<img className={"h-full mx-auto"} src={RumbleLogoIcon} />
+								</div>
+							}
+							{
+								(streamInfo?.streams.kick && streamInfo.streams.kick.live) &&
+								<div onClick={() => onStreamSourceClick("kick")} className={`kick-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "kick" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+									<img className={"h-full mx-auto"} src={KickLogoIcon} />
+								</div>
 							}
 						</div>
 						<div className={"flex flex-col mt-auto"}>
