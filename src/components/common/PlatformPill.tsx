@@ -1,6 +1,7 @@
 import { DOMAttributes, FC } from "react";
 import { logoTwitch, logoYoutube, helpCircleOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
+import { KickLogoIcon, RumbleLogoIcon } from "./../../Images";
 
 type PlatformPillProps = {
     link: string,
@@ -13,6 +14,8 @@ export const PlatformPill: FC<PlatformPillProps> = ({ link, extraText, className
     const platform = 
         link.startsWith("#youtube") ?  "youtube" :
         link.startsWith("#twitch") ? "twitch" :
+        link.startsWith("#kick") ? "kick" :
+        link.startsWith("#rumble") ? "rumble" :
         "unknown";
 
     switch (platform) {
@@ -33,6 +36,26 @@ export const PlatformPill: FC<PlatformPillProps> = ({ link, extraText, className
                 </div>
                 <div className={"ml-2 w-[calc(100%-40px)] truncate whitespace-nowrap my-auto roboto"}>
                     {extraText}
+                </div>
+            </div>
+        )
+        case "kick": return (
+            <div className={"flex flex-row bg-white w-full h-7 rounded-full shadow-lg active:bg-slate-300 " + className} onClick={onClick}>
+                <div className={`w-10 flex rounded-l-full bg-[whitesmoke] border-r-[1px] border-r-slate-600`}>
+                    <img style={{ color: "#FF0000" }} className={`h-5 w-6 text-xl m-auto`} src={KickLogoIcon} />
+                </div>
+                <div className={"ml-2 w-[calc(100%-40px)] truncate whitespace-nowrap my-auto roboto"}>
+                    {link}
+                </div>
+            </div>
+        )
+        case "rumble": return (
+            <div className={"flex flex-row bg-white w-full h-7 rounded-full shadow-lg active:bg-slate-300 " + className} onClick={onClick}>
+                <div className={`w-10 flex rounded-l-full bg-[whitesmoke] border-r-[1px] border-r-slate-600`}>
+                    <img style={{ color: "#FF0000" }} className={`h-5 w-5 text-xl m-auto`} src={RumbleLogoIcon} />
+                </div>
+                <div className={"ml-2 w-[calc(100%-40px)] truncate whitespace-nowrap my-auto roboto"}>
+                    {link.split("/")[1]}
                 </div>
             </div>
         )
