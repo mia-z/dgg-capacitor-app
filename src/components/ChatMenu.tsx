@@ -20,7 +20,7 @@ const memePhrases = [
 	"For me, personally..",
 	"Hey buddy you wanna hop on discord and chat about it? :)",
 	"Off the penjamin",
-	"Sounds good, anything else?"
+	"Gotcha, anything else?"
 ];
 
 type ChatMenuProps = {
@@ -250,7 +250,6 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 											</IonButton>
 										</div>
 									}
-
 								</>
 							}
 						</div>
