@@ -30,7 +30,7 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 			if (streamInfo?.streams.twitch) {
 				setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id });
 			}
-			if (streamInfo?.streams.youtube) {
+			if (streamInfo?.streams.youtube && streamInfo.streams.youtube.live) {
 				setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
 			}
 		}
