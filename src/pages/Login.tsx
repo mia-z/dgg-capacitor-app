@@ -2,7 +2,6 @@ import {IonContent, useIonRouter, IonHeader, IonPage, IonTitle, IonToolbar, IonB
 import React, {FC, useCallback, useContext, useEffect, useRef, useState} from "react";
 import { Browser } from "@capacitor/browser";
 import { Clipboard } from '@capacitor/clipboard';
-import { HTTP } from "@awesome-cordova-plugins/http";
 import {GetLoginToken, GetUserData, HasSeenLoginInfo, SetLoginToken, SetUserData} from "../lib/PreferencesHelper";
 import { Redirect } from "react-router-dom";
 import {useQuery} from "react-query";
