@@ -6,6 +6,7 @@ import { BigScreen } from "./pages/BigScreen";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Login } from "./pages/Login";
 import { ResetSeenLoginInfo } from "./lib/PreferencesHelper";
+import { Capacitor } from "@capacitor/core";
 
 //polyfill for array.at
 import "core-js/features/array/at";
@@ -13,8 +14,7 @@ import "core-js/features/array/at";
 const queryClient = new QueryClient();
 
 setupIonicReact({
-	mode: "md",
-	
+	mode: Capacitor.getPlatform() === "ios" ? "ios" : "md"
 });
 
 //await ResetSeenLoginInfo();
