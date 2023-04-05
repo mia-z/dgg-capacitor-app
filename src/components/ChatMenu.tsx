@@ -54,7 +54,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 
 	const [presentAlert] = useIonAlert();
 
-	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken, setCurrentEmbed, setUsingCustomEmbed, vodsInfo, pinnedMessage } = useBoundStore();
+	const { user, streamInfo, currentEmbed, togglePlayer, playerIsHidden, setUser, setAuthToken, setCurrentEmbed, platform, setUsingCustomEmbed, vodsInfo, pinnedMessage } = useBoundStore();
 
 	const { emotes, flairs } = useContext(DggAssets);
 
@@ -334,7 +334,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 									}
 								</div>
 								<div className={"col-start-3 text-right mr-1 text-xs my-auto text-[#b9b9b9]"}>
-									v{ver}
+									{platform}-v{ver}
 								</div>
 							</div>
 						</div>
