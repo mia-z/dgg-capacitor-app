@@ -34,7 +34,7 @@ export const BigScreen: FC = () => {
 		<IonPage>
 			<DggAssetsContext>
 				<ChatMenu />
-				<IonContent id={"bigscreen-content"}>
+				<IonContent id={"bigscreen-content"} scrollY={false}>
 					<PollContainer height={height} width={width} />
 					<StreamContainer height={height} width={width} />
 					<ChatContainer height={height} width={width} />
