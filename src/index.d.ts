@@ -359,7 +359,7 @@ type EventNames = "chat" | "live";
 declare namespace Vyneer {
 	type Embed = {
 		link: string,
-		platform: string,
+		platform: typeof Platforms[number],
 		channel: string,
 		title: string,
 		timestamp: string
