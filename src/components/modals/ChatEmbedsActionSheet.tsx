@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useRef, Dispatch, SetStateAction } from "react";
 import { useBoundStore } from "../../hooks/useBoundStore";
 import { parseEmbedLink } from "../../lib/Helpers";
-import { ChatMenuModal } from "../common/ChatMenuModal";
 import { useIonAlert } from "@ionic/react";
 import { CustomActionSheet } from "../common/CustomActionSheet";
 import { CupertinoSettings } from "cupertino-pane";
@@ -22,8 +21,14 @@ const couldntParseAlertProps = {
 	buttons: ["Ok"]
 }
 
+const notSupportedTwitchEmbedAlertProps = {
+	header: "Unsupported",
+	subHeader: "Twitch is currently not supported on iOS (Blame Twitch)",
+	buttons: ["Ok"]
+}
+
 export const ChatEmbedsActionSheet: FC<ChatEmbedsActionSheetProps> = ({ isOpen, setOpen }) => {
-	const { last5Embeds, recentEmbeds, setCurrentEmbed, setUsingCustomEmbed } = useBoundStore();
+	const { last5Embeds, recentEmbeds, setCurrentEmbed, platform } = useBoundStore();
 
 	const [presentAlert] = useIonAlert();
 
@@ -33,8 +38,12 @@ export const ChatEmbedsActionSheet: FC<ChatEmbedsActionSheetProps> = ({ isOpen, 
 			presentAlert(couldntParseAlertProps);
 			return;
 		}
+		if (platform === "ios" && embed.platform === "twitch") {
+			presentAlert(notSupportedTwitchEmbedAlertProps);
+			return;
+		}
 		setCurrentEmbed(embed);
-		setUsingCustomEmbed(true);
+		//setUsingCustomEmbed(true);
 		setOpen(false);
 	}
 
