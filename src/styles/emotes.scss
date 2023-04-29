@@ -1,5 +1,5 @@
 .emote.Abathur {
-  
+    
   height: 30px;
   width: 82px;
 }
@@ -71,13 +71,13 @@
   top: 7.5px;
 }
 .emote.Aware {
-
-  height: 30px;
-  width: 1920px;
+  
+  height: 32px;
+  width: 1152px;
 }
 .msg-chat .emote.Aware {
-  margin-top: -30px;
-  top: 7.5px;
+  margin-top: -32px;
+  top: 8px;
 }
 .emote.AYAYA {
   
@@ -229,6 +229,15 @@
   width: 44px;
 }
 .msg-chat .emote.Clap {
+  margin-top: -32px;
+  top: 8px;
+}
+.emote.Clueless {
+  
+  height: 32px;
+  width: 36px;
+}
+.msg-chat .emote.Clueless {
   margin-top: -32px;
   top: 8px;
 }
@@ -979,6 +988,15 @@
   margin-top: -32px;
   top: 8px;
 }
+.emote.NAILS {
+  
+  height: 32px;
+  width: 5152px;
+}
+.msg-chat .emote.NAILS {
+  margin-top: -32px;
+  top: 8px;
+}
 .emote.Nappa {
   
   height: 30px;
@@ -1330,6 +1348,15 @@
   margin-top: -28px;
   top: 7px;
 }
+.emote.NOOOO {
+  
+  height: 35px;
+  width: 41px;
+}
+.msg-chat .emote.NOOOO {
+  margin-top: -35px;
+  top: 8.75px;
+}
 .emote.NOPERS {
   
   height: 28px;
@@ -1603,7 +1630,7 @@
 .emote.POTATO {
   
   height: 28px;
-  width: 28px;
+  width: 32px;
 }
 .msg-chat .emote.POTATO {
   margin-top: -28px;
@@ -1952,1701 +1979,1776 @@
   top: 8px;
 }
 .emote.AMAZIN {
-    transform: translate(0px, 4px);
+  transform: translate(0px, 4px);
 }
 /*@keyframes AngelThump-anim {
-  20%  { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 32px; margin-left: 32px; }
-  90%  { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 32px; margin-left: 32px; }
-  100% { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 0px; margin-left: 48px; }
+20%  { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 32px; margin-left: 32px; }
+90%  { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 32px; margin-left: 32px; }
+100% { filter: drop-shadow(0px 8px 1.22px #f9f63b); font-size: 0px; margin-left: 48px; }
 }
 .emote.AngelThump:before{
-    content: "â€•";
-    color: white; 
-    text-indent: 0;
-    font-family: Arial, sans-serif;
-    font-size: 0px;
-    line-height: 1px;
-    filter: drop-shadow(0px 5px 1.5px #f9f63b);
-    height: 10px;
-    width: 10px;
-    display: block;
-    position: absolute;
-    margin-left: 48px;
-    margin-top: -6px;
-    animation: AngelThump-anim 1.5s;
-    transition: all 0.2s;
+  content: "â€•";
+  color: white; 
+  text-indent: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0px;
+  line-height: 1px;
+  filter: drop-shadow(0px 5px 1.5px #f9f63b);
+  height: 10px;
+  width: 10px;
+  display: block;
+  position: absolute;
+  margin-left: 48px;
+  margin-top: -6px;
+  animation: AngelThump-anim 1.5s;
+  transition: all 0.2s;
 }
 .emote.AngelThump:hover:before{
-  filter: drop-shadow(0px 8px 1.22px #f9f63b);
-  font-size: 32px; 
-  margin-left: 32px;
-  transition: all 0.2s;
+filter: drop-shadow(0px 8px 1.22px #f9f63b);
+font-size: 32px; 
+margin-left: 32px;
+transition: all 0.2s;
 }*/
 .emote.ApeHands {
-  margin-left: -2px;
+margin-left: -2px;
 }
 .emote.ApeHands + .emote.ApeHands, .emote.ApeHands:nth-child(1), .emote.Clap + .emote.ApeHands, .emote.BLADE + .emote.ApeHands {
-  margin-right: -2px;
-  margin-left: 0;
-  transform: scaleX(-1);
+margin-right: -2px;
+margin-left: 0;
+transform: scaleX(-1);
 }
 .emote.ApeHands:only-child, .emote + .emote.ApeHands:last-of-type, .emote.ApeHands:last-of-type {
-  margin-right: 0;
-  transform: scaleX(1);
+margin-right: 0;
+transform: scaleX(1);
 }
 @keyframes GIGAHANDS-anim {
-  0% { transform: translate(-28px, 0); }
-  100% { transform: translate(0, 0); }
+0% { transform: translate(-28px, 0); }
+100% { transform: translate(0, 0); }
 }
 .emote.GIGACHAD + .emote.ApeHands {
-  animation: GIGAHANDS-anim 1.5s ease-out 1;
+animation: GIGAHANDS-anim 1.5s ease-out 1;
 }
-  
+
 @keyframes Askers-anim {
-  100% { background-position: -5544px; }
+100% { background-position: -5544px; }
 }
 
 @keyframes Askers-hover {
-  100% { background-position: -5544px; }
+100% { background-position: -5544px; }
 }
 
 .emote.Askers {
-  width: 56px;
-  margin-left: -4px;
-  margin-right: -4px;
-  background-position: 0px;
-  background-size: 5544px 34px;
-  animation: Askers-anim 3.5s steps(99) 4;
+width: 56px;
+margin-left: -4px;
+margin-right: -4px;
+background-position: 0px;
+background-size: 5544px 34px;
+animation: Askers-anim 3.5s steps(99) 4;
 }
 
 .emote.Askers:hover {
-  animation: Askers-hover 3.5s steps(99) infinite;
+animation: Askers-hover 3.5s steps(99) infinite;
 }
 
 @keyframes ATAB-left {
-  10%, 85% { left: 2px; }
+10%, 85% { left: 2px; }
 }
 @keyframes ATAB-right {
-  10%, 85% { right: 1px; }
+10%, 85% { right: 1px; }
 }
 @keyframes ATAB-glow {
-  8%, 90% { filter: drop-shadow(0 0 0 #000) brightness(1); }
-  10% { filter: drop-shadow(0 0 8px #FCE20577) brightness(1.3); }
-  30%, 80% { filter: drop-shadow(0 0 6px #FCE20544) brightness(1.3); }
+8%, 90% { filter: drop-shadow(0 0 0 #000) brightness(1); }
+10% { filter: drop-shadow(0 0 8px #FCE20577) brightness(1.3); }
+30%, 80% { filter: drop-shadow(0 0 6px #FCE20544) brightness(1.3); }
 }
 .emote.ATAB {
-  animation: ATAB-glow 1.6s 1;
-  filter: none;
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+animation: ATAB-glow 1.6s 1;
+filter: none;
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 .emote.ATAB:hover {
-  filter: drop-shadow(0 0 6px #FCE20544) brightness(1.3);
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  animation: none;
+filter: drop-shadow(0 0 6px #FCE20544) brightness(1.3);
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+animation: none;
 }
 .emote.ATAB:before {
-  content: "AT";
-  color: #FCE205;
-  line-height: initial;
-  font-weight: 500;
-  text-shadow: -1px 1px #000000ff, 1px 1px #000000ff, -1px -1px #000000ff, 1px -1px #000000ff;
-  text-indent: 0;
-  font-size: 15px;
-  position: absolute;
-  left: -20px;
-  top: -2px;
-  animation: ATAB-left 1.5s 1 cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+content: "AT";
+color: #FCE205;
+line-height: initial;
+font-weight: 500;
+text-shadow: -1px 1px #000000ff, 1px 1px #000000ff, -1px -1px #000000ff, 1px -1px #000000ff;
+text-indent: 0;
+font-size: 15px;
+position: absolute;
+left: -20px;
+top: -2px;
+animation: ATAB-left 1.5s 1 cubic-bezier(0.55, 0.06, 0.68, 0.19);
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 .emote.ATAB:after {
-  content: "AB";
-  color: #FCE205;
-  line-height: initial;
-  font-weight: 500;
-  text-shadow: -1px 1px #000000ff, 1px 1px #000000ff, -1px -1px #000000ff, 1px -1px #000000ff;
-  text-indent: 0;
-  font-size: 15px;
-  position: absolute;
-  right: -20px;
-  top: -2px;
-  animation: ATAB-right 1.5s 1 cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+content: "AB";
+color: #FCE205;
+line-height: initial;
+font-weight: 500;
+text-shadow: -1px 1px #000000ff, 1px 1px #000000ff, -1px -1px #000000ff, 1px -1px #000000ff;
+text-indent: 0;
+font-size: 15px;
+position: absolute;
+right: -20px;
+top: -2px;
+animation: ATAB-right 1.5s 1 cubic-bezier(0.55, 0.06, 0.68, 0.19);
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 .emote.ATAB:hover::before {
-  left: 2px;
-  transform-origin: 50% 100%;
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  animation: none;
+left: 2px;
+transform-origin: 50% 100%;
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+animation: none;
 }
 .emote.ATAB:hover::after {
-  right: 1px;
-  transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  transform-origin: 50% 100%;
-  animation: none;
-}
-@keyframes Aware {
-  0% { background-position: 0px; }
-  100% { background-position: -1920px; }
-}
-@keyframes Aware-hover {
-  0% { background-position: 0px; }
-  100% { background-position: -1920px; }
+right: 1px;
+transition: all .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+transform-origin: 50% 100%;
+animation: none;
 }
 .emote.Aware {
-  width: 32px;
-  background-position: 32px; 
-  animation: Aware steps(60) 3s 4;
+height: 32px;
+width: 36px;
+animation: Aware-anim 2s steps(31) forwards;
 }
 .emote.Aware:hover {
-  animation: Aware-hover steps(60) 3s infinite;
+height: 32px;
+width: 36px;
+animation: Aware-hover 2s steps(31) forwards 1;
+}
+
+@keyframes Aware-anim {
+to { background-position: -1116px; }
+}
+@keyframes Aware-hover {
+to { background-position: -1116px; }
 }
 @keyframes AYAYA-anim {
-    0% { transform: translate(0px, 0px); }
-    25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
-    37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
-    55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
-    60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
-    75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
-    100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
+  37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
+  55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
+  60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
+  75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
+  100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
 }
 @keyframes AYAYA-anim-hover {
-    0% { transform: translate(0px, 0px); }
-    25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
-    37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
-    55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
-    60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
-    75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
-    100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
+  37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
+  55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
+  60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
+  75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
+  100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
 }
 .emote.AYAYA {
-    animation: AYAYA-anim 0.7s 1;
+  animation: AYAYA-anim 0.7s 1;
 }
 .emote.AYAYA:hover {
-    animation: AYAYA-anim-hover 0.7s infinite;
+  animation: AYAYA-anim-hover 0.7s infinite;
 }
 @keyframes BERN-anim {
-  100% {background-position: -1860px; }
+100% {background-position: -1860px; }
 }
 @keyframes BERN-shake {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(-0.5px, .25px); -moz-transform: translate(0, .25px); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(-0.5px, -.25px); -moz-transform: translate(0, -.25px); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px);}
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(-0.5px, .25px); -moz-transform: translate(0, .25px); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(-0.5px, -.25px); -moz-transform: translate(0, -.25px); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px);}
 }
 @keyframes BERN-shake-hover {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(-0.5px, .25px); -moz-transform: translate(0, .25px); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(-0.5px, -.25px); -moz-transform: translate(0, -.25px); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px);}
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(-0.5px, .25px); -moz-transform: translate(0, .25px); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(-0.5px, -.25px); -moz-transform: translate(0, -.25px); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px);}
 }
 @keyframes BERN-anim-repeat1 {
-  100% { background-position: -600px; }
+100% { background-position: -600px; }
 }
 @keyframes BERN-anim-repeat2 {
-  0% { background-position: -600px; }
-  100% { background-position: -1440px; }
+0% { background-position: -600px; }
+100% { background-position: -1440px; }
 }
 .emote.BERN {
-    width: 60px;
-    margin-left: -2px;
-    animation: BERN-anim 1.55s steps(31) 1, BERN-shake 1 1.55s;
+  width: 60px;
+  margin-left: -2px;
+  animation: BERN-anim 1.55s steps(31) 1, BERN-shake 1 1.55s;
 }
 .emote.BERN:hover {
-    animation: BERN-shake-hover infinite 1.55s, BERN-anim-repeat1 1 steps(10) .5s, BERN-anim-repeat2 infinite steps(14) .7s .5s;
+  animation: BERN-shake-hover infinite 1.55s, BERN-anim-repeat1 1 steps(10) .5s, BERN-anim-repeat2 infinite steps(14) .7s .5s;
 }
 /* made by Igor (v2) */
 
 @keyframes BibleThump-anim {
-  0%, 100% {transform: scale(1) translate(0px, 0px); animation-timing-function: ease;}
-  50% {transform: scale(1) translate(0px, 14px); animation-timing-function: ease-in;}
-  51% {transform: scale(0) translate(0px, 0px); animation-timing-function: ease-in;}
+0%, 100% {transform: scale(1) translate(0px, 0px); animation-timing-function: ease;}
+50% {transform: scale(1) translate(0px, 14px); animation-timing-function: ease-in;}
+51% {transform: scale(0) translate(0px, 0px); animation-timing-function: ease-in;}
 }
 @keyframes BibleThump-anim-hover {
-  0%, 100% {transform: scale(1) translate(0px, 0px); animation-timing-function: ease-out;}
-  50% {transform: scale(1) translate(0px, 14px); animation-timing-function: ease-in;}
-  51% {transform: scale(0) translate(0px, 0px); animation-timing-function: ease-in;}
+0%, 100% {transform: scale(1) translate(0px, 0px); animation-timing-function: ease-out;}
+50% {transform: scale(1) translate(0px, 14px); animation-timing-function: ease-in;}
+51% {transform: scale(0) translate(0px, 0px); animation-timing-function: ease-in;}
 }
 .emote.BibleThump::before{
-    content: "ðŸ’§";
-    text-indent: 0;
-    color: white;
-    font-size: 8px;
-	  line-height: initial;
-    position: absolute;
-    opacity: 0.6;
-    top: 17px;
-    left: 11px;
-    width: 10px;
-    height: 10px;
-    transform-origin: 50% 0%;
-    filter: contrast(1) saturate(1) brightness(2);
-    animation: BibleThump-anim 0.8s 5;
+  content: "ðŸ’§";
+  text-indent: 0;
+  color: white;
+  font-size: 8px;
+  line-height: initial;
+  position: absolute;
+  opacity: 0.6;
+  top: 17px;
+  left: 11px;
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 0%;
+  filter: contrast(1) saturate(1) brightness(2);
+  animation: BibleThump-anim 0.8s 5;
 }
 .emote.BibleThump:hover::before {
-    animation: BibleThump-anim-hover 1s infinite;
+  animation: BibleThump-anim-hover 1s infinite;
 }
 @keyframes BINGQILIN {
-  0% { background-position: 0px; }
-  100% { background-position: -3510px; }
+0% { background-position: 0px; }
+100% { background-position: -3510px; }
 }
 @keyframes BINGQILIN-hover {
-  0% { background-position: 0px; }
-  100% { background-position: -3510px; }
+0% { background-position: 0px; }
+100% { background-position: -3510px; }
 }
 .emote.BINGQILIN {
-  width: 39px;
-  background-position: 39px; 
-  animation: BINGQILIN steps(90) 3s 1;
+width: 39px;
+background-position: 39px; 
+animation: BINGQILIN steps(90) 3s 1;
 }
 
 .emote.BINGQILIN:hover {
-  animation: BINGQILIN-hover steps(90) 3s infinite;
+animation: BINGQILIN-hover steps(90) 3s infinite;
 }
 /* Halloween version and animation made by Igor */
 @keyframes BLADE-anim-swing {
-  0%, 100% { transform: rotate(0deg); transform-origin: -36px 32px; }
-  30% { transform: rotate(20deg); }
-  80% { transform: rotate(-10deg); }
+0%, 100% { transform: rotate(0deg); transform-origin: -36px 32px; }
+30% { transform: rotate(20deg); }
+80% { transform: rotate(-10deg); }
 }
 @keyframes BLADE-anim-stab {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); transform-origin: left bottom; z-index: 0; }
-  10% { transform: translate(0px, -10px)  rotate(45deg); }
-  20% { transform: translate(0px, -10px)  rotate(45deg); }
-  25% { transform: translate(18px, -10px)  rotate(45deg); }
-  50% { transform: translate(20px, -10px)  rotate(45deg); }
-  65% { transform: translate(16px, -10px)  rotate(45deg); }
-  75% { transform: translate(-10px, -10px)  rotate(45deg); }
-  90% { transform: translate(-10px, -10px)  rotate(45deg); }
+0%, 100% { transform: translate(0, 0) rotate(0deg); transform-origin: left bottom; z-index: 0; }
+10% { transform: translate(0px, -10px)  rotate(45deg); }
+20% { transform: translate(0px, -10px)  rotate(45deg); }
+25% { transform: translate(18px, -10px)  rotate(45deg); }
+50% { transform: translate(20px, -10px)  rotate(45deg); }
+65% { transform: translate(16px, -10px)  rotate(45deg); }
+75% { transform: translate(-10px, -10px)  rotate(45deg); }
+90% { transform: translate(-10px, -10px)  rotate(45deg); }
 }
 @keyframes BLADE-anim-swing-flip {
-  0%, 100% { transform: translate(102px, 0) rotate(0deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
-  30% { transform: translate(102px, 0) rotate(-20deg) scale(-1,1); }
-  80% { transform: translate(102px, 0) rotate(10deg) scale(-1,1); }
+0%, 100% { transform: translate(102px, 0) rotate(0deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
+30% { transform: translate(102px, 0) rotate(-20deg) scale(-1,1); }
+80% { transform: translate(102px, 0) rotate(10deg) scale(-1,1); }
 }
 @keyframes BLADE-anim-stab-flip {
-  0%, 100% { transform: translate(32px, 0px) rotate(0deg) scale(-1,1); transform-origin: left bottom; z-index: 0; }
-  10% { transform: translate(32px, -10px)  rotate(-45deg) scale(-1,1); }
-  20% { transform: translate(32px, -10px)  rotate(-45deg) scale(-1,1); }
-  25% { transform: translate(14px, -10px)  rotate(-45deg) scale(-1,1); }
-  50% { transform: translate(12px, -10px)  rotate(-45deg) scale(-1,1); }
-  65% { transform: translate(16px, -10px)  rotate(-45deg) scale(-1,1); }
-  75% { transform: translate(42px, -10px)  rotate(-45deg) scale(-1,1); }
-  90% { transform: translate(42px, -10px)  rotate(-45deg) scale(-1,1); }
+0%, 100% { transform: translate(32px, 0px) rotate(0deg) scale(-1,1); transform-origin: left bottom; z-index: 0; }
+10% { transform: translate(32px, -10px)  rotate(-45deg) scale(-1,1); }
+20% { transform: translate(32px, -10px)  rotate(-45deg) scale(-1,1); }
+25% { transform: translate(14px, -10px)  rotate(-45deg) scale(-1,1); }
+50% { transform: translate(12px, -10px)  rotate(-45deg) scale(-1,1); }
+65% { transform: translate(16px, -10px)  rotate(-45deg) scale(-1,1); }
+75% { transform: translate(42px, -10px)  rotate(-45deg) scale(-1,1); }
+90% { transform: translate(42px, -10px)  rotate(-45deg) scale(-1,1); }
 }
 @keyframes BLADE-path {
-  0% { clip-path: polygon(-5% 95%, 20% 70%, 30% 80%, 5% 105%); }
-  45%, 60% { clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%); }
-  85% { clip-path: polygon(-20% 80%, 80% -20%, 120% 20%, 20% 120%); }
+0% { clip-path: polygon(-5% 95%, 20% 70%, 30% 80%, 5% 105%); }
+45%, 60% { clip-path: polygon(-5% 95%, 95% -5%, 105% 5%, 5% 105%); }
+85% { clip-path: polygon(-20% 80%, 80% -20%, 120% 20%, 20% 120%); }
 }
 @keyframes BLADE-hold {
-  0% { transform-origin: -36px 32px; }
-  20%, 100% { transform-origin: -36px 32px; transform: rotate(20deg); }
+0% { transform-origin: -36px 32px; }
+20%, 100% { transform-origin: -36px 32px; transform: rotate(20deg); }
 }
 @keyframes BLADE-hold-flip {
-  0% { transform: translate(102px, 0) rotate(0deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
-  20%, 100% { transform: translate(102px, 0) rotate(-20deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
+0% { transform: translate(102px, 0) rotate(0deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
+20%, 100% { transform: translate(102px, 0) rotate(-20deg) scale(-1,1); transform-origin: -36px 32px; z-index: 0; }
 }
 .emote.BLADE {
-    animation: BLADE-anim-swing 0.25s 2 .25s, BLADE-anim-stab 0.75s 1 0.75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold 0.325s 1 ease-in-out;
+transform-origin: -36px 32px;
+transition: all .2s; 
+  animation: BLADE-anim-swing 0.25s 2 .25s, BLADE-anim-stab 0.75s 1 0.75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold 0.325s 1 ease-in-out;
 }
 .emote.BLADE + .emote.BLADE, .emote.BLADE:nth-of-type(1), .emote.RapThis + .emote.BLADE, .emote.Clap + .emote.BLADE, .chat-user + .emote.BLADE  {
-  transform: scale(-1,1);
-  animation: BLADE-anim-swing-flip .25s 2 .25s, BLADE-anim-stab-flip .75s 1 .75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold-flip 0.325s 1 ease-in-out;
+transform: translate(102px) scale(-1,1);
+animation: BLADE-anim-swing-flip .25s 2 .25s, BLADE-anim-stab-flip .75s 1 .75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold-flip 0.325s 1 ease-in-out;
+transition: all .2s; 
 }
 .emote.BLADE:only-of-type, .emote + .emote.BLADE:last-of-type, .emote.BLADE:last-of-type {
-  transform: scale(1);
-  animation: BLADE-anim-swing .25s 3, BLADE-anim-stab .75s 1 .75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold 0.325s 1 ease-in-out;
+transform: scale(1);
+animation: BLADE-anim-swing .25s 3, BLADE-anim-stab .75s 1 .75s linear, BLADE-path 0.325s 1 ease-in, BLADE-hold 0.325s 1 ease-in-out;
+transition: all .2s; 
 }
-.emote.BLADE:hover, .emote.BLADE + .emote.BLADE:hover, .chat-user + .emote.BLADE:hover, .emote + .emote.BLADE:hover {
-  animation: none;
+.emote.BLADE:hover {
+transform-origin: -36px 32px;
+transform: translate(102px) rotate(-10deg) scaleX(-1);
+animation: none;
+}
+.emote.BLADE + .emote.BLADE:hover{
+transform-origin: -36px 32px;
+transform: translate(102px) rotate(-10deg) scaleX(-1);
+animation: none;
+}
+.emote.BLADE + .emote.BLADE:last-of-type:hover, .emote.BLADE:last-of-type:hover {
+transform-origin: -36px 32px;
+transform: rotate(10deg);
+animation: none;
 }
 
 .msg-chat.msg-user .user.flair8 ~ .text .emote.BLADE { 
-  filter: brightness(2) hue-rotate(-90deg) saturate(2);
+filter: brightness(2) hue-rotate(-90deg) saturate(2);
 }
 .msg-chat.msg-user .user.flair3 ~ .text .emote.BLADE {
-  filter: brightness(2) hue-rotate(80deg) saturate(2);
+filter: brightness(2) hue-rotate(80deg) saturate(2);
 }
 .msg-chat.msg-user .user.flair1 ~ .text .emote.BLADE {
-  filter: brightness(2) hue-rotate(160deg) saturate(2);
+filter: brightness(2) hue-rotate(160deg) saturate(2);
 }
 .msg-chat.msg-user .user.flair13 ~ .text .emote.BLADE {
-  filter: brightness(2) hue-rotate(210deg) saturate(2);
+filter: brightness(2) hue-rotate(210deg) saturate(2);
 }
 
 @keyframes GIGABLADE {
-  0% { left: -28px; }
-  100% { left: 0px; }
+0% { left: -28px; }
+100% { left: 0px; }
 }
 .emote.GIGACHAD + .emote.BLADE {
-  transform-origin: -36px 32px;
-  animation: BLADE-anim-swing .25s 3, BLADE-anim-stab .75s 1 .75s linear, BLADE-path 0.325s 1 ease-out, BLADE-hold 0.325s 1 ease-out, GIGABLADE 1.5s 1 ease-out;
-  transition: all .2s; 
+transform-origin: -36px 32px;
+animation: BLADE-anim-swing .25s 3, BLADE-anim-stab .75s 1 .75s linear, BLADE-path 0.325s 1 ease-out, BLADE-hold 0.325s 1 ease-out, GIGABLADE 1.5s 1 ease-out;
+transition: all .2s; 
 }
 .emote.GIGACHAD + .emote.BLADE:hover {
-  transform-origin: -36px 32px;
-  transform: rotate(10deg);
+transform-origin: -36px 32px;
+transform: rotate(10deg);
+animation: none, GIGABLADE 1.5s 1 ease-out;
 }
 @keyframes Blesstiny-anim{
-  0% {transform: rotate(0deg);}
-  25% {transform: rotate(-20deg);}
-  75% {transform: rotate(-20deg);}
-  100% {transform: rotate(0deg);}
+0% {transform: rotate(0deg);}
+25% {transform: rotate(-20deg);}
+75% {transform: rotate(-20deg);}
+100% {transform: rotate(0deg);}
 }
 .emote.Blesstiny {
-  transform-origin: 100% 100%;
-	animation: Blesstiny-anim 1s 1;
-  transition: all .25s ease;
+transform-origin: 100% 100%;
+animation: Blesstiny-anim 1s 1;
+transition: all .25s ease;
 }
 .emote.Blesstiny:hover{
-  transform: rotate(-20deg);
+transform: rotate(-20deg);
 }
 
 @keyframes Blubstiny-anim {
-  0% { top: 0px; }
-    99% { top: -25px; }
-    100%{ top: 30px; }
+0% { top: 0px; }
+  99% { top: -25px; }
+  100%{ top: 30px; }
 }
 
 .emote.Blubstiny::before {
-  content: "o";
-    opacity: 0.75;
-    text-indent: 0;
-    font-size: 16px;
-    position: absolute;
-    color: white;
-    left:9px;
-    top:-25px;
-    text-align: center;
-    animation: Blubstiny-anim 0.6s 4;
+content: "o";
+  opacity: 0.75;
+  text-indent: 0;
+  font-size: 16px;
+  position: absolute;
+  color: white;
+  left:9px;
+  top:-25px;
+  text-align: center;
+  animation: Blubstiny-anim 0.6s 4;
 }
 .emote.Blubstiny:after{
-    content: "o";
-    opacity: 0.95;
-    text-indent: 0;
-    font-size: 20px;
-    position: absolute;
-    color: white;
-    right:10px;
-    top:-25px;
-    animation: Blubstiny-anim 0.8s 4;
-    animation-delay: 0.2s;
+  content: "o";
+  opacity: 0.95;
+  text-indent: 0;
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  right:10px;
+  top:-25px;
+  animation: Blubstiny-anim 0.8s 4;
+  animation-delay: 0.2s;
 }
 .emote.Blubstiny:hover::before {
-  animation: Blubstiny-anim-hover 0.5s infinite;
+animation: Blubstiny-anim-hover 0.5s infinite;
 }
 .emote.Blubstiny:hover::after {
-  animation: Blubstiny-anim-hover 0.5s infinite;
-      animation-delay: 0.25s;
+animation: Blubstiny-anim-hover 0.5s infinite;
+    animation-delay: 0.25s;
 }
 @keyframes catJAM-anim {
-  100% { background-position: -7144px; }
+100% { background-position: -7144px; }
 }
 @keyframes catJAM-hover {
-  100% { background-position: -7144px; }
+100% { background-position: -7144px; }
 }
 
 .emote.catJAM {
-  width: 38px;
-  animation: catJAM-anim 2 steps(188) 6.5s;
+width: 38px;
+animation: catJAM-anim 2 steps(188) 6.5s;
 }
 .emote.catJAM:hover {
-  animation: catJAM-hover infinite steps(188) 6.5s;
+animation: catJAM-hover infinite steps(188) 6.5s;
 }
 @keyframes Clap-anim {
-  100% { background-position: -44px; }
+100% { background-position: -44px; }
 }
 
 @keyframes Clap-hover {
-  100% { background-position: -44px; }
+100% { background-position: -44px; }
 }
 
 .emote.Clap {
-  width: 22px;
-  animation: Clap-anim 400ms steps(2) 10 -150ms;
+width: 22px;
+animation: Clap-anim 400ms steps(2) 10 -150ms;
 }
 .emote.Clap + .emote.Clap, .emote.Clap:nth-of-type(1), .emote.RapThis + .emote.Clap, .emote.BLADE + .emote.Clap, .chat-user + .emote.Clap {
-  transform: scale(-1, 1);
+transform: scale(-1, 1);
 }
 .emote.Clap:only-of-type, .emote + .emote.Clap:last-of-type, .emote.Clap:last-of-type {
-  transform: scale(1);
+transform: scale(1);
 }
 .emote.Clap:hover {
-  animation: Clap-hover 400ms steps(2) infinite;
+animation: Clap-hover 400ms steps(2) infinite;
 }
 
 .emote.SOY + .emote.Clap {
-  animation-duration: 150ms;
-  animation-iteration-count: 26;
+animation-duration: 150ms;
+animation-iteration-count: 26;
 }
 .emote.SOY + .emote.Clap:hover {
-  animation-iteration-count: infinite;
+animation-iteration-count: infinite;
 }
 
 .emote.Slugstiny + .emote.Clap {
-  animation-duration: 1.2s;
-  animation-delay: -500ms;
+animation-duration: 1.2s;
+animation-delay: -500ms;
 }
 
 @keyframes Clap-anim2 {
-  100% { background-position: -44px; }
+100% { background-position: -44px; }
 }
 @keyframes GIGACLAP-slide {
-  0% { transform: translate(-28px, 0); }
-  100% { transform: translate(0, 0); }
+0% { transform: translate(-28px, 0); }
+100% { transform: translate(0, 0); }
 }
 
 .emote.GIGACHAD + .emote.Clap {
-  animation: Clap-anim2 800ms steps(2) 7 -150ms, GIGACLAP-slide 1.5s ease-out 1; 
+animation: Clap-anim2 800ms steps(2) 7 -150ms, GIGACLAP-slide 1.5s ease-out 1; 
 }
 /* Animation made by Igor */
 @keyframes COGGERS-anim {
-    0% { transform-origin: 25% 50%; transform: translate(0, 0) rotate(0) scale(1); }
-    50% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(540deg) scale(.66); }
-    100% { transform-origin: 25% 50%;transform: translate(0, 0) rotate(1080deg) scale(1); }
+  0% { transform-origin: 25% 50%; transform: translate(0, 0) rotate(0) scale(1); }
+  50% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(540deg) scale(.66); }
+  100% { transform-origin: 25% 50%;transform: translate(0, 0) rotate(1080deg) scale(1); }
 }
 @keyframes COGGERS-anim-hover-start {
-    0% { transform-origin: 25% 50%; transform: translate(0, 0) rotate(0) scale(1); }
-    100% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(360deg) scale(.66); }
+  0% { transform-origin: 25% 50%; transform: translate(0, 0) rotate(0) scale(1); }
+  100% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(360deg) scale(.66); }
 }
 @keyframes COGGERS-anim-hover {
-    0% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(0) scale(.66); }
-    100% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(360deg) scale(.66); }
+  0% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(0) scale(.66); }
+  100% { transform-origin: 50% 50%; transform: translate(-16px, 0) rotate(360deg) scale(.66); }
 }
 .emote.COGGERS {
-    transform-origin: 25% 50%;
-    background-repeat: no-repeat;
-    background-position: left center;
-    width: 64px;
-    margin-right: -32px;
-    animation: COGGERS-anim 2.4s 1 linear;
+  transform-origin: 25% 50%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 64px;
+  margin-right: -32px;
+  animation: COGGERS-anim 2.4s 1 linear;
 }
 .emote.COGGERS:hover {
-    animation: COGGERS-anim-hover-start 0.8s 1 linear, COGGERS-anim-hover 0.8s infinite linear 0.8s;
+  animation: COGGERS-anim-hover-start 0.8s 1 linear, COGGERS-anim-hover 0.8s infinite linear 0.8s;
 }
 @keyframes COGGERS-anim-b {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 1; transform: translate(32px); }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 1; transform: translate(32px); }
 }
 @keyframes COGGERS-anim-b-hover {
-    0% { transform: translate(32px); }
-    100% { transform: translate(32px); }
+  0% { transform: translate(32px); }
+  100% { transform: translate(32px); }
 }
 @keyframes COGGERS-anim-b-hover-start {
-    0% { transform: translate(0); }
-    100% { transform: translate(32px); }
+  0% { transform: translate(0); }
+  100% { transform: translate(32px); }
 }
 .emote.COGGERS::before {
-    opacity: 0;
-    width: 64px;
-    height: 32px;
-    display: block;
-    content: "";
-    background: inherit;
-    animation: COGGERS-anim-b 2.4s 1 linear;
+  opacity: 0;
+  width: 64px;
+  height: 32px;
+  display: block;
+  content: "";
+  background: inherit;
+  animation: COGGERS-anim-b 2.4s 1 linear;
 }
 .emote.COGGERS:hover::before {
-    opacity: 1;
-    animation: COGGERS-anim-b-hover-start 0.8s 1 linear, COGGERS-anim-b-hover 0.8s infinite linear 0.8s;
+  opacity: 1;
+  animation: COGGERS-anim-b-hover-start 0.8s 1 linear, COGGERS-anim-b-hover 0.8s infinite linear 0.8s;
 }
 
 .emote.COOMER {
-  animation: COOMER-anim 0.1s 20, COOMER-color 2s 1;
-  transition: filter 0.2s;
+animation: COOMER-anim 0.1s 20, COOMER-color 2s 1;
+transition: filter 0.2s;
 }
 .emote.COOMER:hover {
-  animation: COOMER-anim-hover 0.1s infinite;
-  filter: grayscale(1) sepia(.3) saturate(60) hue-rotate(-50deg) brightness(1.8) drop-shadow(-13px 0px 10px rgba(255, 102, 187, 0.25)) drop-shadow(13px 0px 10px rgba(255, 102, 187, 0.25));
+animation: COOMER-anim-hover 0.1s infinite;
+filter: grayscale(1) sepia(.3) saturate(60) hue-rotate(-50deg) brightness(1.8) drop-shadow(-13px 0px 10px rgba(255, 102, 187, 0.25)) drop-shadow(13px 0px 10px rgba(255, 102, 187, 0.25));
 }
 @keyframes COOMER-anim {
-  0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
-  12.5% {transform: translate(1px, -.5px) rotate(-2deg);}
-  62.5% {transform: translate(-1px, .5px) rotate(2deg);}
-  37.5% {transform: translate(-.5px, 1px) rotate(-2deg);}
-  87.5% {transform: translate(.5px, -1px) rotate(2deg);}
+0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
+12.5% {transform: translate(1px, -.5px) rotate(-2deg);}
+62.5% {transform: translate(-1px, .5px) rotate(2deg);}
+37.5% {transform: translate(-.5px, 1px) rotate(-2deg);}
+87.5% {transform: translate(.5px, -1px) rotate(2deg);}
 }
 @keyframes COOMER-color{
- 0%, 100% {filter: grayscale(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1) drop-shadow(0px 0px 0px rgba(255, 102, 187, 0)) drop-shadow(0px 0px 0px rgba(255, 102, 187, 0));} 
- 10%, 90% {filter: grayscale(1) sepia(.15) saturate(10) hue-rotate(-50deg) brightness(1.3) drop-shadow(-5px 0px 6px rgba(255, 102, 187, 0.1)) drop-shadow(5px 0px 6px rgba(255, 102, 187, 0.1));}
- 30%, 70% {filter: grayscale(1) sepia(.3) saturate(60) hue-rotate(-50deg) brightness(1.8) drop-shadow(-13px 0px 10px rgba(255, 102, 187, 0.25)) drop-shadow(13px 0px 10px rgba(255, 102, 187, 0.25));}
+0%, 100% {filter: grayscale(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1) drop-shadow(0px 0px 0px rgba(255, 102, 187, 0)) drop-shadow(0px 0px 0px rgba(255, 102, 187, 0));} 
+10%, 90% {filter: grayscale(1) sepia(.15) saturate(10) hue-rotate(-50deg) brightness(1.3) drop-shadow(-5px 0px 6px rgba(255, 102, 187, 0.1)) drop-shadow(5px 0px 6px rgba(255, 102, 187, 0.1));}
+30%, 70% {filter: grayscale(1) sepia(.3) saturate(60) hue-rotate(-50deg) brightness(1.8) drop-shadow(-13px 0px 10px rgba(255, 102, 187, 0.25)) drop-shadow(13px 0px 10px rgba(255, 102, 187, 0.25));}
 }
 @keyframes COOMER-anim-hover {
-  0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
-  12.5% {transform: translate(1px, -.5px) rotate(-2deg);}
-  62.5% {transform: translate(-1px, .5px) rotate(2deg);}
-  37.5% {transform: translate(-.5px, 1px) rotate(-2deg);}
-  87.5% {transform: translate(.5px, -1px) rotate(2deg);}
+0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
+12.5% {transform: translate(1px, -.5px) rotate(-2deg);}
+62.5% {transform: translate(-1px, .5px) rotate(2deg);}
+37.5% {transform: translate(-.5px, 1px) rotate(-2deg);}
+87.5% {transform: translate(.5px, -1px) rotate(2deg);}
 }
 @keyframes CROPSTINY-anim {
-  0% { transform: scale(0.39) skew(0, 0); }
-  10% { background-position: 0 5px;
-    transform: scale(0.42) rotate(-5deg);
-  }
-  15% { background-position: 0 0; }
-    20% { background-position: 0 5px; 
-    transform: scale(0.47) rotate(5deg); 
-  }
-  25% { background-position: 0 0; }
-  30% { background-position: 0 5px;
-    transform: scale(0.53) rotate(-5deg);
-  }
-  35% { background-position: 0 0; }
-    40% { background-position: 0 5px; 
-    transform: scale(0.59) rotate(5deg); 
-  }
-  45% { background-position: 0 0; }
-  50% { background-position: 0 5px;
-    transform: scale(0.66) rotate(-5deg);
-  }
-  55% { background-position: 0 0; }
-    60% { background-position: 0 5px; 
-    transform: scale(0.73) rotate(5deg); 
-  }
-  65% { background-position: 0 0; }
-  70% { background-position: 0 5px;
-    transform: scale(0.82) rotate(-5deg);
-  }
-  75% { background-position: 0 0; }
-    81% { background-position: 0 5px; 
-    transform: scale(0.90) rotate(5deg);
-  }
-  86% { background-position: 0 0; }
-    91% { background-position: 0 4px; 
-    transform: scale(.98) skew(4deg, -4deg);
-  }
-  96% { background-position: 0 0; transform: scale(1) skew(0, 0); }
+0% { transform: scale(0.39) skew(0, 0); }
+10% { background-position: 0 5px;
+  transform: scale(0.42) rotate(-5deg);
+}
+15% { background-position: 0 0; }
+  20% { background-position: 0 5px; 
+  transform: scale(0.47) rotate(5deg); 
+}
+25% { background-position: 0 0; }
+30% { background-position: 0 5px;
+  transform: scale(0.53) rotate(-5deg);
+}
+35% { background-position: 0 0; }
+  40% { background-position: 0 5px; 
+  transform: scale(0.59) rotate(5deg); 
+}
+45% { background-position: 0 0; }
+50% { background-position: 0 5px;
+  transform: scale(0.66) rotate(-5deg);
+}
+55% { background-position: 0 0; }
+  60% { background-position: 0 5px; 
+  transform: scale(0.73) rotate(5deg); 
+}
+65% { background-position: 0 0; }
+70% { background-position: 0 5px;
+  transform: scale(0.82) rotate(-5deg);
+}
+75% { background-position: 0 0; }
+  81% { background-position: 0 5px; 
+  transform: scale(0.90) rotate(5deg);
+}
+86% { background-position: 0 0; }
+  91% { background-position: 0 4px; 
+  transform: scale(.98) skew(4deg, -4deg);
+}
+96% { background-position: 0 0; transform: scale(1) skew(0, 0); }
 }
 @keyframes CROPSTINY-anim-hover {
-  0% { transform: scale(0.39) skew(0, 0); }
-  10% { background-position: 0 5px;
-    transform: scale(0.42) rotate(-5deg);
-  }
-  15% { background-position: 0 0; }
-    20% { background-position: 0 5px; 
-    transform: scale(0.47) rotate(5deg); 
-  }
-  25% { background-position: 0 0; }
-  30% { background-position: 0 5px;
-    transform: scale(0.53) rotate(-5deg);
-  }
-  35% { background-position: 0 0; }
-    40% { background-position: 0 5px; 
-    transform: scale(0.59) rotate(5deg); 
-  }
-  45% { background-position: 0 0; }
-  50% { background-position: 0 5px;
-    transform: scale(0.66) rotate(-5deg);
-  }
-  55% { background-position: 0 0; }
-    60% { background-position: 0 5px; 
-    transform: scale(0.73) rotate(5deg); 
-  }
-  65% { background-position: 0 0; }
-  70% { background-position: 0 5px;
-    transform: scale(0.82) rotate(-5deg);
-  }
-  75% { background-position: 0 0; }
-    81% { background-position: 0 5px; 
-    transform: scale(0.90) rotate(5deg);
-  }
-  86% { background-position: 0 0; }
-    91% { background-position: 0 4px; 
-    transform: scale(.96) skew(4deg, -4deg);
-  }
-  96% { background-position: 0 0; transform: scale(1) skew(0, 0); }
+0% { transform: scale(0.39) skew(0, 0); }
+10% { background-position: 0 5px;
+  transform: scale(0.42) rotate(-5deg);
+}
+15% { background-position: 0 0; }
+  20% { background-position: 0 5px; 
+  transform: scale(0.47) rotate(5deg); 
+}
+25% { background-position: 0 0; }
+30% { background-position: 0 5px;
+  transform: scale(0.53) rotate(-5deg);
+}
+35% { background-position: 0 0; }
+  40% { background-position: 0 5px; 
+  transform: scale(0.59) rotate(5deg); 
+}
+45% { background-position: 0 0; }
+50% { background-position: 0 5px;
+  transform: scale(0.66) rotate(-5deg);
+}
+55% { background-position: 0 0; }
+  60% { background-position: 0 5px; 
+  transform: scale(0.73) rotate(5deg); 
+}
+65% { background-position: 0 0; }
+70% { background-position: 0 5px;
+  transform: scale(0.82) rotate(-5deg);
+}
+75% { background-position: 0 0; }
+  81% { background-position: 0 5px; 
+  transform: scale(0.90) rotate(5deg);
+}
+86% { background-position: 0 0; }
+  91% { background-position: 0 4px; 
+  transform: scale(.96) skew(4deg, -4deg);
+}
+96% { background-position: 0 0; transform: scale(1) skew(0, 0); }
 }
 @keyframes CROPSTINY-brightness {
-  0% { filter: brightness(.3); }
-  100% { filter: brightness(1); }
+0% { filter: brightness(.3); }
+100% { filter: brightness(1); }
 }
 @keyframes CROPSTINY-brightness-hover {
-  0% { filter: brightness(.3); }
-  100% { filter: brightness(1); }
+0% { filter: brightness(.3); }
+100% { filter: brightness(1); }
 }
 .emote.CROPSTINY {
-  transform-origin: 46% 100%;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-    animation: CROPSTINY-anim 3.5s 1 ease-in -2s, CROPSTINY-brightness 3.5s 1 linear -2s;
+transform-origin: 46% 100%;
+background-repeat: no-repeat;
+background-position: 0 0;
+  animation: CROPSTINY-anim 3.5s 1 ease-in -2s, CROPSTINY-brightness 3.5s 1 linear -2s;
 }
 .emote.CROPSTINY:hover {
-  animation: CROPSTINY-anim-hover 3.5s infinite ease-in -2s, CROPSTINY-brightness-hover 3.5s infinite linear -2s;
+animation: CROPSTINY-anim-hover 3.5s infinite ease-in -2s, CROPSTINY-brightness-hover 3.5s infinite linear -2s;
 }
 @keyframes CuckCrab-anim {
-  100% { background-position: -2240px; }
+100% { background-position: -2240px; }
 }
 
 @keyframes CuckCrab-hover {
-  100% { background-position: -2240px; }
+100% { background-position: -2240px; }
 }
 
 .emote.CuckCrab {
-  width: 32px;
-  background-position: 704px;
-  animation: CuckCrab-anim 3.68s steps(92) 5;
+width: 32px;
+background-position: 704px;
+animation: CuckCrab-anim 3.68s steps(92) 5;
 }
 
 .emote.CuckCrab:hover {
-  animation: CuckCrab-hover 3.68s steps(92) infinite;
+animation: CuckCrab-hover 3.68s steps(92) infinite;
 }
 @keyframes DANKMEMES-anim {
-    0%, 100% {
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        -webkit-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
+  0%, 100% {
+      -webkit-filter: hue-rotate(0deg);
+      filter: hue-rotate(0deg);
+  }
+  50% {
+      -webkit-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+  }
 }
 @keyframes DANKMEMES-anim-hover {
-    0%, 100% {
-        -webkit-filter: hue-rotate(0deg);
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        -webkit-filter: hue-rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
+  0%, 100% {
+      -webkit-filter: hue-rotate(0deg);
+      filter: hue-rotate(0deg);
+  }
+  50% {
+      -webkit-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+  }
 }
 .emote.DANKMEMES {
-    animation: DANKMEMES-anim 1s 2;
+  animation: DANKMEMES-anim 1s 2;
 }
 .emote.DANKMEMES:hover {
-    animation: DANKMEMES-anim-hover 1s infinite;
+  animation: DANKMEMES-anim-hover 1s infinite;
 }
 /* made by abudhabbi */
 /* Original made by Gahhey */
 /* Modification by Igor */
 @keyframes FiveHead-anim {
-  100% { background-position: -1020px; }
+100% { background-position: -1020px; }
 }
 @keyframes FiveHead-hover {
-  100% { background-position: -1020px; }
+100% { background-position: -1020px; }
 }
 
 .emote.FiveHead {
-  width: 30px;
-  animation: FiveHead-anim 1.7s steps(34) 1;
+width: 30px;
+animation: FiveHead-anim 1.7s steps(34) 1;
 }
 
 .emote.FiveHead:hover {
-  animation: FiveHead-hover 1.7s steps(34) infinite;
+animation: FiveHead-hover 1.7s steps(34) infinite;
 }
 
 @keyframes gachiGASM-anim {
-  0%, 100% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
-  25% { transform: translate(-1px, 0); }
-  75% { transform: translate(1px, 0); }
+0%, 100% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
+25% { transform: translate(-1px, 0); }
+75% { transform: translate(1px, 0); }
 }
 @keyframes gachiGASM-anim-exit {
-  0% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
-  100% { filter: contrast(1) saturate(1) hue-rotate(0); }
+0% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
+100% { filter: contrast(1) saturate(1) hue-rotate(0); }
 }
 @keyframes gachiGASM-anim-hover {
-  0%, 100% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
-  25% { transform: translate(-1px, 0); }
-  75% { transform: translate(1px, 0); }
+0%, 100% { filter: contrast(1.2) saturate(2.2) hue-rotate(-25deg); }
+25% { transform: translate(-1px, 0); }
+75% { transform: translate(1px, 0); }
 }
 @keyframes gachiGASM-anim-ba { 
-  0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white); }
-  100% { opacity: 1; transform: rotate(1080deg); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
+0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white); }
+100% { opacity: 1; transform: rotate(1080deg); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
 }
 @keyframes gachiGASM-anim-ba-exit {
-  0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
-  100% { opacity: 0; transform: rotate(216deg); }
+0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
+100% { opacity: 0; transform: rotate(216deg); }
 }
 @keyframes gachiGASM-anim-ba-hover { 
-  0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white); }
-  100% { opacity: 1; transform: rotate(1080deg); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
+0% { opacity: 1; transform: rotate(0); filter: drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white) drop-shadow(0 0 3px white); }
+100% { opacity: 1; transform: rotate(1080deg); filter: drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa) drop-shadow(0 0 2px #FFFFFFaa); }
 }
 .emote.gachiGASM {
-  animation: gachiGASM-anim 100ms 16, gachiGASM-anim-exit 100ms 1 1.6s;
+animation: gachiGASM-anim 100ms 16, gachiGASM-anim-exit 100ms 1 1.6s;
 }
 .emote.gachiGASM::before {
-    content: "*";
-    text-shadow: none;
-    text-indent: 0;
-    font-size: 10px;
-    color: white;
-	  line-height: initial;
-    position: absolute;
-    opacity: 0;
-    top: 5px;
-    left: 12px;
-    transform-origin: 40% 39%;
-    animation: gachiGASM-anim-ba 500ms 3 linear, gachiGASM-anim-ba-exit 100ms 1 linear 1.5s;
+  content: "*";
+  text-shadow: none;
+  text-indent: 0;
+  font-size: 10px;
+  color: white;
+  line-height: initial;
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  left: 12px;
+  transform-origin: 40% 39%;
+  animation: gachiGASM-anim-ba 500ms 3 linear, gachiGASM-anim-ba-exit 100ms 1 linear 1.5s;
 }
 .emote.gachiGASM::after {
-    content: "*";
-    text-shadow: none;
-    text-indent: 0;
-    font-size: 10px;
-    color: white;
-	  line-height: initial;
-    position: absolute;
-    opacity: 0;
-    top: 4px;
-    left: 20px;
-    transform-origin: 40% 39%;
-    animation: gachiGASM-anim-ba 500ms 3 linear, gachiGASM-anim-ba-exit 100ms 1 linear 1.5s;
+  content: "*";
+  text-shadow: none;
+  text-indent: 0;
+  font-size: 10px;
+  color: white;
+  line-height: initial;
+  position: absolute;
+  opacity: 0;
+  top: 4px;
+  left: 20px;
+  transform-origin: 40% 39%;
+  animation: gachiGASM-anim-ba 500ms 3 linear, gachiGASM-anim-ba-exit 100ms 1 linear 1.5s;
 }
 .emote.gachiGASM:hover {
-  animation: gachiGASM-anim-hover 100ms infinite;
+animation: gachiGASM-anim-hover 100ms infinite;
 }
 .emote.gachiGASM:hover::before {
-    animation: gachiGASM-anim-ba-hover 500ms infinite linear;
+  animation: gachiGASM-anim-ba-hover 500ms infinite linear;
 }
 .emote.gachiGASM:hover::after {
-    animation: gachiGASM-anim-ba-hover 500ms infinite linear;
+  animation: gachiGASM-anim-ba-hover 500ms infinite linear;
 }
 @keyframes GIGACHAD-anim {
-  0% { background-position: -28px 10px; }
-  100% { background-position: 0px; }
+0% { background-position: -28px 10px; }
+100% { background-position: 0px; }
 }
 @keyframes GIGACHAD-combo {
-  20% { filter: brightness(1.45) drop-shadow(0px 0px 10px #FFFFFF80); }
+20% { filter: brightness(1.45) drop-shadow(0px 0px 10px #FFFFFF80); }
 }
 .emote.GIGACHAD {
-  background-repeat: no-repeat;
-  animation: GIGACHAD-anim 1.5s ease-out 1;
-  transition: all 1s;
+background-repeat: no-repeat;
+animation: GIGACHAD-anim 1.5s ease-out 1;
+transition: all 1s;
 }
 .emote.GIGACHAD:hover {
-  filter: brightness(1.45) drop-shadow(0px 0px 10px #FFFFFF80);
-  transition: all .5s;
+filter: brightness(1.45) drop-shadow(0px 0px 10px #FFFFFF80);
+transition: all .5s;
 }
 .msg-chat.msg-emote .emote.GIGACHAD {
-  animation: GIGACHAD-combo 1s 1;
+animation: GIGACHAD-combo 1s 1;
 }
 /* flair colors */
 .msg-chat.msg-user:hover .user.flair8 ~ .text .emote.GIGACHAD {
-  filter: brightness(1.35) hue-rotate(-54deg) saturate(5) drop-shadow(0px 0px 10px #D436D2A0);
-  transition: all .5s;
+filter: brightness(1.35) hue-rotate(-54deg) saturate(5) drop-shadow(0px 0px 10px #D436D2A0);
+transition: all .5s;
 }
 .msg-chat.msg-user:hover .user.flair3 ~ .text .emote.GIGACHAD {
-  filter: brightness(1.35) hue-rotate(103deg) saturate(5) drop-shadow(0px 0px 10px #7AD53DA0);
-  transition: all .5s;
+filter: brightness(1.35) hue-rotate(103deg) saturate(5) drop-shadow(0px 0px 10px #7AD53DA0);
+transition: all .5s;
 }
 .msg-chat.msg-user:hover .user.flair1 ~ .text .emote.GIGACHAD {
-  filter: brightness(1.35) hue-rotate(176deg) saturate(5) drop-shadow(0px 0px 10px #2ADDC8A0);
-  transition: all .5s;
+filter: brightness(1.35) hue-rotate(176deg) saturate(5) drop-shadow(0px 0px 10px #2ADDC8A0);
+transition: all .5s;
 }
 
 .msg-chat.msg-user .user.flair8 ~ .text .emote.GIGACHAD { 
-  filter: brightness(1) hue-rotate(-54deg) saturate(5) drop-shadow(0px 0px 10px #D436D200);
+filter: brightness(1) hue-rotate(-54deg) saturate(5) drop-shadow(0px 0px 10px #D436D200);
 }
 .msg-chat.msg-user .user.flair3 ~ .text .emote.GIGACHAD {
-  filter: brightness(1) hue-rotate(103deg) saturate(5) drop-shadow(0px 0px 10px #7AD53D00);
+filter: brightness(1) hue-rotate(103deg) saturate(5) drop-shadow(0px 0px 10px #7AD53D00);
 }
 .msg-chat.msg-user .user.flair1 ~ .text .emote.GIGACHAD {
-  filter: brightness(1) hue-rotate(176deg) saturate(5) drop-shadow(0px 0px 10px #2ADDC800);
+filter: brightness(1) hue-rotate(176deg) saturate(5) drop-shadow(0px 0px 10px #2ADDC800);
 }
 @keyframes GODSTINY-anim {
-  0% { transform: scale(1.1); filter: drop-shadow(0 0 5px rgba(208, 133, 140, 0.5)) brightness(1.3); }
-  100% { transform: scale(1); }
+0% { transform: scale(1.1); filter: drop-shadow(0 0 5px rgba(208, 133, 140, 0.5)) brightness(1.3); }
+100% { transform: scale(1); }
 }
 .emote.GODSTINY {
-    width: 27px;
-    background-repeat: no-repeat;
-    background-position: right;
-    margin-left: -4px;
-    transform-origin: 50% 70%;
-    animation: GODSTINY-anim 300ms 1;
-    transition: all 100ms ease-out;
+  width: 27px;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-left: -4px;
+  transform-origin: 50% 70%;
+  animation: GODSTINY-anim 300ms 1;
+  transition: all 100ms ease-out;
 }
 .emote.GODSTINY:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 5px rgba(208, 133, 140, 0.5)) brightness(1.3);
-    animation: none;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px rgba(208, 133, 140, 0.5)) brightness(1.3);
+  animation: none;
 }
 @keyframes GODSTINY-anim-ba {
-  0%, 100% { opacity: 0; }
-  35%, 47%, 57%, 65%, 71% { opacity: 1; filter: drop-shadow(0 0 1px #a448) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000); }  
-  10%, 25%, 41%, 52%, 61%, 68%, 73% { opacity: 1; filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444); }
+0%, 100% { opacity: 0; }
+35%, 47%, 57%, 65%, 71% { opacity: 1; filter: drop-shadow(0 0 1px #a448) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000) drop-shadow(0 0 0 #0000); }  
+10%, 25%, 41%, 52%, 61%, 68%, 73% { opacity: 1; filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444); }
 }
 /*.emote.GODSTINY::before {
-    mix-blend-mode: overlay;
-    font-style: normal;
-    content: "*";
-    text-indent: 0;
-    text-shadow: none;
-    font-size: 6px;
-    color: white;
-    line-height: initial;
-    position: absolute;
-    opacity: 0;
-    top: 15.5px;
-    left: 10px;
-    animation: GODSTINY-anim-ba 2s 1 linear;
-    transition: all 100ms ease;
+  mix-blend-mode: overlay;
+  font-style: normal;
+  content: "*";
+  text-indent: 0;
+  text-shadow: none;
+  font-size: 6px;
+  color: white;
+  line-height: initial;
+  position: absolute;
+  opacity: 0;
+  top: 15.5px;
+  left: 10px;
+  animation: GODSTINY-anim-ba 2s 1 linear;
+  transition: all 100ms ease;
 }
 .emote.GODSTINY::after {
-    mix-blend-mode: overlay;
-    font-style: normal;
-    content: "*";
-    text-indent: 0;
-    text-shadow: none;
-    font-size: 6px;
-    color: white;
-    line-height: initial;
-    position: absolute;
-    opacity: 0;
-    top: 13.5px;
-    left: 17.5px;
-    animation: GODSTINY-anim-ba 2s 1 linear;
-    transition: all 100ms ease;
+  mix-blend-mode: overlay;
+  font-style: normal;
+  content: "*";
+  text-indent: 0;
+  text-shadow: none;
+  font-size: 6px;
+  color: white;
+  line-height: initial;
+  position: absolute;
+  opacity: 0;
+  top: 13.5px;
+  left: 17.5px;
+  animation: GODSTINY-anim-ba 2s 1 linear;
+  transition: all 100ms ease;
 }
 .emote.GODSTINY:hover::before {
-    opacity: 1;
-    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444);
-    animation: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444);
+  animation: none;
 }
 .emote.GODSTINY:hover::after {
-    opacity: 1;
-    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444);
-    animation: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white) drop-shadow(0 0 3px white) drop-shadow(0 0 2px #FF4444) drop-shadow(0 0 2px #FF4444);
+  animation: none;
 }
 */
 .emote.GRUGingOverIt {
-  width: 43px;
-  height: 32px;
-  margin-top: -32px;
-  font-family: "Roboto", Helvetica, "Trebuchet MS", Verdana, sans-serif;
-  animation: GRUGingOverIt-anim 2s;
-  background-repeat: no-repeat;
+width: 43px;
+height: 32px;
+margin-top: -32px;
+font-family: "Roboto", Helvetica, "Trebuchet MS", Verdana, sans-serif;
+animation: GRUGingOverIt-anim 2s;
+background-repeat: no-repeat;
 }
 
 .emote.GRUGingOverIt:hover {
-  animation: GRUGingOverIt-anim-hover 2s infinite;
+animation: GRUGingOverIt-anim-hover 2s infinite;
 }
 
 @keyframes GRUGingOverIt-anim {
-  0% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 32px; }
-  10% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 0; }
-  30% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
-  35% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
-  37% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
-  39% {transform: scale3d(1, .95, 1); transform-origin: bottom; }
-  40% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
-  100% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+0% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 32px; }
+10% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 0; }
+30% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+35% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
+37% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
+39% {transform: scale3d(1, .95, 1); transform-origin: bottom; }
+40% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+100% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
 }
 
-@keyframes GRUGingOverIt-hover {
-  0% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 32px; }
-  10% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 0; }
-  30% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
-  35% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
-  37% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
-  39% {transform: scale3d(1, .95, 1); transform-origin: bottom; }
-  40% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
-  100% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+@keyframes GRUGingOverIt {
+0% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 32px; }
+10% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 0; }
+30% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+35% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
+37% {transform: scale3d(1, 1.1, 1); transform-origin: bottom; }
+39% {transform: scale3d(1, .95, 1); transform-origin: bottom; }
+40% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
+100% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
 }
 
 @keyframes GRUGingOverItMark-anim {
-  5% { transform: scale(0, 0); transform-origin: bottom; }
-  37% { transform: scale(0, 0); transform-origin: bottom; }
-  40% { transform: scale(1, 0.7); transform-origin: bottom; }
-  75% { transform: scale(1, 0.7); transform-origin: bottom; }
-  80% { transform: scale(1.3, 1.1); transform-origin: bottom; }
-  85% { transform: scale(1.4, .1); transform-origin: bottom; }
-  90% { transform: scale(0, 0); transform-origin: bottom; }
+5% { transform: scale(0, 0); transform-origin: bottom; }
+37% { transform: scale(0, 0); transform-origin: bottom; }
+40% { transform: scale(1, 0.7); transform-origin: bottom; }
+75% { transform: scale(1, 0.7); transform-origin: bottom; }
+80% { transform: scale(1.3, 1.1); transform-origin: bottom; }
+85% { transform: scale(1.4, .1); transform-origin: bottom; }
+90% { transform: scale(0, 0); transform-origin: bottom; }
 }
 @keyframes GRUGingOverItMark-anim-hover {
-  5% { transform: scale(0, 0); transform-origin: bottom; }
-  37% { transform: scale(0, 0); transform-origin: bottom; }
-  40% { transform: scale(1, 0.7); transform-origin: bottom; }
-  75% { transform: scale(1, 0.7); transform-origin: bottom; }
-  80% { transform: scale(1.3, 1.1); transform-origin: bottom; }
-  85% { transform: scale(1.4, .1); transform-origin: bottom; }
-  90% { transform: scale(0, 0); transform-origin: bottom; }
+5% { transform: scale(0, 0); transform-origin: bottom; }
+37% { transform: scale(0, 0); transform-origin: bottom; }
+40% { transform: scale(1, 0.7); transform-origin: bottom; }
+75% { transform: scale(1, 0.7); transform-origin: bottom; }
+80% { transform: scale(1.3, 1.1); transform-origin: bottom; }
+85% { transform: scale(1.4, .1); transform-origin: bottom; }
+90% { transform: scale(0, 0); transform-origin: bottom; }
 }
 
 .emote.GRUGingOverIt:before {
-    content: "â—";
-    text-shadow: none;
-    text-indent: 0;
-    font-size: 28px;
-    line-height: initial;
-    position: absolute;
-    opacity: 1;
-    top: -10px;
-    left: 0px;
-    transform: scale(0, 0);
-    animation: GRUGingOverItMark-anim 2s 1;
-}
-.emote.GRUGingOverIt:hover::before {
-  animation: GRUGingOverItMark-anim-hover 2s infinite;
-}
-.emote.HACKERMAN {
-  margin-left: -1px;
-  margin-right: -1px;
-  width: 34px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@keyframes HACKERMAN-scan {
-  0% { transform: translate(0, 0); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0; }
-  40% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 30px #0F0; }
-  50% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 0px #0F0;}
-  50.01% { transform: translate(0, 0); box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0;}
-  90% { transform: translate(0, -29px);  box-shadow: inset 0 -.5px 0 #0F0, 0 0 30px #0F0; }
-  100% { transform: translate(0, -29px); box-shadow: inset 0 -.5px 0 #0F0, 0 0 0 #0F0; }
-}
-@keyframes HACKERMAN-scan-hover {
-  0% { transform: translate(0, 0); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0, 0 0 10px #0F0; }
-  40% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0, 0 0 5px #0F0; }
-  50% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 0px #0F0, 0 0 0px #0F0;}
-  50.01% { transform: translate(0, 0); box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0, 0 0 10px #0F0;}
-  90% { transform: translate(0, -29px);  box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0, 0 0 5px #0F0; }
-  100% { transform: translate(0, -29px); box-shadow: inset 0 -.5px 0 #0F0, 0 0 0 #0F0, 0 0 0 #0F0; }
-}
-.emote.HACKERMAN:after {
-  opacity: 0.5;
-  top: 0;
-  mix-blend-mode: color-burn;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  animation: HACKERMAN-scan .60s 2 linear;
-}
-.emote.HACKERMAN:hover:after {
-  animation: HACKERMAN-scan-hover .60s 3 linear, HACKERMAN-scan-hover .60s infinite linear 4s;
-}
-@keyframes HACKERMAN-hack {
-  0% { content: "456125 456732 123546 874654 496865 4895.."; }
-  5% { content: "674579 67865 17895 874654 67567 624..";}
-  10% { content: "87541 4234 45343 45646 5467 954...";}
-  15% { content: "54674 5644 87545 5642 456 35...";}
-  20% { content: "9354 5821 5475 3748 456 5...";}
-  25% { content: "9542 865 8534 785 45..."; width: 100%; }
-  30% { content: "8653 85 853 865 5..."; width: 60%; }
-  35% { content: "854 41 37 86..."; width: 50%; }
-  40% { content: "492 45 69..."; }
-  45%, 54.9% { content: "420 69 ..."; font-size: 6px; line-height: 5px;  width: 50%; letter-spacing: 1px;}
-  55% { content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px;  width: 110%; letter-spacing: 0px;}
-  100% {  content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px; width: 110%; letter-spacing: 0px; }
-}
-@keyframes HACKERMAN-hack-opacity {
-  54.9% { opacity: 0.6; }
-  55%, 60%, 65.1%, 70%, 75.1%, 100% { opacity: 0.6; }
-  60.1%, 65%, 70.1%, 75% { opacity: 0; } 
-}
-@keyframes HACKERMAN-hack-hover {
-  0% { content: "456125 456732 123546 874654 496865 4895.."; }
-  5% { content: "674579 67865 17895 874654 67567 624..";}
-  10% { content: "87541 4234 45343 45646 5467 954...";}
-  15% { content: "54674 5644 87545 5642 456 35...";}
-  20% { content: "9354 5821 5475 3748 456 5...";}
-  25% { content: "9542 865 8534 785 45..."; width: 100%; }
-  30% { content: "8653 85 853 865 5..."; width: 50%; }
-  35% { content: "854 41 37 86...";}
-  40% { content: "492 45 69..."; }
-  45%, 54.9% { content: "420 69 ..."; font-size: 6px; line-height: 5px;  width: 50%; letter-spacing: 1px;}
-  50% { content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px;  width: 110%; letter-spacing: 0px;}
-  100% {  content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px; width: 110%; letter-spacing: 0px; }
-}
-@keyframes HACKERMAN-hack-opacity-hover {
-  54.9% { opacity: 0.6; }
-  55%, 60%, 65.1%, 70%, 75.1%, 100% { opacity: 0.6; }
-  60.1%, 65%, 70.1%, 75% { opacity: 0; } 
-}
-.emote.HACKERMAN:before {
-  text-align: start;
-  word-wrap: none;
-  mix-blend-mode: screen;
-  letter-spacing: 1px;
-  font-family: "Courier New", Courier, monospace;
-  font-style: normal;
+  content: "â—";
   text-shadow: none;
   text-indent: 0;
-  color: #0c0;
-  font-size: 6px;
+  font-size: 28px;
   line-height: initial;
   position: absolute;
-  content: "";
-  line-height: 5px;
-  width: 100%;
-  height: 100%;
-  left: -1px;
-  animation: HACKERMAN-hack 3s 1 -.75s, HACKERMAN-hack-opacity 3s 1 -.75s;
+  opacity: 1;
+  top: -10px;
+  left: 0px;
+  transform: scale(0, 0);
+  animation: GRUGingOverItMark-anim 2s 1;
+}
+.emote.GRUGingOverIt:hover::before {
+animation: GRUGingOverItMark-anim-hover 2s infinite;
+}
+.emote.HACKERMAN {
+margin-left: -1px;
+margin-right: -1px;
+width: 34px;
+background-position: center;
+background-repeat: no-repeat;
+}
+@keyframes HACKERMAN-scan {
+0% { transform: translate(0, 0); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0; }
+40% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 30px #0F0; }
+50% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 0px #0F0;}
+50.01% { transform: translate(0, 0); box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0;}
+90% { transform: translate(0, -29px);  box-shadow: inset 0 -.5px 0 #0F0, 0 0 30px #0F0; }
+100% { transform: translate(0, -29px); box-shadow: inset 0 -.5px 0 #0F0, 0 0 0 #0F0; }
+}
+@keyframes HACKERMAN-scan-hover {
+0% { transform: translate(0, 0); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0, 0 0 10px #0F0; }
+40% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 10px #0F0, 0 0 5px #0F0; }
+50% { transform: translate(0, 29px); box-shadow: inset 0 .5px 0 #0F0, 0 0 0px #0F0, 0 0 0px #0F0;}
+50.01% { transform: translate(0, 0); box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0, 0 0 10px #0F0;}
+90% { transform: translate(0, -29px);  box-shadow: inset 0 -.5px 0 #0F0, 0 0 10px #0F0, 0 0 5px #0F0; }
+100% { transform: translate(0, -29px); box-shadow: inset 0 -.5px 0 #0F0, 0 0 0 #0F0, 0 0 0 #0F0; }
+}
+.emote.HACKERMAN:after {
+opacity: 0.5;
+top: 0;
+mix-blend-mode: color-burn;
+content: "";
+display: block;
+height: 100%;
+width: 100%;
+position: absolute;
+animation: HACKERMAN-scan .60s 2 linear;
+}
+.emote.HACKERMAN:hover:after {
+animation: HACKERMAN-scan-hover .60s 3 linear, HACKERMAN-scan-hover .60s infinite linear 4s;
+}
+@keyframes HACKERMAN-hack {
+0% { content: "456125 456732 123546 874654 496865 4895.."; }
+5% { content: "674579 67865 17895 874654 67567 624..";}
+10% { content: "87541 4234 45343 45646 5467 954...";}
+15% { content: "54674 5644 87545 5642 456 35...";}
+20% { content: "9354 5821 5475 3748 456 5...";}
+25% { content: "9542 865 8534 785 45..."; width: 100%; }
+30% { content: "8653 85 853 865 5..."; width: 60%; }
+35% { content: "854 41 37 86..."; width: 50%; }
+40% { content: "492 45 69..."; }
+45%, 54.9% { content: "420 69 ..."; font-size: 6px; line-height: 5px;  width: 50%; letter-spacing: 1px;}
+55% { content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px;  width: 110%; letter-spacing: 0px;}
+100% {  content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px; width: 110%; letter-spacing: 0px; }
+}
+@keyframes HACKERMAN-hack-opacity {
+54.9% { opacity: 0.6; }
+55%, 60%, 65.1%, 70%, 75.1%, 100% { opacity: 0.6; }
+60.1%, 65%, 70.1%, 75% { opacity: 0; } 
+}
+@keyframes HACKERMAN-hack-hover {
+0% { content: "456125 456732 123546 874654 496865 4895.."; }
+5% { content: "674579 67865 17895 874654 67567 624..";}
+10% { content: "87541 4234 45343 45646 5467 954...";}
+15% { content: "54674 5644 87545 5642 456 35...";}
+20% { content: "9354 5821 5475 3748 456 5...";}
+25% { content: "9542 865 8534 785 45..."; width: 100%; }
+30% { content: "8653 85 853 865 5..."; width: 50%; }
+35% { content: "854 41 37 86...";}
+40% { content: "492 45 69..."; }
+45%, 54.9% { content: "420 69 ..."; font-size: 6px; line-height: 5px;  width: 50%; letter-spacing: 1px;}
+50% { content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px;  width: 110%; letter-spacing: 0px;}
+100% {  content: "ID: 420 Pass:69 ... SUCCESS"; font-size: 8.5px; line-height: 8px; width: 110%; letter-spacing: 0px; }
+}
+@keyframes HACKERMAN-hack-opacity-hover {
+54.9% { opacity: 0.6; }
+55%, 60%, 65.1%, 70%, 75.1%, 100% { opacity: 0.6; }
+60.1%, 65%, 70.1%, 75% { opacity: 0; } 
+}
+.emote.HACKERMAN:before {
+text-align: start;
+word-wrap: none;
+mix-blend-mode: screen;
+letter-spacing: 1px;
+font-family: "Courier New", Courier, monospace;
+font-style: normal;
+text-shadow: none;
+text-indent: 0;
+color: #0c0;
+font-size: 6px;
+line-height: initial;
+position: absolute;
+content: "";
+line-height: 5px;
+width: 100%;
+height: 100%;
+left: -1px;
+animation: HACKERMAN-hack 3s 1 -.75s, HACKERMAN-hack-opacity 3s 1 -.75s;
 }
 .emote.HACKERMAN:hover:before {
-  animation: HACKERMAN-hack-hover 4s infinite, HACKERMAN-hack-opacity-hover 4s infinite;
+animation: HACKERMAN-hack-hover 4s infinite, HACKERMAN-hack-opacity-hover 4s infinite;
 }
 @keyframes Hhhehhehe-anim {
-    0% { transform: translate(0px, 0px) rotate(-0deg); }
-    20% { transform: translate(0px, 3px) rotate(-6deg); }
-    40% { transform: translate(0px, 0px) rotate(-0deg); }
-    60% { transform: translate(0px, 3px) rotate(-6deg); }
-    80% { transform: translate(0px, 0px) rotate(-0deg); }
-    100% { transform: translate(0px, 3px) rotate(-6deg); }
+  0% { transform: translate(0px, 0px) rotate(-0deg); }
+  20% { transform: translate(0px, 3px) rotate(-6deg); }
+  40% { transform: translate(0px, 0px) rotate(-0deg); }
+  60% { transform: translate(0px, 3px) rotate(-6deg); }
+  80% { transform: translate(0px, 0px) rotate(-0deg); }
+  100% { transform: translate(0px, 3px) rotate(-6deg); }
 }
 @keyframes Hhhehhehe-anim-hover {
-    0% { transform: translate(0px, 0px) rotate(-0deg); }
-    20% { transform: translate(0px, 3px) rotate(-6deg); }
-    40% { transform: translate(0px, 0px) rotate(-0deg); }
-    60% { transform: translate(0px, 3px) rotate(-6deg); }
-    80% { transform: translate(0px, 0px) rotate(-0deg); }
-    100% { transform: translate(0px, 3px) rotate(-6deg); }
+  0% { transform: translate(0px, 0px) rotate(-0deg); }
+  20% { transform: translate(0px, 3px) rotate(-6deg); }
+  40% { transform: translate(0px, 0px) rotate(-0deg); }
+  60% { transform: translate(0px, 3px) rotate(-6deg); }
+  80% { transform: translate(0px, 0px) rotate(-0deg); }
+  100% { transform: translate(0px, 3px) rotate(-6deg); }
 }
 .emote.Hhhehhehe {
-    animation: Hhhehhehe-anim 500ms 1;
-    transform-origin: 0 75%;
+  animation: Hhhehhehe-anim 500ms 1;
+  transform-origin: 0 75%;
 }
 .emote.Hhhehhehe:hover {
-    animation: Hhhehhehe-anim-hover 500ms infinite;
+  animation: Hhhehhehe-anim-hover 500ms infinite;
 }
 @keyframes JAMSTINY-anim {
-  0% { transform: rotate(0deg); transform-origin: 50% 30px; }
-  20% { transform: rotate(-35deg) translate(0, 0px); transform-origin: 50% 30px; }
-  30% { transform: rotate(-40deg) translate(0, 0px); transform-origin: 50% 30px; }
-  40% { transform: rotate(-45deg) translate(4px, -0.5px); transform-origin: 50% 30px; }
-  50% { transform: rotate(-35deg) translate(6px, 0px); transform-origin: 50% 30px; }
-  70% { transform: rotate(5deg) translate(6px, 0px); transform-origin: 50% 32px; }
-  80% { transform: rotate(10deg) translate(6px, 0px); transform-origin: 50% 30px; }
-  90% { transform: rotate(15deg) translate(2px, -0.5px); transform-origin: 50% 30px; }
-  100% { transform: rotate(0deg); transform-origin: 50% 30px; }
+0% { transform: rotate(0deg); transform-origin: 50% 30px; }
+20% { transform: rotate(-35deg) translate(0, 0px); transform-origin: 50% 30px; }
+30% { transform: rotate(-40deg) translate(0, 0px); transform-origin: 50% 30px; }
+40% { transform: rotate(-45deg) translate(4px, -0.5px); transform-origin: 50% 30px; }
+50% { transform: rotate(-35deg) translate(6px, 0px); transform-origin: 50% 30px; }
+70% { transform: rotate(5deg) translate(6px, 0px); transform-origin: 50% 32px; }
+80% { transform: rotate(10deg) translate(6px, 0px); transform-origin: 50% 30px; }
+90% { transform: rotate(15deg) translate(2px, -0.5px); transform-origin: 50% 30px; }
+100% { transform: rotate(0deg); transform-origin: 50% 30px; }
 }
 @keyframes JAMSTINY-anim-hover {
-  0% { transform: rotate(0deg); transform-origin: 50% 30px; }
-  20% { transform: rotate(-35deg) translate(0, 0px); transform-origin: 50% 30px; }
-  30% { transform: rotate(-40deg) translate(0, 0px); transform-origin: 50% 30px; }
-  40% { transform: rotate(-45deg) translate(4px, -0.5px); transform-origin: 50% 30px; }
-  50% { transform: rotate(-35deg) translate(6px, 0px); transform-origin: 50% 30px; }
-  70% { transform: rotate(5deg) translate(6px, 0px); transform-origin: 50% 30px; }
-  80% { transform: rotate(10deg) translate(6px, 0px); transform-origin: 50% 30px; }
-  90% { transform: rotate(15deg) translate(2px, -0.5px); transform-origin: 50% 30px; }
-  100% { transform: rotate(0deg); transform-origin: 50% 30px; }
+0% { transform: rotate(0deg); transform-origin: 50% 30px; }
+20% { transform: rotate(-35deg) translate(0, 0px); transform-origin: 50% 30px; }
+30% { transform: rotate(-40deg) translate(0, 0px); transform-origin: 50% 30px; }
+40% { transform: rotate(-45deg) translate(4px, -0.5px); transform-origin: 50% 30px; }
+50% { transform: rotate(-35deg) translate(6px, 0px); transform-origin: 50% 30px; }
+70% { transform: rotate(5deg) translate(6px, 0px); transform-origin: 50% 30px; }
+80% { transform: rotate(10deg) translate(6px, 0px); transform-origin: 50% 30px; }
+90% { transform: rotate(15deg) translate(2px, -0.5px); transform-origin: 50% 30px; }
+100% { transform: rotate(0deg); transform-origin: 50% 30px; }
 }
 .emote.JAMSTINY {
-    animation: JAMSTINY-anim 0.69s 8 ease-out;
+  animation: JAMSTINY-anim 0.69s 8 ease-out;
 }
 .emote.JAMSTINY:hover {
-    animation: JAMSTINY-anim-hover 0.69s infinite ease-out;
+  animation: JAMSTINY-anim-hover 0.69s infinite ease-out;
 }
 .emote.Klappa {
-  width: 38px;
-  height: 30px;
-  animation: Klappa-anim 10 steps(2) 0.4s -0.15s;
+width: 38px;
+height: 30px;
+animation: Klappa-anim 10 steps(2) 0.4s -0.15s;
 }
 .emote.Klappa:hover {
-  animation: Klappa-anim-hover infinite steps(2) 0.4s;
+animation: Klappa-anim-hover infinite steps(2) 0.4s;
 }
 @keyframes Klappa-anim {
-  100% { background-position: -76px; }
+100% { background-position: -76px; }
 }
 @keyframes Klappa-anim-hover {
-  100% { background-position: -76px; }
+100% { background-position: -76px; }
 }
 @keyframes LOVE-anim {
-    0% { top: -25px; }
-    100% { top: 30px; }
+  0% { top: -25px; }
+  100% { top: 30px; }
 }
 @keyframes LOVE-hover {
-    0% { top: -25px; }
-    100% { top: 30px; }
+  0% { top: -25px; }
+  100% { top: 30px; }
 }
 .emote.LOVE:before{
-    content: "ðŸ’—";
-    text-indent: 0;
-    font-size: 18px;
-    position: absolute;
-    left:-3px;
-    top:-25px;
-    animation: LOVE-anim 0.5s 4;
+  content: "ðŸ’—";
+  text-indent: 0;
+  font-size: 18px;
+  position: absolute;
+  left:-3px;
+  top:-25px;
+  animation: LOVE-anim 0.5s 4;
 }
 .emote.LOVE:after{
-    content: "ðŸ’—";
-    text-indent: 0;
-    font-size: 18px;
-    position: absolute;
-    right:-3px;
-    top:-25px;
-    animation: LOVE-anim 0.5s 4;
-    animation-delay: 0.25s;
+  content: "ðŸ’—";
+  text-indent: 0;
+  font-size: 18px;
+  position: absolute;
+  right:-3px;
+  top:-25px;
+  animation: LOVE-anim 0.5s 4;
+  animation-delay: 0.25s;
 }
 .emote.LOVE:hover::before {
-    animation: LOVE-hover 0.5s infinite;
+  animation: LOVE-hover 0.5s infinite;
 }
 .emote.LOVE:hover::after {
-    animation: LOVE-hover 0.5s infinite;
-    animation-delay: 0.25s;
+  animation: LOVE-hover 0.5s infinite;
+  animation-delay: 0.25s;
 }
 @keyframes MALARKEY-anim {
-  0% { background-position: 0px; }
-  100% { background-position: -1581px; }
+0% { background-position: 0px; }
+100% { background-position: -1581px; }
 }
 @keyframes MALARKEY-shake {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px); -moz-transform: translate(0, .5px); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px); -moz-transform: translate(0, -.5px); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px); }
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px); -moz-transform: translate(0, .5px); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px); -moz-transform: translate(0, -.5px); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px); }
 }
 @keyframes MALARKEY-shake_r {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px) scale(-1, 1); -moz-transform: translate(0, .5px) scale(-1, 1); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px) scale(-1, 1); -moz-transform: translate(0, -.5px) scale(-1, 1); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px) scale(-1, 1); -moz-transform: translate(0, .25px) scale(-1, 1); }
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px) scale(-1, 1); -moz-transform: translate(0, .5px) scale(-1, 1); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px) scale(-1, 1); -moz-transform: translate(0, -.5px) scale(-1, 1); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px) scale(-1, 1); -moz-transform: translate(0, .25px) scale(-1, 1); }
 }
 @keyframes MALARKEY-shake-hover {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px); -moz-transform: translate(0, .5px); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px); -moz-transform: translate(0, -.5px); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px); }
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px); -moz-transform: translate(0, .5px); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px); -moz-transform: translate(0, -.5px); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px); -moz-transform: translate(0, .25px); }
 }
 @keyframes MALARKEY-shake_r-hover {
-  15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px) scale(-1, 1); -moz-transform: translate(0, .5px) scale(-1, 1); }
-  5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px) scale(-1, 1); -moz-transform: translate(0, -.5px) scale(-1, 1); }
-  8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px) scale(-1, 1); -moz-transform: translate(0, .25px) scale(-1, 1); }
+15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 92% { transform: translate(0.5px, .5px) scale(-1, 1); -moz-transform: translate(0, .5px) scale(-1, 1); }
+5%, 12%, 17%, 22%, 32%, 37%, 52%, 62%, 67%, 72%, 82%, 90% { transform: translate(0.5px, -.5px) scale(-1, 1); -moz-transform: translate(0, -.5px) scale(-1, 1); }
+8%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 87%, 97% { transform: translate(0, .25px) scale(-1, 1); -moz-transform: translate(0, .25px) scale(-1, 1); }
 }
 @keyframes MALARKEY-anim-repeat1 {
-  100% { background-position: -510px; }
+100% { background-position: -510px; }
 }
 @keyframes MALARKEY-anim-repeat2 {
-  0% { background-position: -510px; }
-  100% { background-position: -1224px; }
+0% { background-position: -510px; }
+100% { background-position: -1224px; }
 }
 .emote.MALARKEY {
-  width: 51px;
-  height: 30px;
-  margin-right: -2px;
-  background-position: -1530px;
-  animation: MALARKEY-anim 1.55s steps(31) 1, MALARKEY-shake 1 1.55s;
+width: 51px;
+height: 30px;
+margin-right: -2px;
+background-position: -1530px;
+animation: MALARKEY-anim 1.55s steps(31) 1, MALARKEY-shake 1 1.55s;
 }
 .emote.TRUMPED + .emote.MALARKEY{
-  margin-left: -4px;
-  transform: scale(-1, 1);
-  animation: MALARKEY-anim 1.55s steps(31) 1, MALARKEY-shake_r 1 1.55s;
+margin-left: -4px;
+transform: scale(-1, 1);
+animation: MALARKEY-anim 1.55s steps(31) 1, MALARKEY-shake_r 1 1.55s;
 }
 .emote.MALARKEY:hover {
-  animation: MALARKEY-shake-hover infinite 1.55s, MALARKEY-anim-repeat1 1 steps(10) .5s, MALARKEY-anim-repeat2 infinite steps(14) .7s .5s;
+animation: MALARKEY-shake-hover infinite 1.55s, MALARKEY-anim-repeat1 1 steps(10) .5s, MALARKEY-anim-repeat2 infinite steps(14) .7s .5s;
 }
 .emote.TRUMPED + .emote.MALARKEY:hover {
-  animation: MALARKEY-shake_r-hover infinite 1.55s, MALARKEY-anim-repeat1 1 steps(10) .5s, MALARKEY-anim-repeat2 infinite steps(14) .7s .5s;
+animation: MALARKEY-shake_r-hover infinite 1.55s, MALARKEY-anim-repeat1 1 steps(10) .5s, MALARKEY-anim-repeat2 infinite steps(14) .7s .5s;
 }
 @keyframes MiyanoHype-anim {
-    100% { background-position: -320px }
+  100% { background-position: -320px }
 }
 
 @keyframes MiyanoHype-hover {
-    100% { background-position: -320px }
+  100% { background-position: -320px }
 }
 
 .emote.MiyanoHype {
-    width: 32px;
-    height: 32px;
-    -webkit-animation: MiyanoHype-anim 800ms steps(10) 3;
-    animation: MiyanoHype-anim 800ms steps(10) 3;
+  width: 32px;
+  height: 32px;
+  -webkit-animation: MiyanoHype-anim 800ms steps(10) 3;
+  animation: MiyanoHype-anim 800ms steps(10) 3;
 }
 
 .emote.MiyanoHype:hover {
-    -webkit-animation: MiyanoHype-hover 800ms steps(10) infinite;
-    animation: MiyanoHype-hover 800ms steps(10) infinite;
+  -webkit-animation: MiyanoHype-hover 800ms steps(10) infinite;
+  animation: MiyanoHype-hover 800ms steps(10) infinite;
 }
 @keyframes MLADY-anim {
-    0%, 100% { transform: rotate(0deg); }
-    30% { transform: rotate(20deg); }
-    80% { transform: rotate(-10deg); }
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  80% { transform: rotate(-10deg); }
 }
 @keyframes MLADY-anim-hover {
-    0%, 100% { transform: rotate(0deg); }
-    30% { transform: rotate(20deg); }
-    80% { transform: rotate(-10deg); }
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  80% { transform: rotate(-10deg); }
 }
 .emote.MLADY {
-    animation: MLADY-anim 250ms 3;
-    transform-origin: 5% 90%;
+  animation: MLADY-anim 250ms 3;
+  transform-origin: 5% 90%;
 }
 .emote.MLADY:hover {
-    animation: MLADY-anim-hover 250ms infinite;
+  animation: MLADY-anim-hover 250ms infinite;
 }
 .emote.monkaVirus {
-  width: 35px;
+width: 35px;
 }
 .emote.monkaVirus:nth-child(6n-5) {
-  filter: hue-rotate(68deg);
+filter: hue-rotate(68deg);
 }
 .emote.monkaVirus:nth-child(6n-4) {
-  filter: hue-rotate(113deg);
+filter: hue-rotate(113deg);
 }
 .emote.monkaVirus:nth-child(6n-3) {
-  filter: hue-rotate(180deg);
+filter: hue-rotate(180deg);
 }
 .emote.monkaVirus:nth-child(6n-2) {
-  filter: hue-rotate(270deg);
+filter: hue-rotate(270deg);
 }
 .emote.monkaVirus:nth-child(6n-1) {
-  filter: hue-rotate(310deg);
+filter: hue-rotate(310deg);
 }
 .emote.monkaVirus:nth-last-child(5n-2) {
-  background-position: 35px;
+background-position: 35px;
 }
+
+.emote.NAILS {
+height: 32px;
+width: 32px;
+animation: NAILS-anim 7.5s steps(160) forwards;
+}
+.emote.NAILS:hover {
+height: 32px;
+width: 32px;
+animation: NAILS-hover 7.5s steps(160) infinite;
+}
+
+@keyframes NAILS-anim {
+to { background-position: -5120px; }
+}
+@keyframes NAILS-hover {
+to { background-position: -5120px; }
+}
+
 
 @keyframes Nappa-anim {
-    0% {
-        transform: translate(0px,0px) scale(0.5);
-    }
-    5%,15%,25%,35% {
-        transform: translate(0px,3px)
-    }
-    15%,35%,55% {
-        transform: translate(0px,-3px)
-    }
-    10%,20%,30%,40%,50%{
-        transform: translate(3px,0px)
-    }
-    15.1% {
-        transform: scale(0.5);
-        -webkit-filter: hue-rotate(-5deg);
-        filter: hue-rotate(-5deg);
-    }
-    30.1% {
-        transform: scale(0.75);
-        opacity: 0.75;
-        -webkit-filter: hue-rotate(-5deg) saturate(125%);
-        filter: hue-rotate(-5deg) saturate(125%);
+  0% {
+      transform: translate(0px,0px) scale(0.5);
+  }
+  5%,15%,25%,35% {
+      transform: translate(0px,3px)
+  }
+  15%,35%,55% {
+      transform: translate(0px,-3px)
+  }
+  10%,20%,30%,40%,50%{
+      transform: translate(3px,0px)
+  }
+  15.1% {
+      transform: scale(0.5);
+      -webkit-filter: hue-rotate(-5deg);
+      filter: hue-rotate(-5deg);
+  }
+  30.1% {
+      transform: scale(0.75);
+      opacity: 0.75;
+      -webkit-filter: hue-rotate(-5deg) saturate(125%);
+      filter: hue-rotate(-5deg) saturate(125%);
 
-    }
-    60%{
-        transform: scale(1.25);
-        -webkit-filter: hue-rotate(-25deg) saturate(150%);
-        filter: hue-rotate(-25deg) saturate(150%);
+  }
+  60%{
+      transform: scale(1.25);
+      -webkit-filter: hue-rotate(-25deg) saturate(150%);
+      filter: hue-rotate(-25deg) saturate(150%);
 
-        opacity: 0.75;
-    }
-    70%{
-        opacity: 0;
-    }
-    90%{
-        opacity: 0;
-        transform: scale(0.1);
-    }
-    100%{
-        transform: translate(0px,0px) scale(1.0);
-        opacity: 1;
-    }
+      opacity: 0.75;
+  }
+  70%{
+      opacity: 0;
+  }
+  90%{
+      opacity: 0;
+      transform: scale(0.1);
+  }
+  100%{
+      transform: translate(0px,0px) scale(1.0);
+      opacity: 1;
+  }
 }
 @keyframes Nappa-anim-hover {
-    0% { transform: translate(0px,0px) scale(0.5); }
-    5%,15%,25%,35% { transform: translate(0px,3px); }
-    15%,35%,55% { transform: translate(0px,-3px); }
-    10%,20%,30%,40%,50% { transform: translate(3px,0px); }
-    15.1% {
-        transform: scale(0.5);
-        -webkit-filter: hue-rotate(-5deg);
-        filter: hue-rotate(-5deg);
-    }
-    30.1% {
-        transform: scale(0.75);
-        opacity: 0.75;
-        -webkit-filter: hue-rotate(-15deg) saturate(125%);
-        filter: hue-rotate(-5deg) saturate(125%);
-    }
-    60%{
-        transform: scale(1.25);
-        -webkit-filter: hue-rotate(-25deg) saturate(150%);
-        filter: hue-rotate(-25deg) saturate(150%);
-        opacity: 0.75;
-    }
-    70%{ opacity: 0; }
-    90%{
-        opacity: 0;
-        transform: scale(0.1);
-    }
-    100%{
-        transform: translate(0px,0px) scale(1.0);
-        opacity: 1;
-    }
+  0% { transform: translate(0px,0px) scale(0.5); }
+  5%,15%,25%,35% { transform: translate(0px,3px); }
+  15%,35%,55% { transform: translate(0px,-3px); }
+  10%,20%,30%,40%,50% { transform: translate(3px,0px); }
+  15.1% {
+      transform: scale(0.5);
+      -webkit-filter: hue-rotate(-5deg);
+      filter: hue-rotate(-5deg);
+  }
+  30.1% {
+      transform: scale(0.75);
+      opacity: 0.75;
+      -webkit-filter: hue-rotate(-15deg) saturate(125%);
+      filter: hue-rotate(-5deg) saturate(125%);
+  }
+  60%{
+      transform: scale(1.25);
+      -webkit-filter: hue-rotate(-25deg) saturate(150%);
+      filter: hue-rotate(-25deg) saturate(150%);
+      opacity: 0.75;
+  }
+  70%{ opacity: 0; }
+  90%{
+      opacity: 0;
+      transform: scale(0.1);
+  }
+  100%{
+      transform: translate(0px,0px) scale(1.0);
+      opacity: 1;
+  }
 }
 .emote.Nappa {
-    animation: Nappa-anim 750ms 1;
+  animation: Nappa-anim 750ms 1;
 }
 .emote.Nappa:hover {
-    animation: Nappa-anim-hover 750ms infinite;
+  animation: Nappa-anim-hover 750ms infinite;
 }
 @keyframes GIGABAN-anim {
-  0% { transform: translate(-28px, 0); }
-  100% { transform: translate(0, 0); }
+0% { transform: translate(-28px, 0); }
+100% { transform: translate(0, 0); }
 }
-  
+
 .emote.GIGACHAD + .emote.nathanTiny2 {
-  animation: GIGABAN-anim 1.5s ease-out 1;
+animation: GIGABAN-anim 1.5s ease-out 1;
+}
+.emote.NOOOO {
+height: 35px;
+width: 41px;
+animation: NOOOO-anim 0.3s 50;
+}
+.emote.NOOOO:hover {
+height: 35px;
+width: 41px;
+animation: NOOOO-hover 0.3s infinite;
+}
+
+@keyframes NOOOO-anim {
+ 0% { transform: translate(1px, .5px) rotate(0deg); }
+10% { transform: translate(-.5px, -.5px) rotate(-.5deg); }
+20% { transform: translate(-.5px, 0px) rotate(.5deg); }
+30% { transform: translate(.5px, .5px) rotate(0deg); }
+40% { transform: translate(.5px, -.5px) rotate(.5deg); }
+50% { transform: translate(-.5px, 1px) rotate(-.5deg); }
+60% { transform: translate(-.5px, .5px) rotate(0deg); }
+70% { transform: translate(.5px, .5px) rotate(-.5deg); }
+80% { transform: translate(-.5px, -.5px) rotate(.5deg); }
+90% { transform: translate(.5px, .5px) rotate(0deg); }
+100% { transform: translate(1px, -.5px) rotate(-.5deg); }
+}
+
+@keyframes NOOOO-hover {
+ 0% { transform: translate(1px, .5px) rotate(0deg); }
+10% { transform: translate(-.5px, -.5px) rotate(-.5deg); }
+20% { transform: translate(-.5px, 0px) rotate(.5deg); }
+30% { transform: translate(.5px, .5px) rotate(0deg); }
+40% { transform: translate(.5px, -.5px) rotate(.5deg); }
+50% { transform: translate(-.5px, 1px) rotate(-.5deg); }
+60% { transform: translate(-.5px, .5px) rotate(0deg); }
+70% { transform: translate(.5px, .5px) rotate(-.5deg); }
+80% { transform: translate(-.5px, -.5px) rotate(.5deg); }
+90% { transform: translate(.5px, .5px) rotate(0deg); }
+100% { transform: translate(1px, -.5px) rotate(-.5deg); }
 }
 @keyframes OBJECTION-anim {
-  0% { clip-path: polygon(0% 0%, 100% -16%, 100% -16%, 0% 100%); transform: rotate(0deg); }
-  1% { clip-path: polygon(0% 0%, 100% -16%, 100% -16%, 0% 100%); transform: rotate(20deg); }
-  50% { clip-path: polygon(0% 0%, 100% -16%, 100% 53.6%, 0% 100%); transform: rotate(8deg); }
-  70% { clip-path: polygon(0% 0%, 100% -16%, 100% 100%, 0% 100%); transform: rotate(-6deg); }
-  80% { transform: rotate(4deg); }
-  90% { transform: rotate(-3deg); }
-  100% { transform: rotate(0deg); }
+0% { clip-path: polygon(0% 0%, 100% -16%, 100% -16%, 0% 100%); transform: rotate(0deg); }
+1% { clip-path: polygon(0% 0%, 100% -16%, 100% -16%, 0% 100%); transform: rotate(20deg); }
+50% { clip-path: polygon(0% 0%, 100% -16%, 100% 53.6%, 0% 100%); transform: rotate(8deg); }
+70% { clip-path: polygon(0% 0%, 100% -16%, 100% 100%, 0% 100%); transform: rotate(-6deg); }
+80% { transform: rotate(4deg); }
+90% { transform: rotate(-3deg); }
+100% { transform: rotate(0deg); }
 }
 @keyframes OBJECTION-combo { 
-  42.5% { transform: rotate(0deg); }
-  43.33% { transform: rotate(10.39deg); }
-  50% {transform: rotate(8deg); }
-  70% { transform: rotate(-6deg); }
-  80% { transform: rotate(4deg); }
-  90% { transform: rotate(-3deg); }
-  100% { transform: rotate(0deg); }
+42.5% { transform: rotate(0deg); }
+43.33% { transform: rotate(10.39deg); }
+50% {transform: rotate(8deg); }
+70% { transform: rotate(-6deg); }
+80% { transform: rotate(4deg); }
+90% { transform: rotate(-3deg); }
+100% { transform: rotate(0deg); }
 }
 .emote.OBJECTION {
-  transform-origin: 0% 100%;
-  margin-right: -5px;
-  transition: all .25s;
-  animation: OBJECTION-anim ease-out .3s 1;
+transform-origin: 0% 100%;
+margin-right: -5px;
+transition: all .25s;
+animation: OBJECTION-anim ease-out .3s 1;
 }
 .emote.OBJECTION:hover {
-  transform: rotate(10deg);
+transform: rotate(10deg);
 }
 .msg-chat.msg-emote .emote.OBJECTION {
-  animation: OBJECTION-combo ease-out .3s 1 -.125s;
+animation: OBJECTION-combo ease-out .3s 1 -.125s;
 }
 .emote.OOOO{
-    width: 28px;
-    height: 28px;
-    animation: OOOO-anim 6 steps(21) 1.05s;
+  width: 28px;
+  height: 28px;
+  animation: OOOO-anim 6 steps(21) 1.05s;
 }
 .emote.OOOO:hover {
-    animation: OOOO-anim-hover infinite steps(21) 1.05s;
+  animation: OOOO-anim-hover infinite steps(21) 1.05s;
 }
 @keyframes OOOO-anim {
-  100% { background-position: -588px; }
+100% { background-position: -588px; }
 }
 @keyframes OOOO-anim-hover {
-  100% { background-position: -588px; }
+100% { background-position: -588px; }
 }
 @keyframes OverRustle-anim {
-    from { left: 0; }
-    to { left: 3px; }
+  from { left: 0; }
+  to { left: 3px; }
 }
 @keyframes OverRustle-anim-hover {
-    from { left: 0; }
-    to { left: 3px; }
+  from { left: 0; }
+  to { left: 3px; }
 }
 .emote.OverRustle {
-    animation: OverRustle-anim 100ms 7;
+  animation: OverRustle-anim 100ms 7;
 }
 .emote.OverRustle:hover {
-    animation: OverRustle-anim-hover 100ms infinite;
+  animation: OverRustle-anim-hover 100ms infinite;
 }
 @keyframes PARDNER-anim {
-  0% { transform: rotate3d(0, 0, 1, 90deg) scaleX(-1); top: 34px; left: -9px; }
-  20% { transform: rotate3d(0, 0, 1, -180deg) scaleX(-1); top: 17px; left: -5px; }
-  45% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); animation-timing-function: ease-out; }
-  55% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); }
-  58% { transform: rotate3d(0, 0, 1, -1100deg) scaleX(-1); left: -6.5px;}  
-  67% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); left: -5px;}
-  75% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); top: 17px; left: -5px; animation-timing-function: ease-in;}
-  80% { transform: rotate3d(0, 0, 1, -1260deg) scaleX(-1); top: 17px; left: -5px; }
-  100% {transform: rotate3d(0, 0, 1, -2160deg) scaleX(-1); top: 34px; left: -9px;}
+0% { transform: rotate3d(0, 0, 1, 90deg) scaleX(-1); top: 34px; left: -9px; }
+20% { transform: rotate3d(0, 0, 1, -180deg) scaleX(-1); top: 17px; left: -5px; }
+45% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); animation-timing-function: ease-out; }
+55% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); }
+58% { transform: rotate3d(0, 0, 1, -1100deg) scaleX(-1); left: -6.5px;}  
+67% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); left: -5px;}
+75% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); top: 17px; left: -5px; animation-timing-function: ease-in;}
+80% { transform: rotate3d(0, 0, 1, -1260deg) scaleX(-1); top: 17px; left: -5px; }
+100% {transform: rotate3d(0, 0, 1, -2160deg) scaleX(-1); top: 34px; left: -9px;}
 }
 @keyframes PARDNER-anim2 {
-  54% { transform: scale(0) rotate(90deg);}
-  56% { transform: scale(1.8) scaleX(1.2) rotate(90deg);}
-  58% { transform: scale(0) rotate(90deg);}
+54% { transform: scale(0) rotate(90deg);}
+56% { transform: scale(1.8) scaleX(1.2) rotate(90deg);}
+58% { transform: scale(0) rotate(90deg);}
 }
 @keyframes PARDNER-kick {
-  56%, 62% { transform: translate(0, 0); }
-  58% { transform: translate(-1px, 0); }
+56%, 62% { transform: translate(0, 0); }
+58% { transform: translate(-1px, 0); }
 }
 @keyframes PARDNER-kick-hover {
-  56%, 62% { transform: translate(0, 0); }
-  58% { transform: translate(-1px, 0); }
+56%, 62% { transform: translate(0, 0); }
+58% { transform: translate(-1px, 0); }
 }
 @keyframes PARDNER-anim-hover {
-  0% { transform: rotate3d(0, 0, 1, 90deg) scaleX(-1); top: 34px; left: -9px; }
-  20% { transform: rotate3d(0, 0, 1, -180deg) scaleX(-1); top: 17px; left: -5px; }
-  45% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); animation-timing-function: ease-out; }
-  55% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); }
-  58% { transform: rotate3d(0, 0, 1, -1100deg) scaleX(-1); left: -6.5px;}  
-  67% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); left: -5px;}
-  75% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); top: 17px; left: -5px; animation-timing-function: ease-in;}
-  80% { transform: rotate3d(0, 0, 1, -1260deg) scaleX(-1); top: 17px; left: -5px; }
-  100% {transform: rotate3d(0, 0, 1, -2160deg) scaleX(-1); top: 34px; left: -9px;}
+0% { transform: rotate3d(0, 0, 1, 90deg) scaleX(-1); top: 34px; left: -9px; }
+20% { transform: rotate3d(0, 0, 1, -180deg) scaleX(-1); top: 17px; left: -5px; }
+45% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); animation-timing-function: ease-out; }
+55% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); }
+58% { transform: rotate3d(0, 0, 1, -1100deg) scaleX(-1); left: -6.5px;}  
+67% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); left: -5px;}
+75% { transform: rotate3d(0, 0, 1, -1080deg) scaleX(-1); top: 17px; left: -5px; animation-timing-function: ease-in;}
+80% { transform: rotate3d(0, 0, 1, -1260deg) scaleX(-1); top: 17px; left: -5px; }
+100% {transform: rotate3d(0, 0, 1, -2160deg) scaleX(-1); top: 34px; left: -9px;}
 }
 @keyframes PARDNER-anim2-hover {
-  54% { transform: scale(0) rotate(90deg);}
-  56% { transform: scale(1.8) scaleX(1.2) rotate(90deg);}
-  58% { transform: scale(0) rotate(90deg);}
+54% { transform: scale(0) rotate(90deg);}
+56% { transform: scale(1.8) scaleX(1.2) rotate(90deg);}
+58% { transform: scale(0) rotate(90deg);}
 }
 .emote.PARDNER::before{
-    content: "ðŸ”«";
-    text-shadow: none;
-    text-indent: 0;
-    color: white;
-    font-size: 15px;
-	  line-height: initial;
-    position: absolute;
-    opacity: 1;
-    top: 34px;
-    left: -9px;
-    width: 20px;
-    transform-origin: 60% 60%;
-    transform: scaleX(-1);
-    filter: contrast(1) hue-rotate(300deg);
-    animation: PARDNER-anim 2s 1 linear;
+  content: "ðŸ”«";
+  text-shadow: none;
+  text-indent: 0;
+  color: white;
+  font-size: 15px;
+  line-height: initial;
+  position: absolute;
+  opacity: 1;
+  top: 34px;
+  left: -9px;
+  width: 20px;
+  transform-origin: 60% 60%;
+  transform: scaleX(-1);
+  filter: contrast(1) hue-rotate(300deg);
+  animation: PARDNER-anim 2s 1 linear;
 }
 .emote.PARDNER::after{
-    content: "ðŸ”¥";
-    text-indent: 0;
-    color: white;
-    text-shadow: none;
-    font-size: 8px;
-    opacity: 1;
-    transform: scale(0);
-	  line-height: initial;
-    position: absolute;
-    transform-origin: 22% 100%;
-    top: 14.5px;
-    left: 11px;
-    width: 20px;
-    filter: brightness(20);
-    animation: PARDNER-anim2 2s 1 linear;
+  content: "ðŸ”¥";
+  text-indent: 0;
+  color: white;
+  text-shadow: none;
+  font-size: 8px;
+  opacity: 1;
+  transform: scale(0);
+  line-height: initial;
+  position: absolute;
+  transform-origin: 22% 100%;
+  top: 14.5px;
+  left: 11px;
+  width: 20px;
+  filter: brightness(20);
+  animation: PARDNER-anim2 2s 1 linear;
 }
 .emote.PARDNER:hover::before {
-    animation: PARDNER-anim-hover 2s infinite linear;
+  animation: PARDNER-anim-hover 2s infinite linear;
 }
 .emote.PARDNER:hover::after {
-    animation: PARDNER-anim2-hover 2s infinite linear;
+  animation: PARDNER-anim2-hover 2s infinite linear;
 }
 .emote.PARDNER {
-    animation: PARDNER-kick 2s 1 ease;
+  animation: PARDNER-kick 2s 1 ease;
 }
 .emote.PARDNER:hover {
-    animation: PARDNER-kick-hover 2s infinite ease-in-out;
+  animation: PARDNER-kick-hover 2s infinite ease-in-out;
 }
 @keyframes peepoRiot-anim {
-  100% { background-position: -280px; }
+100% { background-position: -280px; }
 }
 @keyframes peepoRiot-hover {
-  100% { background-position: -280px; }
+100% { background-position: -280px; }
 }
 .emote.peepoRiot {
-  width: 35px;
-  animation: peepoRiot-anim steps(8) 7 .8s;
+width: 35px;
+animation: peepoRiot-anim steps(8) 7 .8s;
 }
 .emote.peepoRiot:hover {
-  animation: peepoRiot-hover steps(8) infinite .8s;
+animation: peepoRiot-hover steps(8) infinite .8s;
 }
 @keyframes PepeHands-anim {
-    0% { transform: translate(0px, 0px) rotate(40deg); }
-    100% { transform: translate(-58px, 58px) rotate(40deg); }
+  0% { transform: translate(0px, 0px) rotate(40deg); }
+  100% { transform: translate(-58px, 58px) rotate(40deg); }
 }
 @keyframes PepeHands-anim-hover {
-    0% { transform: translate(0px, 0px) rotate(40deg); }
-    100% { transform: translate(-58px, 58px) rotate(40deg); }
+  0% { transform: translate(0px, 0px) rotate(40deg); }
+  100% { transform: translate(-58px, 58px) rotate(40deg); }
 }
 .emote.PepeHands::before{
-    content: ". | . . | . | . | . . | . | | . . | . | . |";
-    text-indent: 0;
-    color: rgb(128, 255, 255);
-    font-size: 10px;
-	  line-height: initial;
-    position: absolute;
-    opacity: 0.6;
-    top: -32px;
-    left: 32px;
-    width: 48px;
-    animation: PepeHands-anim 0.8s 4 linear;
+  content: ". | . . | . | . | . . | . | | . . | . | . |";
+  text-indent: 0;
+  color: rgb(128, 255, 255);
+  font-size: 10px;
+  line-height: initial;
+  position: absolute;
+  opacity: 0.6;
+  top: -32px;
+  left: 32px;
+  width: 48px;
+  animation: PepeHands-anim 0.8s 4 linear;
 }
 .emote.PepeHands::after{
-    content: " . | . . | | . . | . | . | . | . | . . | . . | . |";
-    text-indent: 0;
-    color: rgb(128, 255, 255);
-    font-size: 10px;
-    opacity: 0.6;
-	  line-height: initial;
-    position: absolute;
-    top: -32px;
-    left: 32px;
-    width: 48px;
-    animation: PepeHands-anim 0.8s 4 linear;
-    animation-delay: 0.4s;
+  content: " . | . . | | . . | . | . | . | . | . . | . . | . |";
+  text-indent: 0;
+  color: rgb(128, 255, 255);
+  font-size: 10px;
+  opacity: 0.6;
+  line-height: initial;
+  position: absolute;
+  top: -32px;
+  left: 32px;
+  width: 48px;
+  animation: PepeHands-anim 0.8s 4 linear;
+  animation-delay: 0.4s;
 }
 .emote.PepeHands:hover::before {
-    animation: PepeHands-anim-hover 0.8s infinite linear;
+  animation: PepeHands-anim-hover 0.8s infinite linear;
 }
 .emote.PepeHands:hover::after {
-    animation: PepeHands-anim-hover 0.8s infinite linear;
-    animation-delay: 0.4s;
+  animation: PepeHands-anim-hover 0.8s infinite linear;
+  animation-delay: 0.4s;
 }
 
 @keyframes pepeJAM-anim {
-  0%, 50%, 100% { background-position: 0 0; }
-  20% { background-position: 0 4px; transform: scale(.975); }
-  70% { background-position: 0 6px; transform: scale(1.025); }
+0%, 50%, 100% { background-position: 0 0; }
+20% { background-position: 0 4px; transform: scale(.975); }
+70% { background-position: 0 6px; transform: scale(1.025); }
 }
 @keyframes pepeJAM-anim-hover {
-  0%, 50%, 100% { background-position: 0 0; }
-  20% { background-position: 0 4px; transform: scale(.975); }
-  70% { background-position: 0 6px; transform: scale(1.025); }
+0%, 50%, 100% { background-position: 0 0; }
+20% { background-position: 0 4px; transform: scale(.975); }
+70% { background-position: 0 6px; transform: scale(1.025); }
 }
 .emote.pepeJAM{
-  background-repeat: no-repeat;
-  transform-origin: -20px 100%;
-  animation: pepeJAM-anim 666.6ms 16 ease-in-out -400ms;
+background-repeat: no-repeat;
+transform-origin: -20px 100%;
+animation: pepeJAM-anim 666.6ms 16 ease-in-out -400ms;
 }
 .emote.pepeJAM:hover {
-  animation: pepeJAM-anim-hover 666.6ms infinite ease-in-out;
+animation: pepeJAM-anim-hover 666.6ms infinite ease-in-out;
 }
 .msg-chat.msg-emote:hover .emote.pepeJAM {
-  animation: pepeJAM-anim-hover 666.6ms infinite ease-in-out;
+animation: pepeJAM-anim-hover 666.6ms infinite ease-in-out;
 }
 @keyframes pepeJAM-glow {
-  20% { filter: brightness(1.5) saturate(1.5) hue-rotate(-135deg); -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%); mask-image: linear-gradient(180deg, black 0%, transparent 55%); }
-  70% { filter: brightness(3) saturate(1.5) hue-rotate(90deg); -webkit-mask-image: linear-gradient(120deg, black 0%, transparent 55%); mask-image: linear-gradient(120deg, black 0%, transparent 55%); }
+20% { filter: brightness(1.5) saturate(1.5) hue-rotate(-135deg); -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%); mask-image: linear-gradient(180deg, black 0%, transparent 55%); }
+70% { filter: brightness(3) saturate(1.5) hue-rotate(90deg); -webkit-mask-image: linear-gradient(120deg, black 0%, transparent 55%); mask-image: linear-gradient(120deg, black 0%, transparent 55%); }
 }
 @keyframes pepeJAM-glow-hover {
-  20% { filter: brightness(1.5) saturate(1.5) hue-rotate(-135deg); -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%); mask-image: linear-gradient(180deg, black 0%, transparent 55%); }
-  70% { filter: brightness(3) saturate(1.5) hue-rotate(90deg); -webkit-mask-image: linear-gradient(120deg, black 0%, transparent 55%); mask-image: linear-gradient(120deg, black 0%, transparent 55%); }
+20% { filter: brightness(1.5) saturate(1.5) hue-rotate(-135deg); -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%); mask-image: linear-gradient(180deg, black 0%, transparent 55%); }
+70% { filter: brightness(3) saturate(1.5) hue-rotate(90deg); -webkit-mask-image: linear-gradient(120deg, black 0%, transparent 55%); mask-image: linear-gradient(120deg, black 0%, transparent 55%); }
 }
 .emote.pepeJAM:hover::before {
-    opacity: 1;
-    width: 33px;
-    height: 30px;
-    display: block;
-    content: "";
-    background: inherit;
-    -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%);
-    mask-image: linear-gradient(180deg, black 0%, transparent 55%);
-    animation: pepeJAM-glow-hover 666.6ms infinite linear 50ms;
+  opacity: 1;
+  width: 33px;
+  height: 30px;
+  display: block;
+  content: "";
+  background: inherit;
+  -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%);
+  mask-image: linear-gradient(180deg, black 0%, transparent 55%);
+  animation: pepeJAM-glow-hover 666.6ms infinite linear 50ms;
 }
 .msg-chat.msg-emote .emote.pepeJAM::before {
-    opacity: 1;
-    width: 33px;
-    height: 30px;
-    display: block;
-    content: "";
-    background: inherit;
-    -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%);
-    mask-image: linear-gradient(180deg, black 0%, transparent 55%);
-    animation: pepeJAM-glow 666.6ms 16 linear -350ms;
+  opacity: 1;
+  width: 33px;
+  height: 30px;
+  display: block;
+  content: "";
+  background: inherit;
+  -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 55%);
+  mask-image: linear-gradient(180deg, black 0%, transparent 55%);
+  animation: pepeJAM-glow 666.6ms 16 linear -350ms;
 }
 .msg-chat.msg-emote:hover .emote.pepeJAM::before {
-    animation: pepeJAM-glow-hover 666.6ms infinite linear 50ms;
+  animation: pepeJAM-glow-hover 666.6ms infinite linear 50ms;
 }
 @keyframes PepeLaugh-anim {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(0px, 3px); }
-    100% { transform: translate(0px, 0px); }
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, 3px); }
+  100% { transform: translate(0px, 0px); }
 }
 @keyframes PepeLaugh-anim-hover {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(0px, 3px); }
-    100% { transform: translate(0px, 0px); }
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, 3px); }
+  100% { transform: translate(0px, 0px); }
 }
 .emote.PepeLaugh{
-    animation: PepeLaugh-anim 200ms 3;
+  animation: PepeLaugh-anim 200ms 3;
 }
 .emote.PepeLaugh:hover {
-    animation: PepeLaugh-anim-hover 200ms infinite;
+  animation: PepeLaugh-anim-hover 200ms infinite;
 }
 @keyframes pepeSteer-anim {
-  100% { background-position: -792px; }
+100% { background-position: -792px; }
 }
 
 @keyframes pepeSteer-hover {
-  100% { background-position: -792px; }
+100% { background-position: -792px; }
 }
 
 .emote.pepeSteer {
-  width: 33px;
-  animation: pepeSteer-anim .96s steps(24) 7;
+width: 33px;
+animation: pepeSteer-anim .96s steps(24) 7;
 }
 
 .emote.pepeSteer:hover {
-  animation: pepeSteer-hover .96s steps(24) infinite;
+animation: pepeSteer-hover .96s steps(24) infinite;
 }
 @keyframes PepoTurkey-anim {
-    0% { transform: translate(0px, 0px); }
-    25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
-    37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
-    55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
-    60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
-    75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
-    100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
+  37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
+  55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
+  60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
+  75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
+  100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
 }
 @keyframes PepoTurkey-anim-hover {
-    0% { transform: translate(0px, 0px); }
-    25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
-    37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
-    55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
-    60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
-    75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
-    100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(0px, -7.5px) rotate(-3deg); animation-timing-function: ease }
+  37% { transform: translate(0px, 0px) rotate(-3deg); animation-timing-function: ease-in }
+  55% { transform: translate(0px, -3px) rotate(4deg); animation-timing-function: ease}
+  60% { transform: translate(0px, 0px) rotate(4deg); animation-timing-function: ease-in}
+  75% { transform: translate(0px, -1.5px); animation-timing-function: ease }
+  100% { transform: translate(0px, 0px); animation-timing-function: ease-in}
 }
 .emote.PepoTurkey {
-    animation: PepoTurkey-anim 0.7s 1;
+  animation: PepoTurkey-anim 0.7s 1;
 }
 .emote.PepoTurkey:hover {
-    animation: PepoTurkey-anim-hover 0.7s infinite;
+  animation: PepoTurkey-anim-hover 0.7s infinite;
 }
 @keyframes PICNIC-anim {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 @keyframes PICNIC-anim-hover {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 .emote.PICNIC {
-    animation: PICNIC-anim 350ms 3;
+  animation: PICNIC-anim 350ms 3;
 }
 .emote.PICNIC:hover {
-    animation: PICNIC-anim-hover 350ms infinite;
+  animation: PICNIC-anim-hover 350ms infinite;
 }
 @keyframes GIGARAP-anim {
-  0% { transform: translate(-28px, 0); }
-  100% { transform: translate(0, 0); }
+0% { transform: translate(-28px, 0); }
+100% { transform: translate(0, 0); }
 }
 
 .emote.RapThis {
-  margin-left: -2px;
+margin-left: -2px;
 }
 .emote.RapThis + .emote.RapThis, .emote.RapThis:nth-of-type(1), .emote.Clap + .emote.RapThis, .emote.BLADE + .emote.RapThis, .chat-user + .emote.RapThis {
-  margin-right: -2px;
-  margin-left: 0;
-  transform: scale(-1, 1);
+margin-right: -2px;
+margin-left: 0;
+transform: scale(-1, 1);
 }
 
 .emote.RapThis:only-of-type, .emote + .emote.RapThis:last-of-type, .emote.RapThis:last-of-type {
-  margin-right: 0;
-  transform: scale(1);
+margin-right: 0;
+transform: scale(1);
 }
 
 .emote.GIGACHAD + .emote.RapThis {
-  animation: GIGARAP-anim 1.5s ease-out 1;
+animation: GIGARAP-anim 1.5s ease-out 1;
 }
 @keyframes RaveDoge-anim {
-  100% { background-position: -1350px; }
+100% { background-position: -1350px; }
 }
 
 @keyframes RaveDoge-hover {
-  100% { background-position: -1350px; }
+100% { background-position: -1350px; }
 }
 
 .emote.RaveDoge {
-  margin-left: -3px;
-  margin-right: -3px;
-  width: 50px;
-  animation: RaveDoge-anim 1.62s steps(27) 7 -.67s;
+margin-left: -3px;
+margin-right: -3px;
+width: 50px;
+animation: RaveDoge-anim 1.62s steps(27) 7 -.67s;
 }
 
 .emote.RaveDoge:hover {
-  animation: RaveDoge-hover 1.62s steps(27) infinite;
+animation: RaveDoge-hover 1.62s steps(27) infinite;
 }
 @keyframes REE-anim {
-    from { left: 0; }
-    to { left: 3px; }
+  from { left: 0; }
+  to { left: 3px; }
 }
 @keyframes REE-anim-hover {
-    from { left: 0; }
-    to { left: 3px; }
+  from { left: 0; }
+  to { left: 3px; }
 }
 .emote.REE {
-    animation: REE-anim 100ms 7;
+  animation: REE-anim 100ms 7;
 }
 .emote.REE:hover {
-    animation: REE-anim-hover 100ms infinite;
+  animation: REE-anim-hover 100ms infinite;
 }
 /*@keyframes Shroomstiny-in-out {0% {-webkit-filter: hue-rotate(0deg) drop-shadow(0 0 0px #F44a);filter: hue-rotate(0deg) drop-shadow(0 0 0px #F44a);}100% {-webkit-filter: hue-rotate(0deg) drop-shadow(0 0 4px #F44a);filter: hue-rotate(0deg) drop-shadow(0 0 4px #F44a);}}
 
@@ -3662,535 +3764,540 @@
 .emote.Shroomstiny { animation: Shroomstiny-anim 4s linear 1; transition: all 4s ease-in-out; }
 .emote.Shroomstiny:hover { filter: hue-rotate(360deg); }
 .emote.Shrugstiny {
-  width: 32px;
-  height: 32px;
-  animation: Shrugstiny-anim 1 .5s .1s;
-  transition: steps(1) .5s;
+width: 32px;
+height: 32px;
+animation: Shrugstiny-anim 1 .5s .1s;
+transition: steps(1) .5s;
 }
 .emote.Shrugstiny:hover {
-  transition: steps(1) 0s;
-  background-position: -32px;
+transition: steps(1) 0s;
+background-position: -32px;
 }
 @keyframes Shrugstiny-anim {
-  0%, 100% { background-position: -32px; }
+0%, 100% { background-position: -32px; }
 }
 .emote.SICKO {
-  animation: SICKO-anim 0.1s 20, SICKO-color 2.3s 1;
-  transition: filter 0.2s;
+animation: SICKO-anim 0.1s 20, SICKO-color 2.3s 1;
+transition: filter 0.2s;
 }
 .emote.SICKO:hover {
-  animation: SICKO-anim-hover 0.1s infinite;
-  filter: grayscale(1) sepia(1) hue-rotate(-45deg) saturate(5) brightness(1.1) drop-shadow(7px 3px 0.5px rgba(255, 120, 120, 0.55)) drop-shadow(14px 6px 1px rgba(255, 50, 0, 0.7));
+animation: SICKO-anim-hover 0.1s infinite;
+filter: grayscale(1) sepia(1) hue-rotate(-45deg) saturate(5) brightness(1.1) drop-shadow(7px 3px 0.5px rgba(255, 120, 120, 0.55)) drop-shadow(14px 6px 1px rgba(255, 50, 0, 0.7));
 }
 @keyframes SICKO-anim {
-  0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
-  12.5% {transform: translate(1.5px, -.5px) rotate(-2deg) scale(1.1);}
-  62.5% {transform: translate(-1.5px, .5px) rotate(2deg) scale(1.1);}
-  37.5% {transform: translate(-.5px, 1.5px) rotate(-2deg) scale(1.1);}
-  87.5% {transform: translate(.5px, -1.5px) rotate(2deg) scale(1.1);}
+0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
+12.5% {transform: translate(1.5px, -.5px) rotate(-2deg) scale(1.1);}
+62.5% {transform: translate(-1.5px, .5px) rotate(2deg) scale(1.1);}
+37.5% {transform: translate(-.5px, 1.5px) rotate(-2deg) scale(1.1);}
+87.5% {transform: translate(.5px, -1.5px) rotate(2deg) scale(1.1);}
 }
 @keyframes SICKO-color{
- 0%, 100% {filter: grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) brightness(1) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));} 
- 7%, 85% {filter: grayscale(1) sepia(1) hue-rotate(-45deg) saturate(5) brightness(1.1) drop-shadow(7px 3px 0.5px rgba(255, 120, 120, 0.55)) drop-shadow(14px 6px 1px rgba(255, 50, 0, 0.7));}
+0%, 100% {filter: grayscale(0) sepia(0) hue-rotate(0deg) saturate(1) brightness(1) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));} 
+7%, 85% {filter: grayscale(1) sepia(1) hue-rotate(-45deg) saturate(5) brightness(1.1) drop-shadow(7px 3px 0.5px rgba(255, 120, 120, 0.55)) drop-shadow(14px 6px 1px rgba(255, 50, 0, 0.7));}
 }
 @keyframes SICKO-anim-hover {
-  0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
-  12.5% {transform: translate(1.5px, -.5px) rotate(-2deg) scale(1.1);}
-  62.5% {transform: translate(-1.5px, .5px) rotate(2deg) scale(1.1);}
-  37.5% {transform: translate(-.5px, 1.5px) rotate(-2deg) scale(1.1);}
-  87.5% {transform: translate(.5px, -1.5px) rotate(2deg) scale(1.1);}
+0%, 25%, 50%, 75%, 100% {transform: translate(0px, 0px);}
+12.5% {transform: translate(1.5px, -.5px) rotate(-2deg) scale(1.1);}
+62.5% {transform: translate(-1.5px, .5px) rotate(2deg) scale(1.1);}
+37.5% {transform: translate(-.5px, 1.5px) rotate(-2deg) scale(1.1);}
+87.5% {transform: translate(.5px, -1.5px) rotate(2deg) scale(1.1);}
 }
 @keyframes Sippy-right {
-  0%, 100% { filter: drop-shadow(0 0 0.5px black); }
-  15% { background-position: 0 0;  }
-  20%, 35%, 50%, 65% { transform: translate(-9px, -12px) rotate(-140deg); }
-  27.5%, 42.5%, 57.5%, 72.5% { transform: translate(-7px, -14px) rotate(-140deg); }
-  82.5% { background-position: 0 0; animation-timing-function: ease;}
+0%, 100% { filter: drop-shadow(0 0 0.5px black); }
+15% { background-position: 0 0;  }
+20%, 35%, 50%, 65% { transform: translate(-9px, -12px) rotate(-140deg); }
+27.5%, 42.5%, 57.5%, 72.5% { transform: translate(-7px, -14px) rotate(-140deg); }
+82.5% { background-position: 0 0; animation-timing-function: ease;}
 }
 @keyframes Sippy-right-hover {
-  0%, 100% { filter: drop-shadow(0 0 0.5px black); }
-  15% { background-position: 0 0;  }
-  20%, 35%, 50%, 65% { transform: translate(-9px, -12px) rotate(-140deg); }
-  27.5%, 42.5%, 57.5%, 72.5% { transform: translate(-7px, -14px) rotate(-140deg); }
-  82.5% { background-position: 0 0; }
+0%, 100% { filter: drop-shadow(0 0 0.5px black); }
+15% { background-position: 0 0;  }
+20%, 35%, 50%, 65% { transform: translate(-9px, -12px) rotate(-140deg); }
+27.5%, 42.5%, 57.5%, 72.5% { transform: translate(-7px, -14px) rotate(-140deg); }
+82.5% { background-position: 0 0; }
 }
 @keyframes Sippy-left {
-  0%, 100% { filter: drop-shadow(0 0 0.5px black); z-index: 2; }
-  15% { background-position: 0 0;  }
-  20%, 35%, 50%, 65% { transform: translate(14px, -12px) rotate(120deg); }
-  27.5%, 42.5%, 57.5%, 72.5% { transform: translate(12px, -14px) rotate(120deg); }
-  82.5% { background-position: 0 0; animation-timing-function: ease;}
+0%, 100% { filter: drop-shadow(0 0 0.5px black); z-index: 2; }
+15% { background-position: 0 0;  }
+20%, 35%, 50%, 65% { transform: translate(14px, -12px) rotate(120deg); }
+27.5%, 42.5%, 57.5%, 72.5% { transform: translate(12px, -14px) rotate(120deg); }
+82.5% { background-position: 0 0; animation-timing-function: ease;}
 }
 @keyframes Sippy-left-hover {
-  0%, 100% { filter: drop-shadow(0 0 0.5px black); z-index: 2;}
-  15% { background-position: 0 0;  }
-  20%, 35%, 50%, 65% { transform: translate(14px, -12px) rotate(120deg); }
-  27.5%, 42.5%, 57.5%, 72.5% { transform: translate(12px, -14px) rotate(120deg); }
-  82.5% { background-position: 0 0; }
+0%, 100% { filter: drop-shadow(0 0 0.5px black); z-index: 2;}
+15% { background-position: 0 0;  }
+20%, 35%, 50%, 65% { transform: translate(14px, -12px) rotate(120deg); }
+27.5%, 42.5%, 57.5%, 72.5% { transform: translate(12px, -14px) rotate(120deg); }
+82.5% { background-position: 0 0; }
 }
 .emote.Sippy {
-  margin-left: -2px;
-  transform-origin: 50% 65%;
-  background-repeat: no-repeat;
-  background-position: 0 5px;
-  animation: Sippy-right 1.5s 1;
+margin-left: -2px;
+transform-origin: 50% 65%;
+background-repeat: no-repeat;
+background-position: 0 5px;
+animation: Sippy-right 1.5s 1;
 }
 .emote.Sippy:hover {
-  animation: Sippy-right-hover 1.5s infinite;
+animation: Sippy-right-hover 1.5s infinite;
 }
 .emote.Sippy + .emote.Sippy, .emote.Sippy:first-of-type {
-  margin-left: 0;
-  animation: Sippy-left 1.5s 1;
+margin-left: 0;
+animation: Sippy-left 1.5s 1;
 }
 .emote.Sippy + .emote.Sippy:hover, .emote.Sippy:first-of-type:hover {
-  animation: Sippy-left-hover 1.5s 1;
+animation: Sippy-left-hover 1.5s 1;
 }
 .emote.Sippy + .emote.Sippy:last-of-type, .emote.Sippy:last-of-type {
-  margin-left: -2px;
-  animation: Sippy-right 1.5s 1;
+margin-left: -2px;
+animation: Sippy-right 1.5s 1;
 }
 .emote.Sippy + .emote.Sippy:last-of-type:hover, .emote.Sippy:last-of-type:hover {
-  animation: Sippy-right-hover 1.5s 1;
+animation: Sippy-right-hover 1.5s 1;
 }
 @keyframes GIGASIP {
-  0% { left: -29px; }
-  100% { left: 0px; }
+0% { left: -29px; }
+100% { left: 0px; }
 }
 .emote.GIGACHAD + .emote.Sippy {
-  margin-left: 2px;
-  animation: Sippy-right 1.5s 1, GIGASIP 1.5s 1 ease-out;
+margin-left: 2px;
+animation: Sippy-right 1.5s 1, GIGASIP 1.5s 1 ease-out;
 }
+.emote.GIGACHAD + .emote.Sippy:hover{
+animation: Sippy-right-hover 1.5s 1, GIGASIP 1.5s 1 ease-out;
+}  
+
+
 @keyframes Slugstiny-anim {
-  0% {background-position: 29px 0;}
-  100% {background-position: 0 0;}
+0% {background-position: 29px 0;}
+100% {background-position: 0 0;}
 }
 .emote.Slugstiny {
-  background-repeat: no-repeat;
-  animation: Slugstiny-anim 2.5s 1 linear;
-  transition: all 2.5s linear;
+background-repeat: no-repeat;
+animation: Slugstiny-anim 2.5s 1 linear;
+transition: all 2.5s linear;
 }
 .emote.Slugstiny:hover {
-  background-position: 30px 0;
+background-position: 30px 0;
 }
 @keyframes Slumlord-anim {
-    0% { top: -25px; }
-    100% { top: 30px; }
+  0% { top: -25px; }
+  100% { top: 30px; }
 }
 @keyframes Slumlord-anim-hover {
-    0% { top: -25px; }
-    100% { top: 30px; }
+  0% { top: -25px; }
+  100% { top: 30px; }
 }
 .emote.Slumlord:before{
-    content: "ðŸ’°";
-    text-indent: 0;
-    font-size: 18px;
-    position: absolute;
-    line-height: initial;
-    left:-3px;
-    top:-25px;
-    animation: Slumlord-anim 0.5s 4;
+  content: "ðŸ’°";
+  text-indent: 0;
+  font-size: 18px;
+  position: absolute;
+  line-height: initial;
+  left:-3px;
+  top:-25px;
+  animation: Slumlord-anim 0.5s 4;
 }
 .emote.Slumlord:after{
-    content: "ðŸ’°";
-    text-indent: 0;
-    font-size: 18px;
-    position: absolute;
-    line-height: initial;
-    right:-3px;
-    top:-25px;
-    animation: Slumlord-anim 0.5s 4;
-    animation-delay: 0.25s;
+  content: "ðŸ’°";
+  text-indent: 0;
+  font-size: 18px;
+  position: absolute;
+  line-height: initial;
+  right:-3px;
+  top:-25px;
+  animation: Slumlord-anim 0.5s 4;
+  animation-delay: 0.25s;
 }
 .emote.Slumlord:hover::before {
-    animation: Slumlord-anim-hover 0.5s infinite;
+  animation: Slumlord-anim-hover 0.5s infinite;
 }
 .emote.Slumlord:hover::after {
-    animation: Slumlord-anim-hover 0.5s infinite;
-    animation-delay: 0.25s;
+  animation: Slumlord-anim-hover 0.5s infinite;
+  animation-delay: 0.25s;
 }
 @keyframes SMASHit-anim {
-  0% { background-position: 0px; }
-  100% { background-position: -2856px; }
+0% { background-position: 0px; }
+100% { background-position: -2856px; }
 }
 
 @keyframes SMASHit-hover {
-  0% { background-position: 0px; }
-  100% { background-position: -2856px; }
+0% { background-position: 0px; }
+100% { background-position: -2856px; }
 }
 
 .emote.SMASHit {
-  width: 42px;
-  height: 29px;
-  background-position: -2814px;
-  animation: SMASHit-anim 1.34s steps(68) 4;
+width: 42px;
+height: 29px;
+background-position: -2814px;
+animation: SMASHit-anim 1.34s steps(68) 4;
 }
 
 .emote.SMASHit:hover {
-  animation: SMASHit-hover 1.34s steps(68) infinite;
+animation: SMASHit-hover 1.34s steps(68) infinite;
 }
 @keyframes SNAP-anim {
-  10% { filter: brightness(1.7); }
-  50% { filter: brightness(1.05); }
+10% { filter: brightness(1.7); }
+50% { filter: brightness(1.05); }
 }
 @keyframes SNAP-anim-hover {
-  10% { filter: brightness(1.7); }
-  50% { filter: brightness(1.05); }
+10% { filter: brightness(1.7); }
+50% { filter: brightness(1.05); }
 }
 .emote.SNAP {
-  animation: SNAP-anim 2 150ms, SNAP-anim 4 250ms 600ms;
+animation: SNAP-anim 2 150ms, SNAP-anim 4 250ms 600ms;
 }
 .emote.SNAP:hover {
-  animation: SNAP-anim-hover 2 150ms, SNAP-anim-hover infinite 250ms 600ms;
+animation: SNAP-anim-hover 2 150ms, SNAP-anim-hover infinite 250ms 600ms;
 }
 @keyframes SNAP-before {
-	0% { transform: scale(0); }
-	10% { transform: scale(1); }
-	50% { transform: scale(0.05); } 
-	100% { transform: scale(0); }
+0% { transform: scale(0); }
+10% { transform: scale(1); }
+50% { transform: scale(0.05); } 
+100% { transform: scale(0); }
 }
 @keyframes SNAP-hover-before {
-	0% { transform: scale(0); }
-	10% { transform: scale(1); }
-	50% { transform: scale(0.05); } 
-	100% { transform: scale(0); }
+0% { transform: scale(0); }
+10% { transform: scale(1); }
+50% { transform: scale(0.05); } 
+100% { transform: scale(0); }
 }
 .emote.SNAP::before {
-  mix-blend-mode: screen;
-	content: "ðŸ’¥";
-	text-indent: 0;
-  text-shadow: none;
-  color: white;
-	font-size: 24px;
-	line-height: initial;
-	position: absolute;
-	opacity: 1;
-	top: -1.5px;
-	left: 5.5px;
-  transform: scale(0);
-	filter: hue-rotate(-120deg) brightness(1.2) saturate(.5);
-	animation: SNAP-before 2 150ms, SNAP-before 4 250ms 600ms;
+mix-blend-mode: screen;
+content: "ðŸ’¥";
+text-indent: 0;
+text-shadow: none;
+color: white;
+font-size: 24px;
+line-height: initial;
+position: absolute;
+opacity: 1;
+top: -1.5px;
+left: 5.5px;
+transform: scale(0);
+filter: hue-rotate(-120deg) brightness(1.2) saturate(.5);
+animation: SNAP-before 2 150ms, SNAP-before 4 250ms 600ms;
 }
 .emote.SNAP:hover::before {
-  animation: SNAP-hover-before 2 150ms, SNAP-hover-before infinite 250ms 600ms;
+animation: SNAP-hover-before 2 150ms, SNAP-hover-before infinite 250ms 600ms;
 }
 @keyframes SpookerZ-anim {
-    0% { transform: translate(0px 0px); }
-    25% { transform: translate(0px,4px) }
-    75% { transform: rotate(-10deg); }
-    100% {
-        transform: rotate(0deg);
-        transform-origin: 4px bottom;
-    }
+  0% { transform: translate(0px 0px); }
+  25% { transform: translate(0px,4px) }
+  75% { transform: rotate(-10deg); }
+  100% {
+      transform: rotate(0deg);
+      transform-origin: 4px bottom;
+  }
 }
 @keyframes SpookerZ-anim-hover {
-    0% { transform: translate(0px 0px); }
-    25% { transform: translate(0px,4px) }
-    75% { transform: rotate(-10deg); }
-    100% {
-        transform: rotate(0deg);
-        transform-origin: 4px bottom;
-    }
+  0% { transform: translate(0px 0px); }
+  25% { transform: translate(0px,4px) }
+  75% { transform: rotate(-10deg); }
+  100% {
+      transform: rotate(0deg);
+      transform-origin: 4px bottom;
+  }
 }
 .emote.SpookerZ {
-    animation: SpookerZ-anim 250ms 3;
+  animation: SpookerZ-anim 250ms 3;
 }
 .emote.SpookerZ:hover {
-    animation: SpookerZ-anim-hover 250ms infinite;
+  animation: SpookerZ-anim-hover 250ms infinite;
 }
 /* @keyframes TRUMPED-anim { 
-  0%, 100% { background-position: -53px 0; }
-  5%, 15%, 35%, 60%, 80%, 95% { transform: translate(1px, .5px); }
-  20%, 30%, 40%, 50%, 70%, 90% { transform: translate(-.5px, -1px); }
-  10%, 25%, 45%, 55%, 75%, 85% { transform: translate(-1px, .5px); }
+0%, 100% { background-position: -53px 0; }
+5%, 15%, 35%, 60%, 80%, 95% { transform: translate(1px, .5px); }
+20%, 30%, 40%, 50%, 70%, 90% { transform: translate(-.5px, -1px); }
+10%, 25%, 45%, 55%, 75%, 85% { transform: translate(-1px, .5px); }
 }
 @keyframes TRUMPED-filters {
-  0%, 100% { filter: sepia(1) hue-rotate(-45deg) contrast(1.8) saturate(3.5); }
+0%, 100% { filter: sepia(1) hue-rotate(-45deg) contrast(1.8) saturate(3.5); }
 }
 @keyframes TRUMPED-filters2 {
-  0%, 100% { filter: sepia(1) hue-rotate(-160deg) contrast(1.8) saturate(3.5); }
+0%, 100% { filter: sepia(1) hue-rotate(-160deg) contrast(1.8) saturate(3.5); }
 }
 @keyframes TRUMPED-hover { 
-  0%, 100% { background-position: -53px 0; }
-  5%, 15%, 35%, 60%, 80%, 95% { transform: translate(1px, .5px); }
-  20%, 30%, 40%, 50%, 70%, 90% { transform: translate(-.5px, -1px); }
-  10%, 25%, 45%, 55%, 75%, 85% { transform: translate(-1px, .5px); }
+0%, 100% { background-position: -53px 0; }
+5%, 15%, 35%, 60%, 80%, 95% { transform: translate(1px, .5px); }
+20%, 30%, 40%, 50%, 70%, 90% { transform: translate(-.5px, -1px); }
+10%, 25%, 45%, 55%, 75%, 85% { transform: translate(-1px, .5px); }
 }
 @keyframes TRUMPED-hover-filters {
-  0%, 100% { filter: sepia(1) hue-rotate(-45deg) contrast(1.8) saturate(3.5); }
+0%, 100% { filter: sepia(1) hue-rotate(-45deg) contrast(1.8) saturate(3.5); }
 }
 .emote.TRUMPED:nth-of-type(2n) {
-  width: 53px;
-  height: 28px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-    animation: TRUMPED-anim .45s 4, TRUMPED-filters .45s 4;
+width: 53px;
+height: 28px;
+background-repeat: no-repeat;
+background-position: 0 0;
+  animation: TRUMPED-anim .45s 4, TRUMPED-filters .45s 4;
 }
 .emote.TRUMPED:nth-of-type(2n + 1) {
-  width: 53px;
-  height: 28px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-    animation: TRUMPED-anim .45s 4, TRUMPED-filters2 .45s 4;
+width: 53px;
+height: 28px;
+background-repeat: no-repeat;
+background-position: 0 0;
+  animation: TRUMPED-anim .45s 4, TRUMPED-filters2 .45s 4;
 }
 .emote.TRUMPED:hover {
-  animation: TRUMPED-hover .5s infinite, TRUMPED-hover-filters .5s infinite;
+animation: TRUMPED-hover .5s infinite, TRUMPED-hover-filters .5s infinite;
 } */
 @keyframes GIGALUCK-anim {
-  0% { transform: translate(-28px, 0); }
-  100% { transform: translate(0, 0); }
+0% { transform: translate(-28px, 0); }
+100% { transform: translate(0, 0); }
 }
-  
+
 .emote.GIGACHAD + .emote.UNLUCKY {
-  animation: GIGALUCK-anim 1.5s ease-out 1;
+animation: GIGALUCK-anim 1.5s ease-out 1;
 }
 @keyframes widepeepoHappy-anim {
-  0% {transform: scale3d(0.6, 1.15, 1);}
-  30% {transform: scale3d(1.25, 0.75, 1);}
-  40% {transform: scale3d(0.4, 1.3, 1);}
-  50% {transform: scale3d(1.15, 0.85, 1);}
-  65% {transform: scale3d(.95, 1.05, 1);}
-  75% {transform: scale3d(1.05, .95, 1);}
-  100% {transform: scale3d(1, 1, 1);}
+0% {transform: scale3d(0.6, 1.15, 1);}
+30% {transform: scale3d(1.25, 0.75, 1);}
+40% {transform: scale3d(0.4, 1.3, 1);}
+50% {transform: scale3d(1.15, 0.85, 1);}
+65% {transform: scale3d(.95, 1.05, 1);}
+75% {transform: scale3d(1.05, .95, 1);}
+100% {transform: scale3d(1, 1, 1);}
 }
 
 @keyframes widepeepoHappy-anim-hover {
-  0% {transform: scale3d(0.6, 1.15, 1);}
-  30% {transform: scale3d(1.25, 0.75, 1);}
-  40% {transform: scale3d(0.4, 1.3, 1);}
-  50% {transform: scale3d(1.15, 0.85, 1);}
-  65% {transform: scale3d(.95, 1.05, 1);}
-  75% {transform: scale3d(1.05, .95, 1);}
-  100% {transform: scale3d(1, 1, 1);}
+0% {transform: scale3d(0.6, 1.15, 1);}
+30% {transform: scale3d(1.25, 0.75, 1);}
+40% {transform: scale3d(0.4, 1.3, 1);}
+50% {transform: scale3d(1.15, 0.85, 1);}
+65% {transform: scale3d(.95, 1.05, 1);}
+75% {transform: scale3d(1.05, .95, 1);}
+100% {transform: scale3d(1, 1, 1);}
 }
 
 .emote.widepeepoHappy {
-  transform-origin: 50% 100%;
-  animation: widepeepoHappy-anim 1s 1;
+transform-origin: 50% 100%;
+animation: widepeepoHappy-anim 1s 1;
 }
 
 .emote.widepeepoHappy:hover {
-  animation: widepeepoHappy-anim-hover 1s infinite;
+animation: widepeepoHappy-anim-hover 1s infinite;
 }
 .emote.WOOF {
-  width: 60px;
-  height: 31px;
-  animation: WOOF-anim 1 steps(17);
-  animation-duration: 1.05s;
+width: 60px;
+height: 31px;
+animation: WOOF-anim 1 steps(17);
+animation-duration: 1.05s;
 }
 .emote.WOOF:hover {
-  animation: WOOF-anim-hover 1 steps(17);
-  animation-duration: 1.05s;
-  animation-delay: 0.1s;
+animation: WOOF-anim-hover 1 steps(17);
+animation-duration: 1.05s;
+animation-delay: 0.1s;
 }
 @keyframes WOOF-anim {
-  0% { background-position: -1020px; }
+0% { background-position: -1020px; }
 }
 @keyframes WOOF-anim-hover {
-  100% { background-position: 1020px; }
+100% { background-position: 1020px; }
 }
 @keyframes WooYeah-anim {
-  100% { background-position: -704px; }
+100% { background-position: -704px; }
 }
 
 @keyframes WooYeah-hover {
-  100% { background-position: -704px; }
+100% { background-position: -704px; }
 }
 
 .emote.WooYeah {
-  width: 32px;
-  margin-left: -4px;
-  background-position: 0px;
-  animation: WooYeah-anim 1.76s steps(22) 6 -.27s;
+width: 32px;
+margin-left: -4px;
+background-position: 0px;
+animation: WooYeah-anim 1.76s steps(22) 6 -.27s;
 }
 
 .emote.WooYeah:hover {
-  animation: WooYeah-hover 1.76s steps(22) infinite;
+animation: WooYeah-hover 1.76s steps(22) infinite;
 }
 .emote.YAM {
-    margin-left: 4px;
-    margin-right: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 @keyframes YAM-anim1 {
-    20% { background-position: 0 4px; transform: skew(2deg, 0deg); animation-timing-function: ease-in-out; }
-    0%, 50% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
-    70% { background-position: 0 6px; transform: skew(-7deg, 5deg) scale(1.065); animation-timing-function: ease-in-out; }
-    100% { animation-timing-function: cubic-bezier(0.56, 0.1, 0.49, 0.96); animation-timing-function: ease-in-out; }
+  20% { background-position: 0 4px; transform: skew(2deg, 0deg); animation-timing-function: ease-in-out; }
+  0%, 50% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
+  70% { background-position: 0 6px; transform: skew(-7deg, 5deg) scale(1.065); animation-timing-function: ease-in-out; }
+  100% { animation-timing-function: cubic-bezier(0.56, 0.1, 0.49, 0.96); animation-timing-function: ease-in-out; }
 }
 
 @keyframes YAM-anim2 {
-    0% { animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
-    40%{ background-position: 0 5px; transform: skew(-7deg, 7deg) scale(1.08); animation-timing-function: ease-in-out; }
-    100% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: ease-in-out; }
+  0% { animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
+  40%{ background-position: 0 5px; transform: skew(-7deg, 7deg) scale(1.08); animation-timing-function: ease-in-out; }
+  100% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: ease-in-out; }
 }
 
 @keyframes YAM-wave {
-    0% { filter: drop-shadow(0px 3px 3px #ff66cc75) drop-shadow(0px -3px 3px #ff66de7a); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    33.3% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
-    33.4% { filter: drop-shadow(0px 3px 3px #66adff7a) drop-shadow(0px -3px 3px #66adff78); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    66.6% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px 2px 15px #2AF0); }
-    66.7% { filter: drop-shadow(0px 3px 3px #66FF6670) drop-shadow(0px -3px 3px #66FF6670); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    100% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
+  0% { filter: drop-shadow(0px 3px 3px #ff66cc75) drop-shadow(0px -3px 3px #ff66de7a); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  33.3% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
+  33.4% { filter: drop-shadow(0px 3px 3px #66adff7a) drop-shadow(0px -3px 3px #66adff78); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  66.6% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px 2px 15px #2AF0); }
+  66.7% { filter: drop-shadow(0px 3px 3px #66FF6670) drop-shadow(0px -3px 3px #66FF6670); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  100% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
 }
 @keyframes YAM-anim-hover {
-    0% { animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
-    40%{ background-position: 0 5px; transform: skew(-7deg, 7deg) scale(1.08); animation-timing-function: ease-in-out; }
-    100% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: ease-in-out; }
+  0% { animation-timing-function: cubic-bezier(0.84, 0.38, 0.5, 0.93); }
+  40%{ background-position: 0 5px; transform: skew(-7deg, 7deg) scale(1.08); animation-timing-function: ease-in-out; }
+  100% { background-position: 0 0; transform: skew(0deg, 0deg); animation-timing-function: ease-in-out; }
 }
 @keyframes YAM-wave-hover {
-    0% { filter: drop-shadow(0px 3px 3px #ff66cc75) drop-shadow(0px -3px 3px #ff66de7a); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    33.3% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
-    33.4% { filter: drop-shadow(0px 3px 3px #66adff7a) drop-shadow(0px -3px 3px #66adff78); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    66.6% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px 2px 15px #2AF0); }
-    66.7% { filter: drop-shadow(0px 3px 3px #66FF6670) drop-shadow(0px -3px 3px #66FF6670); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
-    100% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
+  0% { filter: drop-shadow(0px 3px 3px #ff66cc75) drop-shadow(0px -3px 3px #ff66de7a); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  33.3% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
+  33.4% { filter: drop-shadow(0px 3px 3px #66adff7a) drop-shadow(0px -3px 3px #66adff78); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  66.6% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px 2px 15px #2AF0); }
+  66.7% { filter: drop-shadow(0px 3px 3px #66FF6670) drop-shadow(0px -3px 3px #66FF6670); animation-timing-function: cubic-bezier(0, 0.01, 0, 0.96); }
+  100% { filter: drop-shadow(25px -4px 15px #2AF0) drop-shadow(-25px -4px 15px #2AF0); }
 }
 .emote.YAM {
-    transform-origin: -5% 80%;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    animation: YAM-anim1 666.6ms -400ms linear 16;
+  transform-origin: -5% 80%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  animation: YAM-anim1 666.6ms -400ms linear 16;
 }
 .emote.YAM:nth-of-type(2n), .msg-chat.msg-emote .emote.YAM {
-    transform-origin: -5% 80%;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    animation: YAM-anim2 333.3ms -66.6ms linear 31, YAM-wave 999.9ms -666.6ms linear 11;
+  transform-origin: -5% 80%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  animation: YAM-anim2 333.3ms -66.6ms linear 31, YAM-wave 999.9ms -666.6ms linear 11;
 }
 .emote.YAM:hover, .msg-chat.msg-emote .emote.YAM:hover  {
-    animation: YAM-anim-hover 333.3ms linear infinite,
-    YAM-wave-hover 999.9ms 100ms linear infinite;
+  animation: YAM-anim-hover 333.3ms linear infinite,
+  YAM-wave-hover 999.9ms 100ms linear infinite;
 }
 @keyframes YEEHAW-anim {
-  5% { transform: rotate3d(0, 0, 1, -90deg) scale(1.5, 1); top: 34px; left: 14px; }
-  18.3% { transform: rotate3d(0, 0, 1, 180deg) scale(1.5, 1); top: 17px; left: 10px; }
-  36% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); animation-timing-function: ease-out; }
-  38% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); left: 10px;}
-  40% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 11.5px;}  
-  /* */42% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;}
-  43% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px;}
-  45% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 11.5px;}
-  /* */47% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  48% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px;}
-  50% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 11.5px;}
-  /* */52% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  53% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px;}
-  55% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 11.5px;}
-  /* */57% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  58% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px;}
-  60% { transform: rotate3d(0, 0, 1, 1140deg) scale(1.5, 1); left: 11.5px;}
-  /* */62% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 10px; top: 17px; animation-timing-function: ease-in;}
-  68% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); top: 17px; left: 10px; animation-timing-function: ease-out;}
-  100% {transform: rotate3d(0, 0, 1, 2160deg) scale(1.5, 1); top: 34px; left: 14px; animation-timing-function: ease-in;}
+5% { transform: rotate3d(0, 0, 1, -90deg) scale(1.5, 1); top: 34px; left: 14px; }
+18.3% { transform: rotate3d(0, 0, 1, 180deg) scale(1.5, 1); top: 17px; left: 10px; }
+36% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); animation-timing-function: ease-out; }
+38% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); left: 10px;}
+40% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 11.5px;}  
+/* */42% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;}
+43% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px;}
+45% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 11.5px;}
+/* */47% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+48% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px;}
+50% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 11.5px;}
+/* */52% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+53% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px;}
+55% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 11.5px;}
+/* */57% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+58% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px;}
+60% { transform: rotate3d(0, 0, 1, 1140deg) scale(1.5, 1); left: 11.5px;}
+/* */62% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 10px; top: 17px; animation-timing-function: ease-in;}
+68% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); top: 17px; left: 10px; animation-timing-function: ease-out;}
+100% {transform: rotate3d(0, 0, 1, 2160deg) scale(1.5, 1); top: 34px; left: 14px; animation-timing-function: ease-in;}
 }
 @keyframes YEEHAW-anim2 {
-  38% { transform: scale(0);top: 18px;left: 2px;}
-  40% { transform: scale(1.8);top: 18px;left: 2px;}
-  42% { transform: scale(0);top: 18px;left: 2px;}
-  43% { transform: scale(0);top: 15px;left: 2.5px;}
-  45% { transform: scale(1.8);top: 15px;left: 2.5px;}
-  47% { transform: scale(0);top: 15px;left: 2.5px;}
-  48% { transform: scale(0);top: 12px;left: 3px;}
-  50% { transform: scale(1.8);top: 12px;left: 3px;}
-  52% { transform: scale(0);top: 12px;left: 3px;}
-  53% { transform: scale(0);top: 9px;left: 4px;}
-  55% { transform: scale(1.8);top: 9px;left: 4px;}
-  57% { transform: scale(0);top: 9px;left: 4px;}
-  58% { transform: scale(0);top: 8px;left: 6px;}
-  60% { transform: scale(1.8);top: 8px;left: 6px;}
-  62% { transform: scale(0);top: 8px;left: 6px;}
+38% { transform: scale(0);top: 18px;left: 2px;}
+40% { transform: scale(1.8);top: 18px;left: 2px;}
+42% { transform: scale(0);top: 18px;left: 2px;}
+43% { transform: scale(0);top: 15px;left: 2.5px;}
+45% { transform: scale(1.8);top: 15px;left: 2.5px;}
+47% { transform: scale(0);top: 15px;left: 2.5px;}
+48% { transform: scale(0);top: 12px;left: 3px;}
+50% { transform: scale(1.8);top: 12px;left: 3px;}
+52% { transform: scale(0);top: 12px;left: 3px;}
+53% { transform: scale(0);top: 9px;left: 4px;}
+55% { transform: scale(1.8);top: 9px;left: 4px;}
+57% { transform: scale(0);top: 9px;left: 4px;}
+58% { transform: scale(0);top: 8px;left: 6px;}
+60% { transform: scale(1.8);top: 8px;left: 6px;}
+62% { transform: scale(0);top: 8px;left: 6px;}
 }
 @keyframes YEEHAW-anim-hover {
-  5% { transform: rotate3d(0, 0, 1, -90deg) scale(1.5, 1); top: 34px; left: 14px; }
-  18.3% { transform: rotate3d(0, 0, 1, 180deg) scale(1.5, 1); top: 17px; left: 10px; }
-  36% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); animation-timing-function: ease-out; }
-  38% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); left: 10px;}
-  40% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 11.5px;}  
-  /* */42% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;}
-  43% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px;}
-  45% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 11.5px;}
-  /* */47% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  48% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px;}
-  50% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 11.5px;}
-  /* */52% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  53% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px;}
-  55% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 11.5px;}
-  /* */57% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
-  58% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px;}
-  60% { transform: rotate3d(0, 0, 1, 1140deg) scale(1.5, 1); left: 11.5px;}
-  /* */62% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 10px; top: 17px; animation-timing-function: ease-in;}
-  68% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); top: 17px; left: 10px; animation-timing-function: ease-out;}
-  100% {transform: rotate3d(0, 0, 1, 2160deg) scale(1.5, 1); top: 34px; left: 14px; animation-timing-function: ease-in;}
+5% { transform: rotate3d(0, 0, 1, -90deg) scale(1.5, 1); top: 34px; left: 14px; }
+18.3% { transform: rotate3d(0, 0, 1, 180deg) scale(1.5, 1); top: 17px; left: 10px; }
+36% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); animation-timing-function: ease-out; }
+38% { transform: rotate3d(0, 0, 1, 1080deg) scale(1.5, 1); left: 10px;}
+40% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 11.5px;}  
+/* */42% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;}
+43% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); left: 10px;}
+45% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 11.5px;}
+/* */47% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+48% { transform: rotate3d(0, 0, 1, 1100deg) scale(1.5, 1); left: 10px;}
+50% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 11.5px;}
+/* */52% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+53% { transform: rotate3d(0, 0, 1, 1110deg) scale(1.5, 1); left: 10px;}
+55% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 11.5px;}
+/* */57% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px; animation-timing-function: ease-in;} 
+58% { transform: rotate3d(0, 0, 1, 1120deg) scale(1.5, 1); left: 10px;}
+60% { transform: rotate3d(0, 0, 1, 1140deg) scale(1.5, 1); left: 11.5px;}
+/* */62% { transform: rotate3d(0, 0, 1, 1130deg) scale(1.5, 1); left: 10px; top: 17px; animation-timing-function: ease-in;}
+68% { transform: rotate3d(0, 0, 1, 1090deg) scale(1.5, 1); top: 17px; left: 10px; animation-timing-function: ease-out;}
+100% {transform: rotate3d(0, 0, 1, 2160deg) scale(1.5, 1); top: 34px; left: 14px; animation-timing-function: ease-in;}
 }
 @keyframes YEEHAW-anim2-hover {
-  38% { transform: scale(0);top: 18px;left: 2px;}
-  40% { transform: scale(1.8);top: 18px;left: 2px;}
-  42% { transform: scale(0);top: 18px;left: 2px;}
-  43% { transform: scale(0);top: 15px;left: 2.5px;}
-  45% { transform: scale(1.8);top: 15px;left: 2.5px;}
-  47% { transform: scale(0);top: 15px;left: 2.5px;}
-  48% { transform: scale(0);top: 12px;left: 3px;}
-  50% { transform: scale(1.8);top: 12px;left: 3px;}
-  52% { transform: scale(0);top: 12px;left: 3px;}
-  53% { transform: scale(0);top: 9px;left: 4px;}
-  55% { transform: scale(1.8);top: 9px;left: 4px;}
-  57% { transform: scale(0);top: 9px;left: 4px;}
-  58% { transform: scale(0);top: 8px;left: 6px;}
-  60% { transform: scale(1.8);top: 8px;left: 6px;}
-  62% { transform: scale(0);top: 8px;left: 6px;}
+38% { transform: scale(0);top: 18px;left: 2px;}
+40% { transform: scale(1.8);top: 18px;left: 2px;}
+42% { transform: scale(0);top: 18px;left: 2px;}
+43% { transform: scale(0);top: 15px;left: 2.5px;}
+45% { transform: scale(1.8);top: 15px;left: 2.5px;}
+47% { transform: scale(0);top: 15px;left: 2.5px;}
+48% { transform: scale(0);top: 12px;left: 3px;}
+50% { transform: scale(1.8);top: 12px;left: 3px;}
+52% { transform: scale(0);top: 12px;left: 3px;}
+53% { transform: scale(0);top: 9px;left: 4px;}
+55% { transform: scale(1.8);top: 9px;left: 4px;}
+57% { transform: scale(0);top: 9px;left: 4px;}
+58% { transform: scale(0);top: 8px;left: 6px;}
+60% { transform: scale(1.8);top: 8px;left: 6px;}
+62% { transform: scale(0);top: 8px;left: 6px;}
 }
 .emote.YEEHAW::before{
-    content: "ðŸ”«";
-    text-indent: 0;
-    color: white;
-    font-size: 15px;
-    line-height: initial;
-    position: absolute;
-    opacity: 1;
-    top: 34px;
-    left: 14px;
-    width: 20px;
-    transform-origin: 60% 60%;
-    filter: contrast(1) hue-rotate(300deg) saturate(0.3);
-    animation: YEEHAW-anim 3s 1 linear;
-    animation-delay: -0.15s;
+  content: "ðŸ”«";
+  text-indent: 0;
+  color: white;
+  font-size: 15px;
+  line-height: initial;
+  position: absolute;
+  opacity: 1;
+  top: 34px;
+  left: 14px;
+  width: 20px;
+  transform-origin: 60% 60%;
+  filter: contrast(1) hue-rotate(300deg) saturate(0.3);
+  animation: YEEHAW-anim 3s 1 linear;
+  animation-delay: -0.15s;
 }
 
 .emote.YEEHAW::after{
-    content: "ðŸ’¥";
-    text-indent: 0;
-    color: white;
-    font-size: 8px;
-    opacity: 1;
-    transform: scale(0);
-    line-height: initial;
-    position: absolute;
-    transform-origin: 30% 50%;
-    top: 20px;
-    left: 2px;
-    width: 18px;
-    filter: brightness(20);
-    animation: YEEHAW-anim2 3s 1 linear;
-    animation-delay: -0.15s;
+  content: "ðŸ’¥";
+  text-indent: 0;
+  color: white;
+  font-size: 8px;
+  opacity: 1;
+  transform: scale(0);
+  line-height: initial;
+  position: absolute;
+  transform-origin: 30% 50%;
+  top: 20px;
+  left: 2px;
+  width: 18px;
+  filter: brightness(20);
+  animation: YEEHAW-anim2 3s 1 linear;
+  animation-delay: -0.15s;
 }
 .emote.YEEHAW:hover::before {
-    animation: YEEHAW-anim-hover 3s infinite linear;
+  animation: YEEHAW-anim-hover 3s infinite linear;
 }
 .emote.YEEHAW:hover::after {
-    animation: YEEHAW-anim2-hover 3s infinite linear;
+  animation: YEEHAW-anim2-hover 3s infinite linear;
 }
 @keyframes YeeLaugh-anim {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(0px, 3px); }
-    100% { transform: translate(0px, 0px); }
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, 3px); }
+  100% { transform: translate(0px, 0px); }
 }
 @keyframes YeeLaugh-anim-hover {
-    0% { transform: translate(0px, 0px); }
-    50% { transform: translate(0px, 3px); }
-    100% { transform: translate(0px, 0px); }
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(0px, 3px); }
+  100% { transform: translate(0px, 0px); }
 }
 .emote.YeeLaugh{
-    animation: YeeLaugh-anim 200ms 3;
+  animation: YeeLaugh-anim 200ms 3;
 }
 .emote.YeeLaugh:hover {
-    animation: YeeLaugh-anim-hover 200ms infinite;
+  animation: YeeLaugh-anim-hover 200ms infinite;
 }
