@@ -1,5 +1,5 @@
 .emote.Abathur {
-    
+  
   height: 30px;
   width: 82px;
 }
@@ -2875,7 +2875,7 @@ animation: GRUGingOverIt-anim-hover 2s infinite;
 100% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
 }
 
-@keyframes GRUGingOverIt {
+@keyframes GRUGingOverIt-anim-hover {
 0% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 32px; }
 10% {transform: scale3d(1, 1, 1); transform-origin: bottom; background-position: 0 0; }
 30% {transform: scale3d(1, 1, 1); transform-origin: bottom; }
