@@ -38,7 +38,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			// console.log(data);
 			const messages = data
 				.map((payload) => parseChatMessage(payload))
-				.filter((payload) => payload.command === "MSG" || payload.command === "BROADCAST") as MessageCollection; //Typescript couldnt grasp this inference hmm.
+				.filter((payload) => payload.command === "MSG" || payload.command === "BROADCAST") as MessageCollection; 
 			const spacerMessage: UtilityMessage = {
 				command: "UTILITY", 
 				utilityType: "HORIZONTAL_SPACER", 
