@@ -12,7 +12,7 @@ export const UtilityLine: FC<UtilityLineProps> = ({ data, command, utilityType, 
     switch (utilityType) {
         case "HORIZONTAL_SPACER": return (
             <div className={"w-4/5 mx-auto border-t my-3 flex flex-col"}>
-                <div className={"text-center mt-1 text-[#dedede]"}>End of chat history</div>
+                <div className={"text-center mt-1 text-[#dedede]"}>{data}</div>
             </div>
         );
     }

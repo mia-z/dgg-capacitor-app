@@ -42,7 +42,7 @@ export const ChatContainer: FC<ChatContainerProps> = ({ height, width }) => {
 			const spacerMessage: UtilityMessage = {
 				command: "UTILITY", 
 				utilityType: "HORIZONTAL_SPACER", 
-				data: "", 
+				data: "End of chat history", 
 				isHidden: false, 
 				timestamp: Date.now().toString()
 			};
