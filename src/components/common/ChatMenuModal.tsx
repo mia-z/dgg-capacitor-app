@@ -21,7 +21,7 @@ export const ChatMenuModal: FC<ChatMenuModalProps> = ({ isOpen, setOpen, childre
 	return (
 		<IonModal className={""} id={"emotes-modal"} ref={modalRef} trigger={"emotes-modal"} isOpen={isOpen}>
 			<IonContent>
-				<div className={"bg-light-black h-full w-full flex flex-col"}>
+				<div className={"bg-base-100 h-full w-full flex flex-col"}>
 					{children}
 				</div>
 			</IonContent>

@@ -63,7 +63,7 @@ export const ChatInputContainer: FC<ChatInputContainerProps> = ({ height, width,
 			<div className={`absolute ${(suggestionsShowing) ? "h-10 -top-10" : "h-0 -top-0"} -right-2 left-0 z-50 transition-all flex flex-row overflow-x-scroll w-[calc(100%-2px)] bg-black rounded-t-xl border-t border-x border-t-blue-400 border-x-blue-400`}>
 				{
 					emoteSuggestions.concat(chatterSuggestions).map((suggestion, index) => (
-						<div key={`suggestion-${index}`} onTouchEnd={(event: TouchEvent<HTMLDivElement>) => replaceLatestWord(event, suggestion)} className={"text-[#dedede] mx-1 roboto my-auto rounded-full bg-light-black px-2 py-1"}>
+						<div key={`suggestion-${index}`} onTouchEnd={(event: TouchEvent<HTMLDivElement>) => replaceLatestWord(event, suggestion)} className={"text-[#dedede] mx-1 roboto my-auto rounded-full bg-base-100 px-2 py-1"}>
 							{suggestion}
 						</div>
 					))
@@ -80,7 +80,7 @@ export const ChatInputContainer: FC<ChatInputContainerProps> = ({ height, width,
 				onInput={onInputChange}
 				onKeyUp={onInputKeyUp}
 				placeholder={`Write something ${user?.nick}`}
-				className={`text-white bg-light-black rounded-full ml-2`}
+				className={`text-white bg-base-100 rounded-full ml-2`}
             />
 		</div>
 	);

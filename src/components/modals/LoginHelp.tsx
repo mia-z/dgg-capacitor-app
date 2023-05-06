@@ -33,7 +33,7 @@ export const LoginHelp: FC<LoginHelpProps> = ({ loginHelpOpen, setLoginHelpOpen 
 	return (
 		<IonModal keepContentsMounted={true} isOpen={loginHelpOpen} onWillDismiss={loginHelpDismiss}>
 			<IonContent>
-				<div className={"bg-light-black h-full"}>
+				<div className={"bg-base-100 h-full"}>
 					<Swiper onSwiper={(instance) => setSwiperRef(instance)}
 						className={"h-full"}
 						initialSlide={0}

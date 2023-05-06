@@ -63,11 +63,11 @@ export const PollContainer: FC<PollContainerProps> = ({ width, height }) => {
                         const isWinner = winner && winner.option === option;
                         return (
                             <div key={`option-${option}-${index}`} className={`flex flex-row text-white h-[2rem] px-2 ${(winner && isWinner ? "opacity-100" : (winner && !isWinner ? "opacity-50" : "opacity-100"))}`}>
-                                <div className={"w-1/12 my-auto bg-light-black rounded-xl m-1 text-center"}>
+                                <div className={"w-1/12 my-auto bg-base-100 rounded-xl m-1 text-center"}>
                                     {index + 1}
                                 </div>
                                 <div className={"w-11/12 my-auto h-full flex relative"}>
-                                    <div className={"border-[1px] border-blue-400 rounded-2xl bg-light-black flex flex-row justify-between w-full my-auto px-2 h-6"}>
+                                    <div className={"border-[1px] border-blue-400 rounded-2xl bg-base-100 flex flex-row justify-between w-full my-auto px-2 h-6"}>
                                         <div className={"z-50 text-xs my-auto"}>
                                             {option}
                                         </div>

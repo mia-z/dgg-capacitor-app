@@ -64,7 +64,7 @@ export const Login: FC = () => {
 	return (
 		<IonPage>
 			<IonContent>
-				<div className={"bg-light-black h-full flex flex-col"}>
+				<div className={"bg-base-100 h-full flex flex-col"}>
 					<div className={"mt-auto w-3/4 mx-auto relative shine"}>
 						<img src={dggLogo}  />
                     </div>
