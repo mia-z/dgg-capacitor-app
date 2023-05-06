@@ -1,42 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Lato&family=Lobster&family=Lora:wght@400;500;600&family=Mulish:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;600;700&family=Nunito:wght@200;300;400;500;600;700&family=Open+Sans&family=Roboto+Slab:wght@200;300;400;500;600;700&family=Work+Sans:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&family=Roboto+Flex:wght@400;700&display=swap");
 
-html, body, #app {
-    background-color: whitesmoke;
-}
-
-$lato: 'Lato', sans-serif;
 $lobster: 'Lobster', cursive;
-$lora: 'Lora', serif;
-$mulish: 'Mulish', sans-serif;
-$nunito: 'Nunito', sans-serif;
-$nunito-sans: 'Nunito Sans', sans-serif;
 $open-sans: 'Open Sans', sans-serif;
-$roboto: 'Roboto Slab', serif;
-$work-sans: 'Work Sans', sans-serif;
-$abyssinica: 'Abyssinica SIL', serif;
-
-.lato {
-    font-family: $lato;
-}
+$roboto: 'Roboto Flex', serif;
 
 .lobster {
     font-family: $lobster;
-}
-
-.lora {
-    font-family: $lora;
-}
-
-.mulish {
-    font-family: $mulish;
-}
-
-.nunito {
-    font-family: $nunito;
-}
-
-.nunito-sans {
-    font-family: $nunito-sans;
 }
 
 .open-sans {
@@ -47,18 +16,15 @@ $abyssinica: 'Abyssinica SIL', serif;
     font-family: $roboto;
 }
 
-.work-sans {
-    font-family: $work-sans;
-}
+html, body, #app {
+	background-color: whitesmoke;
+    font-family: $open-sans;
+	@apply text-neutral-content;
 
-.abyssinica {
-    font-family: $abyssinica;
+    button {
+        font-family: $roboto;
+    }
 }
-
-.curvy-bg {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300' preserveAspectRatio='xMinYMin meet'><path d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z'></path></svg>")
-}
-
 
 //REMOVE UGLY ARROWS FROM input[type=number]
 /* Chrome, Safari, Edge, Opera */
@@ -137,7 +103,7 @@ input[type=number] {
 		top: -110%;
 		left: -40%;
 		z-index: -1;
-		background: url("https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png") 0 0 repeat;
+		background: url("https://cdn.destiny.gg//2.69.2//emotes//5c2bbd3411c78.png") 0 0 repeat;
 		animation: bg-tile-animation 1s linear 0s infinite;
 	}
 }
@@ -178,6 +144,6 @@ input[type=number] {
 	z-index: 999999;
 
 	.pane {
-		@apply bg-light-black;
+		@apply bg-base-100;
 	}
 }
