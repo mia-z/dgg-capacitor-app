@@ -30,19 +30,19 @@ export const parseEmbedLink = (input: string): EmbedInfo | null => {
 		if (parts.length !== 2) {
 			return null;
 		}
-		return { platform: parts[0] as SupportedPlatforms, videoId: parts[1] };
+		return { platform: parts[0] as SupportedPlatforms, videoId: parts[1], isDestiny: false };
 	}
 
 	if (embedLink.match(youtubeRegex)) {
 		const { host, pathname, searchParams } = new URL(embedLink);
 		if (host.endsWith(".be")) {
-			return { platform: "youtube", videoId: pathname.slice(1) }
+			return { platform: "youtube", videoId: pathname.slice(1), isDestiny: false }
 		} else {
-			return { platform: "youtube", videoId: searchParams.get("v") as string }
+			return { platform: "youtube", videoId: searchParams.get("v") as string, isDestiny: false }
 		}
 	} else if (embedLink.match(twitchRegex)) {
 		const { pathname } = new URL(embedLink);
-		return { platform: "twitch", videoId: pathname.slice(1) }
+		return { platform: "twitch", videoId: pathname.slice(1), isDestiny: false }
 	} else {
 		return null;
 	}

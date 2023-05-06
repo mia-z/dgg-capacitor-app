@@ -99,29 +99,29 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		setLogoutLoadingAlertOpen(false);
 	}
 
-	const onStreamSourceClick = useCallback((platform: "youtube" | "kick" | "rumble" | "twitch") => {
+	const onStreamSourceClick = useCallback((platform: SupportedPlatforms) => {
 		switch (platform) {
 			case "youtube": {
 				if (streamInfo?.streams.youtube && streamInfo.streams.youtube.live) {
-					setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
+					setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id, isDestiny: true });
 				}
 				break;
 			}
 			case "kick": {
 				if (streamInfo?.streams.kick && streamInfo.streams.kick.live) {
-					setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id });
+					setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id, isDestiny: true });
 				}
 				break;
 			}
 			case "rumble": {
 				if (streamInfo?.streams.rumble && streamInfo.streams.rumble.live) {
-					setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id });
+					setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id, isDestiny: true });
 				}
 				break;
 			}
 			case "twitch": {
 				if (streamInfo?.streams.twitch && streamInfo.streams.twitch.live) {
-					setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id });
+					setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id, isDestiny: true });
 				}
 				break;
 			}
@@ -140,124 +140,111 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 			<IonMenu ref={sideMenuRef} id={"side-menu"} menuId={"side-menu"} contentId={"bigscreen-content"}>
 				<IonContent>
 					<div className={"bg-base-300 h-full w-full flex flex-col relative"}>
-						<IonIcon onTouchEnd={() => presentAlert(notImplementedAlertProps)} className={"absolute left-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
-						<IonIcon onTouchEnd={() => setLogoutAlertOpen(true)} className={"absolute right-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={logOutOutline} />
-						<div className={"lobster text-3xl text-white my-2 text-center text-shadow-lg"}>
+						<IonIcon onTouchEnd={() => presentAlert(notImplementedAlertProps)} className={"absolute left-5 top-7 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
+						<IonIcon onTouchEnd={() => setLogoutAlertOpen(true)} className={"absolute right-5 top-7 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={logOutOutline} />
+						<div className={"lobster text-3xl text-white my-5 text-center text-shadow-lg"}>
 							Appstiny
 						</div>
-						<div className={"p-3"}>
-							<div id={"user-card"} className={`relative grid grid-cols-3 bg-base-100 grid-rows-1 text-sm rounded-md shadow-lg ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
-								<div className={"col-span-1"}>
-									<div className={`flex shadow-xl flex-col bg-base-100 text-sm h-20 p-2 m-3 rounded relative`}>
+						<div id={"user-card"} className={`m-3 mt-auto relative grid grid-cols-3 bg-base-100 grid-rows-1 text-sm rounded-md shadow-lg ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
+							<div className={"col-span-1"}>
+								<div className={`flex shadow-xl flex-col bg-base-100 text-sm h-20 p-2 m-3 rounded relative`}>
+									{
+										user?.team === "YEE" ?
+											<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbe330b357.png"} /> :
+										user?.team === "PEPE" ?
+											<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/6157386b7d2fc.png"} /> :
+										<div className={"text-white text-xs text-center"}>No team!</div>
+									}
+								</div>
+							</div>
+							<div className={"col-span-2 flex flex-col pr-2"}>
+								<div className={"my-auto flex flex-col"}>
+									<div className={"text-center text-white user font-bold " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+										{user?.nick}
+									</div>
+									<hr className={"divider my-2 border-none h-[1px] bg-neutral-content"} />
+									<div className={"flex flex-row text-sm flex-wrap justify-center"}>
 										{
-											user?.team === "YEE" ?
-												<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbe330b357.png"} /> :
-											user?.team === "PEPE" ?
-												<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/6157386b7d2fc.png"} /> :
-											<div className={"text-white text-xs text-center"}>No team!</div>
+											flairsToUse?.filter(x => !x.hidden).map((flair, index) => (
+												<React.Fragment key={`${flair.name}`}>
+													<img
+														className={"my-auto"}
+														style={{ height: flair.image[0].height, width: flair.image[0].width }}
+														src={flair.image[0].url}
+													/>
+													<span>&nbsp;</span>
+												</React.Fragment>
+											))
 										}
 									</div>
 								</div>
-								<div className={"col-span-2 flex flex-col pr-2"}>
-									<div className={"my-auto flex flex-col"}>
-										<div className={"text-center text-white user font-bold " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
-											{user?.nick}
-										</div>
-										<hr className={"divider my-2 border-none h-[1px] bg-neutral-content"} />
-										<div className={"flex flex-row text-sm flex-wrap justify-center"}>
-											{
-												flairsToUse?.filter(x => !x.hidden).map((flair, index) => (
-													<React.Fragment key={`${flair.name}`}>
-														<img
-															className={"my-auto"}
-															style={{ height: flair.image[0].height, width: flair.image[0].width }}
-															src={flair.image[0].url}
-														/>
-														<span>&nbsp;</span>
-													</React.Fragment>
-												))
-											}
-										</div>
-									</div>
-									{/* <div className={"col-start-3 flex flex-col my-auto h-full"}>
-										<div className={"text-center roboto text-white mb-2"}>
-											Member since:
-										</div>
-										<div className={"text-center roboto text-white"}>
-											{DateTime.fromISO(user?.createdDate!).toFormat("yyyy/MM/dd")}
-										</div>
-									</div> */}
+							</div>
+							<div className={"col-start-1 col-span-3 flex roboto text-xs flex-row justify-around my-auto text-neutral-content"}>
+								<div className={"ml-auto mr-1"}>
+									Member since:
+								</div>
+								<div className={"mr-auto ml-1"}>
+									{DateTime.fromISO(user?.createdDate!).toFormat("yyyy/MM/dd")}
 								</div>
 							</div>
 						</div>
-						
-						<hr className={"w-[85%] mx-auto my-2"} />
-						<div className={"flex flex-col"}>
-							{
-								(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live) || 
-									(streamInfo?.streams.kick && streamInfo?.streams.kick.live) || 
-									(streamInfo?.streams.rumble && streamInfo?.streams.rumble.live) || 
-									(streamInfo?.streams.twitch && streamInfo?.streams.twitch.live) ?
-								<>
-									<div className={"text-center roboto text-white"}>
-										Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
+						<div className={"bg-base-100 rounded-md shadow-xl m-3 mb-auto p-2"}>
+							<div className={"flex flex-col"}>
+								{
+									(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live) || 
+										(streamInfo?.streams.kick && streamInfo?.streams.kick.live) || 
+										(streamInfo?.streams.rumble && streamInfo?.streams.rumble.live) || 
+										(streamInfo?.streams.twitch && streamInfo?.streams.twitch.live) ?
+									<>
+										<div className={"text-center roboto text-white"}>
+											Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
+										</div>
+										<div className={"mx-auto mt-1"}>
+											<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbb9fa8ab2.png"} />
+										</div>
+									</> :
+									<div className={"flex flex-row justify-center"}>
+										<div className={"text-center roboto my-auto text-white"}>
+											Destiny is <span className={"font-bold text-red-400"}>OFFLINE</span>
+										</div>
+										<div className={"ml-1"}>
+											<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png"} />
+										</div>
 									</div>
-									<div className={"mx-auto mt-1"}>
-										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbb9fa8ab2.png"} />
-									</div>
-								</> :
-								<div className={"flex flex-row justify-center"}>
-									<div className={"text-center roboto my-auto text-white"}>
-										Destiny is <span className={"font-bold text-red-400"}>OFFLINE</span>
-									</div>
-									<div className={"ml-1"}>
-										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png"} />
-									</div>
-								</div>
-							}
-						</div>
-						<div className={"flex flex-row h-14 mt-5 justify-center space-x-2"}>
-							{
-								(streamInfo?.streams.twitch && streamInfo.streams.twitch.live) &&
-								<div onClick={() => onStreamSourceClick("twitch")} className={`twitch-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "twitch" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+								}
+							</div>
+							<div className={"flex flex-row h-14 mt-5 justify-center space-x-2"}>
+								<div onClick={() => onStreamSourceClick("twitch")} className={`twitch-live-icon h-10 w-10 flex  ${(currentEmbed?.platform === "twitch" && currentEmbed?.isDestiny) ? "bg-blue-400" : "bg-white"} rounded-full p-2 ${streamInfo?.streams.twitch && streamInfo.streams.twitch.live ? "opacity-100" : "opacity-30 grayscale"}`}>
 									<img className={"h-full"} src={TwitchLogoIcon} />
 								</div>
-							}
-							{
-								(streamInfo?.streams.youtube && streamInfo.streams.youtube.live) &&
-								<div onClick={() => onStreamSourceClick("youtube")} className={`youtube-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "youtube" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+								<div onClick={() => onStreamSourceClick("youtube")} className={`youtube-live-icon h-10 w-10 flex  ${(currentEmbed?.platform === "youtube" && currentEmbed?.isDestiny) ? "bg-blue-400" : "bg-white"} rounded-full p-2 ${streamInfo?.streams.youtube && streamInfo.streams.youtube.live ? "opacity-100" : "opacity-30 grayscale"}`}>
 									<img className={"w-full my-auto"} src={YoutubeLogoIcon} />
 								</div>
-							}
-							{
-								(streamInfo?.streams.rumble && streamInfo.streams.rumble.live) &&
-								<div onClick={() => onStreamSourceClick("rumble")} className={`rumble-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "rumble" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+								<div onClick={() => onStreamSourceClick("rumble")} className={`rumble-live-icon h-10 w-10 flex  ${(currentEmbed?.platform === "rumble" && currentEmbed?.isDestiny) ? "bg-blue-400" : "bg-white"} rounded-full p-2 ${streamInfo?.streams.rumble && streamInfo.streams.rumble.live ? "opacity-100" : "opacity-30 grayscale"}`}>
 									<img className={"h-full mx-auto"} src={RumbleLogoIcon} />
 								</div>
-							}
-							{
-								(streamInfo?.streams.kick && streamInfo.streams.kick.live) &&
-								<div onClick={() => onStreamSourceClick("kick")} className={`kick-live-icon h-10 w-10 flex  ${currentEmbed?.platform === "kick" ? "bg-blue-400" : "bg-white"} rounded-full p-2`}>
+								<div onClick={() => onStreamSourceClick("kick")} className={`kick-live-icon h-10 w-10 flex  ${(currentEmbed?.platform === "kick" && currentEmbed?.isDestiny) ? "bg-blue-400" : "bg-white"} rounded-full p-2 ${streamInfo?.streams.kick && streamInfo.streams.kick.live ? "opacity-100" : "opacity-30 grayscale"}`}>
 									<img className={"h-full mx-auto"} src={KickLogoIcon} />
 								</div>
-							}
-						</div>
-						<div className={"flex flex-col mt-auto"}>
-							<IonButton onTouchEnd={() => setVodsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
-								<div className={"text-xs"}>
-									Latest VODs
-								</div>
-							</IonButton>
-							<IonButton onTouchEnd={() => setVideosModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
-								<div className={"text-xs"}>
-									Latest videos
-								</div>
-							</IonButton>
-							<IonButton onTouchEnd={() => setEmbedsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
-								<div className={"text-xs"}>
-									Recent chat embeds
-								</div>
-							</IonButton>
+							</div>
+							<hr className={"divider my-2 border-none h-[1px] bg-neutral-content opacity-50 mb-5"} />
+							<div className={"flex flex-col mt-auto"}>
+								<IonButton onTouchEnd={() => setVodsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
+									<div className={"text-xs"}>
+										Latest VODs
+									</div>
+								</IonButton>
+								<IonButton onTouchEnd={() => setVideosModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
+									<div className={"text-xs"}>
+										Latest videos
+									</div>
+								</IonButton>
+								<IonButton onTouchEnd={() => setEmbedsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
+									<div className={"text-xs"}>
+										Recent chat embeds
+									</div>
+								</IonButton>
+							</div>
 						</div>
 						<div className={"mt-auto"}>
 							{

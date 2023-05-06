@@ -24,7 +24,7 @@ export const VodsActionSheet: FC<VodsActionSheetProps> = ({ isOpen, setOpen }) =
 		// 	console.log(`${embed.platform} is not a supported embed, yet!`);
 		// 	return;
 		// }
-		setCurrentEmbed({ videoId: vod.id, platform: "youtube" });
+		setCurrentEmbed({ videoId: vod.id, platform: "youtube", isDestiny: false });
 		setUsingCustomEmbed(true);
 		setOpen(false);
 		return;

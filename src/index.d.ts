@@ -351,7 +351,8 @@ type SupportedPlatforms = typeof Platforms[number];
 
 type EmbedInfo = {
 	platform: SupportedPlatforms,
-	videoId: string
+	videoId: string,
+	isDestiny: boolean
 } | null;
 
 type EventNames = "chat" | "live";

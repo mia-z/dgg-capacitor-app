@@ -31,20 +31,20 @@ export const StreamContainer: FC<StreamContainerProps> = ({ height, width }) => 
 	useEffect(() => {
 		if (!usingCustomEmbed && !currentEmbed) {
 			if (streamInfo?.streams.kick) {
-				setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id });
+				setCurrentEmbed({ platform: "kick", videoId: streamInfo.streams.kick.id, isDestiny: true });
 			}
 			if (streamInfo?.streams.rumble) {
-				setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id });
+				setCurrentEmbed({ platform: "rumble", videoId: streamInfo.streams.rumble.id, isDestiny: true });
 			}
 			if (streamInfo?.streams.twitch) {
 				if (platform === "ios") {
 					presentAlert(notSupportedTwitchEmbedAlertProps);
 				} else {
-					setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id });
+					setCurrentEmbed({ platform: "twitch", videoId: streamInfo.streams.twitch.id, isDestiny: true });
 				}
 			}
 			if (streamInfo?.streams.youtube && streamInfo.streams.youtube.live) {
-				setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id });
+				setCurrentEmbed({ platform: "youtube", videoId: streamInfo.streams.youtube.id, isDestiny: true });
 			}
 		}
 	}, [streamInfo, currentEmbed, usingCustomEmbed]);
