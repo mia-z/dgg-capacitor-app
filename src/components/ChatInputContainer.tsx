@@ -22,7 +22,6 @@ export const ChatInputContainer: FC<ChatInputContainerProps> = ({ height, width,
 
     const onInputKeyUp = useCallback(async (event: KeyboardEvent) => {
         if (event.key === "Enter") {
-            console.log("enter pressed");
             sendMessage(chatInput);
             setChatInput("");
         }
