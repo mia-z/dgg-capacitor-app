@@ -142,7 +142,7 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 					<div className={"bg-base-300 h-full w-full flex flex-col relative"}>
 						<IonIcon onTouchEnd={() => presentAlert(notImplementedAlertProps)} className={"absolute left-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
 						<IonIcon onTouchEnd={() => setLogoutAlertOpen(true)} className={"absolute right-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={logOutOutline} />
-						<div className={"lobster text-3xl text-white my-2 text-center"}>
+						<div className={"lobster text-3xl text-white my-2 text-center text-shadow-lg"}>
 							Appstiny
 						</div>
 						<div className={"p-3"}>
@@ -194,10 +194,10 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 						<hr className={"w-[85%] mx-auto my-2"} />
 						<div className={"flex flex-col"}>
 							{
-								(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live || 
-									streamInfo?.streams.kick && streamInfo?.streams.kick.live || 
-									streamInfo?.streams.rumble && streamInfo?.streams.rumble.live || 
-									streamInfo?.streams.twitch && streamInfo?.streams.twitch.live) ?
+								(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live) || 
+									(streamInfo?.streams.kick && streamInfo?.streams.kick.live) || 
+									(streamInfo?.streams.rumble && streamInfo?.streams.rumble.live) || 
+									(streamInfo?.streams.twitch && streamInfo?.streams.twitch.live) ?
 								<>
 									<div className={"text-center roboto text-white"}>
 										Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
@@ -243,19 +243,19 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 							}
 						</div>
 						<div className={"flex flex-col mt-auto"}>
-							<IonButton onTouchEnd={() => setVodsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setVodsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
 								<div className={"text-xs"}>
-									Show latest VODs
+									Latest VODs
 								</div>
 							</IonButton>
-							<IonButton onTouchEnd={() => setVideosModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setVideosModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
 								<div className={"text-xs"}>
-									Show latest videos
+									Latest videos
 								</div>
 							</IonButton>
-							<IonButton onTouchEnd={() => setEmbedsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto"}>
+							<IonButton onTouchEnd={() => setEmbedsModalOpen(true)} className={"w-4/5 h8 text-sm mx-auto roboto shadow-xl"}>
 								<div className={"text-xs"}>
-									Show recent chat embeds
+									Recent chat embeds
 								</div>
 							</IonButton>
 						</div>
