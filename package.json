@@ -23,7 +23,6 @@
     "@capacitor/android": "4.7.1",
     "@capacitor/app": "^4.1.1",
     "@capacitor/browser": "^4.1.0",
-    "@capacitor/camera": "latest",
     "@capacitor/clipboard": "^4.1.0",
     "@capacitor/core": "latest",
     "@capacitor/ios": "4.7.1",
