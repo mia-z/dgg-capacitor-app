@@ -39,15 +39,15 @@ export const VodsActionSheet: FC<VodsActionSheetProps> = ({ isOpen, setOpen }) =
 				<div className={"flex flex-row flex-wrap justify-center text-center h-[calc(100%-40px)] p-2 overflow-y-scroll"}>
 					{
 						vodsInfo?.map((vod, index) => (
-							<div onClick={() => onVideoClick(vod)} key={vod.id} className={"shadow-lg flex p-1 flex-row h-12 bg-[whitesmoke] m-2 rounded-full w-full active:bg-slate-300"}>
+							<div onClick={() => onVideoClick(vod)} key={vod.id} className={"shadow-xl flex p-1 flex-row h-12 bg-neutral m-2 rounded-md min-w-full active:bg-neutral-focus text-neutral-content"}>
 								<div className={"w-11 flex relative"}>
-									<img className={"w-10 h-10 rounded-full my-auto"} src={vod.thumbnail} />
+									<img className={"w-10 h-10 rounded-md my-auto"} src={vod.thumbnail} />
 								</div>
 								<div className={"w-[calc(100%-54px)] h-11 ml-2 flex flex-col"}>
-									<div className={"my-auto roboto truncate text-black text-sm"}>
+									<div className={"my-auto roboto truncate text-sm"}>
 										{vod.title}
 									</div>
-									<div className={"relative bottom-0 text-left text-black lato text-[7pt]"}>
+									<div className={"relative bottom-0 text-left open-sans text-[7pt]"}>
 										{DateTime.fromISO(vod.starttime).toFormat("EEEE, LLLL d")}
 									</div>
 								</div>

@@ -45,12 +45,12 @@ export const VideosActionSheet: FC<VideosActionSheetlProps> = ({ isOpen, setOpen
 			<div className={"flex flex-row flex-wrap justify-center text-center h-[calc(100%-40px)] p-2 overflow-y-scroll"}>
 				{
 					videosInfo?.videos?.map((video, index) => (
-						<div onClick={() => onVideoClick(video.url)} key={video.id} className={"shadow-lg flex p-1 flex-row h-12 bg-[whitesmoke] m-2 rounded-full w-full active:bg-slate-300"}>
+						<div onClick={() => onVideoClick(video.url)} key={video.id} className={"shadow-xl flex p-1 flex-row h-12 bg-neutral m-2 rounded-md min-w-full active:bg-neutral-focus text-neutral-content"}>
 							<div className={"w-11 flex relative"}>
-								<img className={"w-10 h-10 rounded-full my-auto"} src={video.highThumbnailUrl} />
+								<img className={"w-10 h-10 rounded-md my-auto"} src={video.highThumbnailUrl} />
 							</div>
 							<div className={"w-[calc(100%-54px)] h-11 ml-2 flex flex-col"}>
-								<div className={"my-auto roboto truncate text-black text-sm"}>
+								<div className={"my-auto roboto truncate text-sm"}>
 									{video.title}
 								</div>
 							</div>
