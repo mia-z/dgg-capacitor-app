@@ -139,94 +139,59 @@ export const ChatMenu: FC<ChatMenuProps> = ({ }) => {
 		<>
 			<IonMenu ref={sideMenuRef} id={"side-menu"} menuId={"side-menu"} contentId={"bigscreen-content"}>
 				<IonContent>
-					<div className={"bg-light-black h-full w-full flex flex-col relative"}>
+					<div className={"bg-base-300 h-full w-full flex flex-col relative"}>
 						<IonIcon onTouchEnd={() => presentAlert(notImplementedAlertProps)} className={"absolute left-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={settingsSharp} />
 						<IonIcon onTouchEnd={() => setLogoutAlertOpen(true)} className={"absolute right-5 top-5 text-white h-6 w-6 active:text-blue-400 transition-all"} icon={logOutOutline} />
 						<div className={"lobster text-3xl text-white my-2 text-center"}>
 							Appstiny
 						</div>
-						<div id={"user-card"} className={`flex flex-col bg-slate-600 text-sm h-24 p-2 m-3 rounded relative ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
-							<div className={"text-center mb-2 text-white user " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
-								{user?.nick}
-							</div>
-							<div className={"grid grid-cols-3 text-xs h-full"}>
-								<div className={"col-start-1 flex flex-col my-auto h-full"}>
-									<div className={"text-center roboto text-white mb-2"}>
-										Team
-									</div>
-									{
-										user?.team === "YEE" ?
-											<img className={"mx-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbe330b357.png"} /> :
-										user?.team === "PEPE" ?
-											<img className={"mx-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/6157386b7d2fc.png"} /> :
-										<div className={"text-white text-xs text-center"}>None set! <br /> you can do this on your profile on the DGG website!</div>
-									}
-								</div>
-								<div className={"col-start-2 flex flex-col my-auto h-full"}>
-									<div className={"text-center roboto text-white mb-2"}>
-										Flairs
-									</div>
-									<div className={"flex flex-row flex-wrap justify-center"}>
+						<div className={"p-3"}>
+							<div id={"user-card"} className={`relative grid grid-cols-3 bg-base-100 grid-rows-1 text-sm rounded-md shadow-lg ${user?.team === "YEE" ? "yee" : user?.team === "PEPE" ? "pepe" : ""}`}>
+								<div className={"col-span-1"}>
+									<div className={`flex shadow-xl flex-col bg-base-100 text-sm h-20 p-2 m-3 rounded relative`}>
 										{
-											flairsToUse?.filter(x => !x.hidden).map((flair, index) => (
-												<React.Fragment key={`${flair.name}`}>
-													<img
-														className={"my-auto"}
-														style={{ height: flair.image[0].height, width: flair.image[0].width }}
-														src={flair.image[0].url}
-													/>
-													<span>&nbsp;</span>
-												</React.Fragment>
-											))
+											user?.team === "YEE" ?
+												<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbe330b357.png"} /> :
+											user?.team === "PEPE" ?
+												<img className={"m-auto h-8 w-8"} src={"https://cdn.destiny.gg/2.60.0/emotes/6157386b7d2fc.png"} /> :
+											<div className={"text-white text-xs text-center"}>No team!</div>
 										}
 									</div>
 								</div>
-								<div className={"col-start-3 flex flex-col my-auto h-full"}>
-									<div className={"text-center roboto text-white mb-2"}>
-										Member since:
+								<div className={"col-span-2 flex flex-col pr-2"}>
+									<div className={"my-auto flex flex-col"}>
+										<div className={"text-center text-white user font-bold " + flairsToUse?.map(x => x.name).reverse().join(" ")} >
+											{user?.nick}
+										</div>
+										<hr className={"divider my-2 border-none h-[1px] bg-neutral-content"} />
+										<div className={"flex flex-row text-sm flex-wrap justify-center"}>
+											{
+												flairsToUse?.filter(x => !x.hidden).map((flair, index) => (
+													<React.Fragment key={`${flair.name}`}>
+														<img
+															className={"my-auto"}
+															style={{ height: flair.image[0].height, width: flair.image[0].width }}
+															src={flair.image[0].url}
+														/>
+														<span>&nbsp;</span>
+													</React.Fragment>
+												))
+											}
+										</div>
 									</div>
-									<div className={"text-center roboto text-white"}>
-										{DateTime.fromISO(user?.createdDate!).toFormat("yyyy/MM/dd")}
-									</div>
+									{/* <div className={"col-start-3 flex flex-col my-auto h-full"}>
+										<div className={"text-center roboto text-white mb-2"}>
+											Member since:
+										</div>
+										<div className={"text-center roboto text-white"}>
+											{DateTime.fromISO(user?.createdDate!).toFormat("yyyy/MM/dd")}
+										</div>
+									</div> */}
 								</div>
 							</div>
 						</div>
+						
 						<hr className={"w-[85%] mx-auto my-2"} />
-						{/* <div className={"flex flex-col"}>
-							{
-								streamInfo?.streams.youtube.live ?
-								<>
-									<div className={"text-center roboto text-white"}>
-										Destiny is <span className={"font-bold text-emerald-400"}>LIVE</span>
-									</div>
-									<div className={"mx-auto mt-1"}>
-										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbb9fa8ab2.png"} />
-									</div>
-									<div className={"text-center roboto text-[8pt] text-[#b9b9b9] mt-1 px-2"}>
-										Stream started at&nbsp;
-										{DateTime.fromISO(streamInfo?.streams.youtube.started_at).toFormat("HH:mm")},&nbsp;
-										live for&nbsp;
-										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
-									</div>
-								</> :
-								<>
-									<div className={"text-center roboto text-white"}>
-										Destiny is <span className={"font-bold text-red-400"}>OFFLINE</span>
-									</div>
-									<div className={"mx-auto mt-1"}>
-										<img src={"https://cdn.destiny.gg/2.60.0/emotes/5c2bbc1b2e160.png"} />
-									</div>
-									<div className={"text-center roboto text-[8pt] text-[#b9b9b9] mt-1 px-2"}>
-										Last stream was on&nbsp;
-										{DateTime.fromISO(streamInfo?.streams.youtube.started_at as string).toFormat("EEEE, LLLL d")}&nbsp;
-										at&nbsp;
-										{DateTime.fromISO(streamInfo?.streams.youtube.started_at as string).toFormat("HH:mm")},&nbsp;
-										and lasted&nbsp;
-										{HumanizeDuration(streamInfo?.streams.youtube.duration as number * 1000)}
-									</div>
-								</>
-							}
-						</div> */}
 						<div className={"flex flex-col"}>
 							{
 								(streamInfo?.streams.youtube && streamInfo?.streams.youtube.live || 
